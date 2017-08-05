@@ -25,6 +25,9 @@ final class ProjectLibraryViewModel: NSObject {
         return listOfProjects.count
     }
     
+    func projectTitleAt(indexPath: IndexPath) -> String {
+        return listOfProjects[indexPath.row].projectName
+    }
 }
 
 // MARK: - Main View
@@ -109,8 +112,9 @@ final class ProjectLibraryViewController: UIViewController {
             self.view = mainView
         case .viewDidAppear:
             setAddProjectButtonTarget()
-            registerCollectionViewCell()
             registerCollectionViewHeader()
+            registerCollectionViewCell()
+            setCollectionViewDataSource()
         case .addProject:
             break
         default:
@@ -139,6 +143,11 @@ final class ProjectLibraryViewController: UIViewController {
         state = .addProject
     }
     
+    private func setCollectionViewDataSource() {
+        mainView.projectLibraryCollectionView.delegate = self
+        mainView.projectLibraryCollectionView.dataSource = self
+    }
+    
     private func registerCollectionViewCell() {
         mainView.projectLibraryCollectionView.register(
             ProjectLibraryCollectionViewCell.self,
@@ -147,7 +156,7 @@ final class ProjectLibraryViewController: UIViewController {
     }
     
     private func registerCollectionViewHeader() {
-        mainView.projectLibraryCollectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader")
+        mainView.projectLibraryCollectionView.register(ProjectLibraryReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader")
     }
 }
 
@@ -155,7 +164,12 @@ final class ProjectLibraryViewController: UIViewController {
 extension ProjectLibraryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItemsIn(section: section)
+        // return viewModel.numberOfItemsIn(section: section)
+        return 1
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -169,17 +183,30 @@ extension ProjectLibraryViewController: UICollectionViewDelegate, UICollectionVi
         
         return reusableView
     }
-    
 }
 
 
 // MARK: - Cell
 final class ProjectLibraryCollectionViewCell: UICollectionViewCell {
     
+    var projectTitleLabel = UILabel()
+    var projectArtwork = UIImageView()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = .black
     }
+    
+    func configure(with viewModel: ProjectLibraryViewModel, forRowAtIndexPath indexPath: IndexPath) {
+        projectTitleLabel.text = viewModel.projectTitleAt(indexPath: indexPath)
+    }
+}
+
+
+
+// MARK: - Reusable View
+final class ProjectLibraryReusableView: UICollectionReusableView {
+    
     
 }
 
