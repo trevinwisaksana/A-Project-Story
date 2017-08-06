@@ -2,7 +2,7 @@
 
 import UIKit
 import PlaygroundSupport
-import SnapKit
+// import SnapKit
 
 
 // MARK: - Data Model
@@ -45,6 +45,7 @@ final class ProjectLibraryMainView: UIView {
     
     // Only for PDD
     private func setScreenSize() {
+        // iPhone 7 Plus
         let screenSize = CGSize(width: 414, height: 736)
         frame.size = screenSize
         backgroundColor = UIColor(colorLiteralRed: 248, green: 253, blue: 253, alpha: 1)
@@ -55,7 +56,7 @@ final class ProjectLibraryMainView: UIView {
         let width = frame.width
         let height = frame.height
         
-        let maxY = frame.maxY * 0.1
+        let maxY = frame.maxY * 0.07
         
         let collectionViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
         
@@ -161,7 +162,7 @@ final class ProjectLibraryViewController: UIViewController {
 }
 
 
-extension ProjectLibraryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // return viewModel.numberOfItemsIn(section: section)
@@ -179,10 +180,33 @@ extension ProjectLibraryViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader", for: indexPath)
-        
-        return reusableView
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            
+            let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader", for: indexPath) as! ProjectLibraryReusableView
+            return reusableView
+            
+        default:
+            assert(false, "Unexpected element kind")
+        }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = self.view.frame.width
+        let height = self.view.frame.height * 0.4
+        
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        let width = self.view.frame.width
+        let height = self.view.frame.height * 0.1
+        
+        return CGSize(width: width, height: height)
+    }
+    
 }
 
 
@@ -194,7 +218,7 @@ final class ProjectLibraryCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = .black
+        backgroundColor = .yellow
     }
     
     func configure(with viewModel: ProjectLibraryViewModel, forRowAtIndexPath indexPath: IndexPath) {
@@ -203,12 +227,40 @@ final class ProjectLibraryCollectionViewCell: UICollectionViewCell {
 }
 
 
-
 // MARK: - Reusable View
 final class ProjectLibraryReusableView: UICollectionReusableView {
     
+    private var sectionTitle = UILabel()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        prepareSectionTitle()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func prepareSectionTitle() {
+        let width = frame.width
+        let height = frame.height
+        
+        let maxX = frame.maxX * 0.05
+        
+        let sectionTitleFrame = CGRect(x: maxX, y: 0, width: width, height: height)
+        sectionTitle.frame = sectionTitleFrame
+        
+        sectionTitle.text = "Projects"
+        
+        let titleFont = UIFont(name: "Avenir", size: 30)
+        sectionTitle.font = titleFont
+        sectionTitle.font = UIFont.boldSystemFont(ofSize: 30)
+        sectionTitle.textColor = .blue
+        
+        addSubview(sectionTitle)
+    }
 }
 
 // Displaying the view controller
 PlaygroundPage.current.liveView = ProjectLibraryViewController()
+PlaygroundPage.current.needsIndefiniteExecution = true
