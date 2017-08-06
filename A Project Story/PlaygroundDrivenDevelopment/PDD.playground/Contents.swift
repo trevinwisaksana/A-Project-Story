@@ -2,8 +2,12 @@
 
 import UIKit
 import PlaygroundSupport
-// import SnapKit
+@testable import SnapKit
 
+
+////////////////
+// Data Model //
+////////////////
 
 // MARK: - Data Model
 final class ProjectDataModel {
@@ -16,8 +20,12 @@ final class ProjectDataModel {
     }
 }
 
+////////////////
+// View Model //
+////////////////
+
 // MARK: - View Model
-final class ProjectLibraryViewModel: NSObject {
+final class ProjectLibraryViewModel {
 
     private var listOfProjects = [ProjectDataModel]()
     
@@ -28,13 +36,30 @@ final class ProjectLibraryViewModel: NSObject {
     func projectTitleAt(indexPath: IndexPath) -> String {
         return listOfProjects[indexPath.row].projectName
     }
+    
+    func didSelectItemAt(indexPath: IndexPath) {
+        
+    }
 }
 
-// MARK: - Main View
+
+///////////////////////////////
+// Project Library Main View //
+///////////////////////////////
+
 final class ProjectLibraryMainView: UIView {
     
     var addProjectButton: UIButton!
     var projectLibraryCollectionView: UICollectionView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -48,7 +73,7 @@ final class ProjectLibraryMainView: UIView {
         // iPhone 7 Plus
         let screenSize = CGSize(width: 414, height: 736)
         frame.size = screenSize
-        backgroundColor = UIColor(colorLiteralRed: 248, green: 253, blue: 253, alpha: 1)
+        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     
     private func prepareCollectionView() {
@@ -63,9 +88,16 @@ final class ProjectLibraryMainView: UIView {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         
         projectLibraryCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
-        projectLibraryCollectionView.backgroundColor = .white
+        projectLibraryCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         
         addSubview(projectLibraryCollectionView)
+        
+        projectLibraryCollectionView.snp.makeConstraints { (make) in
+            make.width.equalTo(self.frame.width)
+            make.leading.trailing.equalTo(0)
+            make.bottom.equalTo(0)
+            make.top.equalTo(50)
+        }
     }
     
     private func prepareAddProjectButton() {
@@ -76,19 +108,25 @@ final class ProjectLibraryMainView: UIView {
         let maxY = frame.maxY * 0.03
         
         let buttonFrame = CGRect(x: maxX, y: maxY, width: height, height: height)
-        
         addProjectButton = UIButton(frame: buttonFrame)
         
         let addProjectImage = UIImage(named: "addProjectButtonImage")
         addProjectButton.setImage(addProjectImage, for: .normal)
         
         addSubview(addProjectButton)
+        
+        addProjectButton.snp.makeConstraints { (make) in
+            make.leading.top.equalTo(22)
+        }
     }
     
 }
 
 
-// MARK: - View Controller
+/////////////////////////////////////
+// Project Library View Controller //
+/////////////////////////////////////
+
 final class ProjectLibraryViewController: UIViewController {
     
     private let mainView = ProjectLibraryMainView()
@@ -97,6 +135,7 @@ final class ProjectLibraryViewController: UIViewController {
     private enum State {
         case `default`
         case loading
+        case viewDidLayoutSubviews
         case viewDidAppear
         case addProject
     }
@@ -111,13 +150,15 @@ final class ProjectLibraryViewController: UIViewController {
         switch state {
         case .loading:
             self.view = mainView
-        case .viewDidAppear:
+        case .viewDidLayoutSubviews:
             setAddProjectButtonTarget()
             registerCollectionViewHeader()
             registerCollectionViewCell()
             setCollectionViewDataSource()
-        case .addProject:
+        case .viewDidAppear:
             break
+        case .addProject:
+            presentAddProjectViewController()
         default:
             break
         }
@@ -129,6 +170,11 @@ final class ProjectLibraryViewController: UIViewController {
         state = .loading
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        state = .viewDidLayoutSubviews
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         state = .viewDidAppear
@@ -136,11 +182,11 @@ final class ProjectLibraryViewController: UIViewController {
     
     // MARK: - Methods
     private func setAddProjectButtonTarget() {
-        mainView.addProjectButton.addTarget(self, action: #selector(didPressAddProjctButton), for: .touchUpInside)
+        mainView.addProjectButton.addTarget(self, action: #selector(didPressAddProjectButton), for: .touchUpInside)
     }
     
     @objc
-    private func didPressAddProjctButton() {
+    private func didPressAddProjectButton() {
         state = .addProject
     }
     
@@ -159,8 +205,17 @@ final class ProjectLibraryViewController: UIViewController {
     private func registerCollectionViewHeader() {
         mainView.projectLibraryCollectionView.register(ProjectLibraryReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader")
     }
+    
+    private func presentAddProjectViewController() {
+        present(AddProjectViewController(), animated: true, completion: nil)
+    }
 }
 
+
+
+///////////////////////////////
+// Collection View Extension //
+///////////////////////////////
 
 extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
@@ -194,7 +249,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = self.view.frame.width
-        let height = self.view.frame.height * 0.4
+        let height = self.view.frame.height * 0.5
         
         return CGSize(width: width, height: height)
     }
@@ -207,27 +262,54 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         return CGSize(width: width, height: height)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
 }
 
 
-// MARK: - Cell
+//////////////////////////
+// Collection View Cell //
+//////////////////////////
+
 final class ProjectLibraryCollectionViewCell: UICollectionViewCell {
     
+    var containerView = UIView()
     var projectTitleLabel = UILabel()
     var projectArtwork = UIImageView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        backgroundColor = .yellow
+        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        prepareContainerView()
     }
     
     func configure(with viewModel: ProjectLibraryViewModel, forRowAtIndexPath indexPath: IndexPath) {
         projectTitleLabel.text = viewModel.projectTitleAt(indexPath: indexPath)
     }
+    
+    private func prepareContainerView() {
+        
+        let width = frame.width * 0.8
+        let height = frame.height
+        
+        let maxX = frame.maxX * 0.05
+        
+        let containerViewFrame = CGRect(x: maxX, y: 0, width: width, height: height)
+        containerView.frame = containerViewFrame
+        containerView.layer.cornerRadius = 10
+        containerView.backgroundColor = .green
+        
+        addSubview(containerView)
+    }
 }
 
 
-// MARK: - Reusable View
+///////////////////
+// Reusable View //
+///////////////////
+
 final class ProjectLibraryReusableView: UICollectionReusableView {
     
     private var sectionTitle = UILabel()
@@ -252,14 +334,178 @@ final class ProjectLibraryReusableView: UICollectionReusableView {
         
         sectionTitle.text = "Projects"
         
-        let titleFont = UIFont(name: "Avenir", size: 30)
+        let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
+        CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
+        let titleFont = UIFont(name: "Averta-Bold", size: 35)
         sectionTitle.font = titleFont
-        sectionTitle.font = UIFont.boldSystemFont(ofSize: 30)
-        sectionTitle.textColor = .blue
         
         addSubview(sectionTitle)
     }
 }
+
+
+/////////////////////////////////
+// Add Project View Controller //
+/////////////////////////////////
+
+final class AddProjectViewController: UIViewController {
+    
+    private let mainView = AddProjectMainView()
+    
+    private enum State {
+        case `default`
+        case loading
+        case viewDidAppear
+        case cancelToAdd
+    }
+    
+    private var state: State = .default {
+        didSet {
+            didChange(state)
+        }
+    }
+    
+    private func didChange(_ state: State) {
+        switch state {
+        case .loading:
+            self.view = mainView
+        case .viewDidAppear:
+            setcancelToCreateButtonTarget()
+        case .cancelToAdd:
+            dismiss(animated: true, completion: nil)
+        default:
+            break
+        }
+    }
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        state = .loading
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        state = .viewDidAppear
+    }
+    
+    // MARK: - Methods
+    private func setcancelToCreateButtonTarget() {
+        mainView.cancelToCreateButton.addTarget(self, action: #selector(didPressCancelToCreateButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func didPressCancelToCreateButton() {
+        state = .cancelToAdd
+    }
+    
+}
+
+
+///////////////////////////
+// Add Project Main View //
+///////////////////////////
+
+final class AddProjectMainView: UIView {
+    
+    var cancelToCreateButton = UIButton()
+    var createProjectButton = UIButton()
+    var projectNameTextField = UITextField()
+
+    // Lines
+    var projectNameLineSeparator = UIView()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .white
+        prepareCancelButton()
+        prepareCreateProjectButton()
+        prepareProjectNameTextField()
+        prepareLineSeparator()
+    }
+    
+    private func prepareCancelButton() {
+        
+        let width = frame.width * 0.2
+        let height = frame.height * 0.04
+        
+        let maxX = frame.maxX * 0.05
+        let maxY = frame.maxY * 0.03
+        
+        let buttonFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        cancelToCreateButton.frame = buttonFrame
+        
+        cancelToCreateButton.setTitle("Cancel", for: .normal)
+        cancelToCreateButton.setTitleColor(.red, for: .normal)
+        
+        let buttonFont = UIFont(name: "Avenir", size: 20)
+        cancelToCreateButton.titleLabel?.font = buttonFont
+        
+        addSubview(cancelToCreateButton)
+    }
+    
+    private func prepareCreateProjectButton() {
+        
+        let width = frame.width * 0.2
+        let height = frame.height * 0.04
+        
+        let maxX = frame.maxX * 0.75
+        let maxY = frame.maxY * 0.03
+        
+        let buttonFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        createProjectButton.frame = buttonFrame
+        
+        createProjectButton.setTitle("Create", for: .normal)
+        
+        let fontColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
+        createProjectButton.setTitleColor(fontColor, for: .normal)
+        
+        let buttonFont = UIFont(name: "Avenir", size: 20)
+        createProjectButton.titleLabel?.font = buttonFont
+        
+        addSubview(createProjectButton)
+    }
+    
+    private func prepareProjectNameTextField() {
+        
+        let width = frame.width * 0.8
+        let height = frame.height * 0.1
+        
+        let maxX = frame.maxX * 0.065
+        let maxY = frame.maxY * 0.085
+        
+        let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        projectNameTextField.frame = textFieldFrame
+        
+        projectNameTextField.placeholder = "Project Name"
+        projectNameTextField.textColor = .black
+      
+        let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
+        CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
+        let textFieldFont = UIFont(name: "Averta-Bold", size: 35)
+        projectNameTextField.font = textFieldFont
+        
+        addSubview(projectNameTextField)
+    }
+    
+    private func prepareLineSeparator() {
+        
+        let width = frame.width * 0.85
+        let height: CGFloat = 1.0
+        
+        let maxX = frame.maxX * 0.065
+        let maxY = frame.maxY * 0.2
+        
+        let lineSeparatorFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        projectNameLineSeparator.frame = lineSeparatorFrame
+        
+        projectNameLineSeparator.backgroundColor = UIColor(colorLiteralRed: 213/255, green: 213/255, blue: 213/255, alpha: 1)
+        
+        addSubview(projectNameLineSeparator)
+    }
+    
+}
+
 
 // Displaying the view controller
 PlaygroundPage.current.liveView = ProjectLibraryViewController()
