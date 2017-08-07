@@ -10,11 +10,19 @@
 		0DC30BA2CC43C2944A4A78EA /* Pods_A_Project_StoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F57D0FDDDAB8D68311CD49 /* Pods_A_Project_StoryUITests.framework */; };
 		34B117EA0B445EE105CE9362 /* Pods_A_Project_StoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928CF55A63E6F7EE01A0D326 /* Pods_A_Project_StoryTests.framework */; };
 		95B2EF85E1866295E0AE7A56 /* Pods_A_Project_Story.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113830262D21F6550BAFDEE /* Pods_A_Project_Story.framework */; };
-		DD8250441F35ED3700CAB919 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8250431F35ED3700CAB919 /* Images.xcassets */; };
+		DD65C6D91F373A9C00333190 /* CreateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6D81F373A9C00333190 /* CreateProjectViewController.swift */; };
+		DD65C6DB1F373B2800333190 /* CreateProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */; };
+		DD65C6DD1F373B7F00333190 /* ProjectLibraryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */; };
+		DD65C6E01F373BFD00333190 /* ProjectLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DF1F373BFD00333190 /* ProjectLibraryViewModel.swift */; };
+		DD65C6E31F373C2F00333190 /* ProjectLibraryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */; };
+		DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */; };
+		DD65C7091F373E8700333190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7021F373E8700333190 /* Assets.xcassets */; };
+		DD65C70B1F373E8700333190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7051F373E8700333190 /* Images.xcassets */; };
+		DD65C70D1F373E8700333190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7071F373E8700333190 /* LaunchScreen.storyboard */; };
+		DD65C7101F3740CB00333190 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7061F373E8700333190 /* Info.plist */; };
+		DD65C7111F3740D000333190 /* A_Project_Story.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */; };
+		DD65C7141F37415A00333190 /* Averta-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7131F37415A00333190 /* Averta-Bold.otf */; };
 		DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879B11F2DBFAC004466BE /* AppDelegate.swift */; };
-		DD8879BA1F2DBFAD004466BE /* A_Project_Story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD8879B81F2DBFAD004466BE /* A_Project_Story.xcdatamodeld */; };
-		DD8879BC1F2DBFAD004466BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8879BB1F2DBFAD004466BE /* Assets.xcassets */; };
-		DD8879BF1F2DBFAD004466BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8879BD1F2DBFAD004466BE /* LaunchScreen.storyboard */; };
 		DD8879CA1F2DBFAD004466BE /* A_Project_StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879C91F2DBFAD004466BE /* A_Project_StoryTests.swift */; };
 		DD8879D51F2DBFAD004466BE /* A_Project_StoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879D41F2DBFAD004466BE /* A_Project_StoryUITests.swift */; };
 		DDFDD9E31F35AAA7006FB0AE /* ProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E11F35AAA7006FB0AE /* ProjectMainView.swift */; };
@@ -52,13 +60,19 @@
 		58178A5EA6B33293440233A6 /* Pods-A Project StoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Project StoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-A Project StoryTests/Pods-A Project StoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		928CF55A63E6F7EE01A0D326 /* Pods_A_Project_StoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A_Project_StoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3BE7CB26227B5CC5B5DDFB /* Pods-A Project Story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Project Story.release.xcconfig"; path = "Pods/Target Support Files/Pods-A Project Story/Pods-A Project Story.release.xcconfig"; sourceTree = "<group>"; };
-		DD8250431F35ED3700CAB919 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD65C6D81F373A9C00333190 /* CreateProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProjectViewController.swift; sourceTree = "<group>"; };
+		DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProjectMainView.swift; sourceTree = "<group>"; };
+		DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectLibraryReusableView.swift; path = ../ProjectLibraryReusableView.swift; sourceTree = "<group>"; };
+		DD65C6DF1F373BFD00333190 /* ProjectLibraryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewModel.swift; sourceTree = "<group>"; };
+		DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryDataModel.swift; sourceTree = "<group>"; };
+		DD65C7011F373E8700333190 /* A_Project_Story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A_Project_Story.xcdatamodel; sourceTree = "<group>"; };
+		DD65C7021F373E8700333190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD65C7051F373E8700333190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD65C7061F373E8700333190 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD65C7071F373E8700333190 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD65C7131F37415A00333190 /* Averta-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Averta-Bold.otf"; sourceTree = "<group>"; };
 		DD8879AE1F2DBFAC004466BE /* A Project Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Project Story.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8879B11F2DBFAC004466BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD8879B91F2DBFAD004466BE /* A_Project_Story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A_Project_Story.xcdatamodel; sourceTree = "<group>"; };
-		DD8879BB1F2DBFAD004466BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD8879BE1F2DBFAD004466BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DD8879C01F2DBFAD004466BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD8879C51F2DBFAD004466BE /* A Project StoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Project StoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8879C91F2DBFAD004466BE /* A_Project_StoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Project_StoryTests.swift; sourceTree = "<group>"; };
 		DD8879CB1F2DBFAD004466BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +126,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD65C6D71F373A7900333190 /* CreateProjectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C6D81F373A9C00333190 /* CreateProjectViewController.swift */,
+				DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */,
+			);
+			name = CreateProjectViewController;
+			path = AddProjectViewController;
+			sourceTree = "<group>";
+		};
+		DD65C6DE1F373BF200333190 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C6DF1F373BFD00333190 /* ProjectLibraryViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD65C6E11F373C1F00333190 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		DD65C6FF1F373E8700333190 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C7031F373E8700333190 /* Fonts */,
+				DD65C7061F373E8700333190 /* Info.plist */,
+				DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */,
+				DD65C7021F373E8700333190 /* Assets.xcassets */,
+				DD65C7051F373E8700333190 /* Images.xcassets */,
+				DD65C7071F373E8700333190 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD65C7031F373E8700333190 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C7131F37415A00333190 /* Averta-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		DD8879A51F2DBFAC004466BE = {
 			isa = PBXGroup;
 			children = (
@@ -142,11 +203,8 @@
 				DDFDD9F41F35AFB5006FB0AE /* UINavigationController */,
 				DDFDD9E51F35ABB2006FB0AE /* ProjectLibraryViewController */,
 				DDFDD9E01F35AAA7006FB0AE /* ProjectViewController */,
-				DD8879BB1F2DBFAD004466BE /* Assets.xcassets */,
-				DD8250431F35ED3700CAB919 /* Images.xcassets */,
-				DD8879BD1F2DBFAD004466BE /* LaunchScreen.storyboard */,
-				DD8879C01F2DBFAD004466BE /* Info.plist */,
-				DD8879B81F2DBFAD004466BE /* A_Project_Story.xcdatamodeld */,
+				DD65C6D71F373A7900333190 /* CreateProjectViewController */,
+				DD65C6FF1F373E8700333190 /* Supporting Files */,
 			);
 			path = "A Project Story";
 			sourceTree = "<group>";
@@ -182,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */,
+				DD65C6E11F373C1F00333190 /* DataModel */,
+				DD65C6DE1F373BF200333190 /* ViewModel */,
 				DDFDD9EC1F35AE56006FB0AE /* Views */,
 			);
 			path = ProjectLibraryViewController;
@@ -190,8 +250,8 @@
 		DDFDD9EC1F35AE56006FB0AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DDFDD9F11F35AE7E006FB0AE /* CollectionViewCells */,
 				DDFDD9EE1F35AE56006FB0AE /* ProjectLibraryMainView.swift */,
+				DDFDD9F11F35AE7E006FB0AE /* CollectionViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +259,7 @@
 		DDFDD9F11F35AE7E006FB0AE /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */,
 				DDFDD9F21F35AE7E006FB0AE /* ProjectLibraryCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
@@ -352,9 +413,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8250441F35ED3700CAB919 /* Images.xcassets in Resources */,
-				DD8879BF1F2DBFAD004466BE /* LaunchScreen.storyboard in Resources */,
-				DD8879BC1F2DBFAD004466BE /* Assets.xcassets in Resources */,
+				DD65C7111F3740D000333190 /* A_Project_Story.xcdatamodeld in Resources */,
+				DD65C7101F3740CB00333190 /* Info.plist in Resources */,
+				DD65C70B1F373E8700333190 /* Images.xcassets in Resources */,
+				DD65C7141F37415A00333190 /* Averta-Bold.otf in Resources */,
+				DD65C7091F373E8700333190 /* Assets.xcassets in Resources */,
+				DD65C70D1F373E8700333190 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,9 +586,14 @@
 				DDFDD9E41F35AAA7006FB0AE /* ProjectViewController.swift in Sources */,
 				DDFDD9F01F35AE56006FB0AE /* ProjectLibraryMainView.swift in Sources */,
 				DDFDD9F31F35AE7E006FB0AE /* ProjectLibraryCollectionViewCell.swift in Sources */,
+				DD65C6DB1F373B2800333190 /* CreateProjectMainView.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
+				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
+				DD65C6D91F373A9C00333190 /* CreateProjectViewController.swift in Sources */,
+				DD65C6E31F373C2F00333190 /* ProjectLibraryDataModel.swift in Sources */,
+				DD65C6E01F373BFD00333190 /* ProjectLibraryViewModel.swift in Sources */,
 				DDFDD9F61F35AFCD006FB0AE /* UINavigationController.swift in Sources */,
-				DD8879BA1F2DBFAD004466BE /* A_Project_Story.xcdatamodeld in Sources */,
+				DD65C6DD1F373B7F00333190 /* ProjectLibraryReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,17 +627,6 @@
 			targetProxy = DD8879D11F2DBFAD004466BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DD8879BD1F2DBFAD004466BE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD8879BE1F2DBFAD004466BE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DD8879D71F2DBFAD004466BE /* Debug */ = {
@@ -670,7 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9ME882KZTA;
-				INFOPLIST_FILE = "A Project Story/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/A Project Story/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trevinwisaksana.A-Project-Story";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -684,7 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9ME882KZTA;
-				INFOPLIST_FILE = "A Project Story/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/A Project Story/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trevinwisaksana.A-Project-Story";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -796,12 +854,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DD8879B81F2DBFAD004466BE /* A_Project_Story.xcdatamodeld */ = {
+		DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DD8879B91F2DBFAD004466BE /* A_Project_Story.xcdatamodel */,
+				DD65C7011F373E8700333190 /* A_Project_Story.xcdatamodel */,
 			);
-			currentVersion = DD8879B91F2DBFAD004466BE /* A_Project_Story.xcdatamodel */;
+			currentVersion = DD65C7011F373E8700333190 /* A_Project_Story.xcdatamodel */;
 			path = A_Project_Story.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -1,10 +1,12 @@
 //: Playground - noun: a place where people can play
 
+/*
+
 import UIKit
 import PlaygroundSupport
-@testable import SnapKit
+import SnapKit
 
-
+ 
 ////////////////
 // Data Model //
 ////////////////
@@ -418,6 +420,7 @@ final class AddProjectMainView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = .white
+        
         prepareCancelButton()
         prepareCreateProjectButton()
         prepareProjectNameTextField()
@@ -499,14 +502,16 @@ final class AddProjectMainView: UIView {
         let lineSeparatorFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
         projectNameLineSeparator.frame = lineSeparatorFrame
         
-        projectNameLineSeparator.backgroundColor = UIColor(colorLiteralRed: 213/255, green: 213/255, blue: 213/255, alpha: 1)
+        let backgroundColor = UIColor(colorLiteralRed: 213/255, green: 213/255, blue: 213/255, alpha: 1)
+        projectNameLineSeparator.backgroundColor = backgroundColor
         
         addSubview(projectNameLineSeparator)
     }
     
 }
 
+*/
 
 // Displaying the view controller
-PlaygroundPage.current.liveView = ProjectLibraryViewController()
-PlaygroundPage.current.needsIndefiniteExecution = true
+// PlaygroundPage.current.liveView = ProjectLibraryViewController()
+// PlaygroundPage.current.needsIndefiniteExecution = true
