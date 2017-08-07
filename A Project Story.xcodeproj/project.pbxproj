@@ -26,6 +26,7 @@
 		DD8879CA1F2DBFAD004466BE /* A_Project_StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879C91F2DBFAD004466BE /* A_Project_StoryTests.swift */; };
 		DD8879D51F2DBFAD004466BE /* A_Project_StoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879D41F2DBFAD004466BE /* A_Project_StoryUITests.swift */; };
 		DD9A787C1F3848990023E0E4 /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A787B1F3848990023E0E4 /* CreateProjectViewModel.swift */; };
+		DD9A78841F38BEF40023E0E4 /* DraftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A78831F38BEF40023E0E4 /* DraftCollectionViewCell.swift */; };
 		DDFDD9E31F35AAA7006FB0AE /* ProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E11F35AAA7006FB0AE /* ProjectMainView.swift */; };
 		DDFDD9E41F35AAA7006FB0AE /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E21F35AAA7006FB0AE /* ProjectViewController.swift */; };
 		DDFDD9E71F35ABBE006FB0AE /* ProjectLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */; };
@@ -81,6 +82,7 @@
 		DD8879D41F2DBFAD004466BE /* A_Project_StoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Project_StoryUITests.swift; sourceTree = "<group>"; };
 		DD8879D61F2DBFAD004466BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9A787B1F3848990023E0E4 /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
+		DD9A78831F38BEF40023E0E4 /* DraftCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDFDD9E11F35AAA7006FB0AE /* ProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainView.swift; sourceTree = "<group>"; };
 		DDFDD9E21F35AAA7006FB0AE /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */,
 				DDFDD9F21F35AE7E006FB0AE /* ProjectLibraryCollectionViewCell.swift */,
+				DD9A78831F38BEF40023E0E4 /* DraftCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				DD65C6DB1F373B2800333190 /* CreateProjectMainView.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
+				DD9A78841F38BEF40023E0E4 /* DraftCollectionViewCell.swift in Sources */,
 				DD9A787C1F3848990023E0E4 /* CreateProjectViewModel.swift in Sources */,
 				DD65C6D91F373A9C00333190 /* CreateProjectViewController.swift in Sources */,
 				DD65C6E31F373C2F00333190 /* Project.swift in Sources */,

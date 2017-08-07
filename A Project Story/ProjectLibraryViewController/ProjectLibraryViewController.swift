@@ -35,10 +35,17 @@ final class ProjectLibraryViewController: UIViewController {
         switch state {
         case .loading:
             view = mainView
+            
+            // Testing
+            let project = Project(title: "", ownerEmail: "", description: "")
+            viewModel.appendDraft(with: project)
+            viewModel.appendProject(with: project)
+            viewModel.appendProject(with: project)
+            
         case .viewDidLayoutSubviews:
             setAddProjectButtonTarget()
             registerCollectionViewHeader()
-            registerCollectionViewCell()
+            registerCollectionViewCells()
             setCollectionViewDataSource()
         case .viewDidAppear:
             break
@@ -85,10 +92,14 @@ final class ProjectLibraryViewController: UIViewController {
         mainView.projectLibraryCollectionView.dataSource = self
     }
     
-    private func registerCollectionViewCell() {
+    private func registerCollectionViewCells() {
         mainView.projectLibraryCollectionView.register(
             ProjectLibraryCollectionViewCell.self,
             forCellWithReuseIdentifier: "ProjectLibraryCell"
+        )
+        mainView.projectLibraryCollectionView.register(
+            DraftCollectionViewCell.self,
+            forCellWithReuseIdentifier: "DraftCell"
         )
     }
     
@@ -113,11 +124,20 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectLibraryCell", for: indexPath) as! ProjectLibraryCollectionViewCell
+        
+        let section = indexPath.section
+        let cell: UICollectionViewCell
+        
+        if section == 0 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DraftCell", for: indexPath) as! DraftCollectionViewCell
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProjectLibraryCell", for: indexPath) as! ProjectLibraryCollectionViewCell
+        }
+    
         return cell
     }
     
@@ -127,6 +147,28 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         case UICollectionElementKindSectionHeader:
             
             let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectLibraryCollectionViewHeader", for: indexPath) as! ProjectLibraryReusableView
+            
+            let sectionTitleLabel = reusableView.sectionTitleLabel
+            var listOfSectionTitle = [String]()
+            let section = indexPath.section
+            
+            let numberOfDrafts = viewModel.numberOfItemsIn(section: 0)
+            let numberOfProjects = viewModel.numberOfItemsIn(section: 1)
+            
+            if numberOfDrafts > 0 {
+                listOfSectionTitle.append("Drafts")
+            } else {
+                listOfSectionTitle.append("")
+            }
+            
+            if numberOfProjects > 0 {
+                listOfSectionTitle.append("Featured")
+            } else {
+                listOfSectionTitle.append("")
+            }
+            
+            sectionTitleLabel.text = listOfSectionTitle[section]
+            
             return reusableView
             
         default:
@@ -136,10 +178,17 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = self.view.frame.width
-        let height = self.view.frame.height * 0.5
+        let section = indexPath.section
         
-        return CGSize(width: width, height: height)
+        if section == 0 {
+            let width = self.view.frame.width
+            let height = self.view.frame.height * 0.1
+            return CGSize(width: width, height: height)
+        } else {
+            let width = self.view.frame.width
+            let height = self.view.frame.height * 0.5
+            return CGSize(width: width, height: height)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -151,7 +200,16 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        
+        if section == 0 {
+            return 15
+        } else {
+            return 20
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

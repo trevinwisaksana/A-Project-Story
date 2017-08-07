@@ -27,7 +27,13 @@ final class ProjectLibraryViewModel {
     }
     
     func numberOfItemsIn(section: Int) -> Int {
-        return listOfProjects.count
+        if section == 0 {
+            return listOfDrafts.count
+        } else if section == 1 {
+            return listOfProjects.count
+        } else {
+            return -1
+        }
     }
     
     func projectTitleAt(indexPath: IndexPath) -> String {

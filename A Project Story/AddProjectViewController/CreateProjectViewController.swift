@@ -15,7 +15,7 @@ import UIKit
 final class CreateProjectViewController: UIViewController {
     
     fileprivate let mainView = CreateProjectMainView()
-    private let viewModel = CreateProjectViewModel()
+    let viewModel = CreateProjectViewModel()
     
     private enum State {
         case `default`
@@ -127,7 +127,7 @@ final class CreateProjectViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // TODO: Create universal error state
+    // TODO: Create a universal error state
     private func translateErrorMessage(_ error: NSError) {
         switch error.domain {
         case "titleAndEmailIsEmpty":
@@ -141,7 +141,7 @@ final class CreateProjectViewController: UIViewController {
         }
     }
     
-    // Miscellaneaous
+    // Miscellaneous
     override var prefersStatusBarHidden: Bool {
         return true
     }

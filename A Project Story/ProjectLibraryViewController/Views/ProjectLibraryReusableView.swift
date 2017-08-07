@@ -14,7 +14,7 @@ import UIKit
 
 final class ProjectLibraryReusableView: UICollectionReusableView {
     
-    private var sectionTitle = UILabel()
+    var sectionTitleLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,14 +33,14 @@ final class ProjectLibraryReusableView: UICollectionReusableView {
         let maxX = frame.maxX * 0.05
         
         let sectionTitleFrame = CGRect(x: maxX, y: 0, width: width, height: height)
-        sectionTitle.frame = sectionTitleFrame
+        sectionTitleLabel.frame = sectionTitleFrame
         
-        sectionTitle.text = "Featured"
+        sectionTitleLabel.text = "Featured"
         
         let titleFont = UIFont(name: "Averta-Bold", size: frame.width * 0.09)
-        sectionTitle.font = titleFont
+        sectionTitleLabel.font = titleFont
         
-        addSubview(sectionTitle)
+        addSubview(sectionTitleLabel)
     }
 }
 
