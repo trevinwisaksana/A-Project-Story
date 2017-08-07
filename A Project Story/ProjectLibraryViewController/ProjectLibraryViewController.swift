@@ -15,7 +15,7 @@ import UIKit
 final class ProjectLibraryViewController: UIViewController {
     
     private var mainView = ProjectLibraryMainView()
-    fileprivate let viewModel = ProjectLibraryViewModel()
+    let viewModel = ProjectLibraryViewModel()
     
     private enum State {
         case `default`
@@ -102,7 +102,6 @@ final class ProjectLibraryViewController: UIViewController {
 }
 
 
-
 ///////////////////////////////
 // Collection View Extension //
 ///////////////////////////////
@@ -110,8 +109,7 @@ final class ProjectLibraryViewController: UIViewController {
 extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // return viewModel.numberOfItemsIn(section: section)
-        return 2
+        return viewModel.numberOfItemsIn(section: section)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

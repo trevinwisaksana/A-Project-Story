@@ -17,7 +17,7 @@ final class CreateProjectMainView: UIView {
     
     var cancelToCreateButton = UIButton()
     var createProjectButton = UIButton()
-    var projectNameTextField = UITextField()
+    var projectTitleTextField = UITextField()
     var projectDescriptionTextView = UITextView()
     var emailAddressTitleLabel = UILabel()
     var emailAddressTextField = UITextField()
@@ -32,7 +32,7 @@ final class CreateProjectMainView: UIView {
         
         prepareCancelButton()
         prepareCreateProjectButton()
-        prepareProjectNameTextField()
+        prepareProjectTitleTextField()
         prepareLineSeparator()
         prepareProjectDescriptionTextView()
         prepareEmailAddressTitleLabel()
@@ -97,7 +97,7 @@ final class CreateProjectMainView: UIView {
         }
     }
     
-    private func prepareProjectNameTextField() {
+    private func prepareProjectTitleTextField() {
         
         let width = frame.width * 0.88
         let height = frame.height * 0.1
@@ -106,21 +106,21 @@ final class CreateProjectMainView: UIView {
         let maxY = frame.maxY * 0.085
         
         let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
-        projectNameTextField.frame = textFieldFrame
+        projectTitleTextField.frame = textFieldFrame
         
-        projectNameTextField.returnKeyType = .done
+        projectTitleTextField.returnKeyType = .done
         
-        projectNameTextField.placeholder = "New Project Name"
-        projectNameTextField.textColor = .black
+        projectTitleTextField.placeholder = "New Project Title"
+        projectTitleTextField.textColor = .black
         
         let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
         CTFontManagerRegisterFontsForURL(fontURL, CTFontManagerScope.process, nil)
         let textFieldFont = UIFont(name: "Averta-Bold", size: frame.width * 0.08)
-        projectNameTextField.font = textFieldFont
+        projectTitleTextField.font = textFieldFont
         
-        addSubview(projectNameTextField)
+        addSubview(projectTitleTextField)
         
-        projectNameTextField.snp.makeConstraints { (make) in
+        projectTitleTextField.snp.makeConstraints { (make) in
             make.top.equalTo(createProjectButton).offset(60)
             make.top.equalTo(cancelToCreateButton).offset(60)
             make.width.equalTo(width)
@@ -147,7 +147,7 @@ final class CreateProjectMainView: UIView {
         projectNameLineSeparator.snp.makeConstraints { (make) in
             make.height.equalTo(1)
             make.width.equalTo(frame.width * 0.88)
-            make.top.equalTo(projectNameTextField).offset(40)
+            make.top.equalTo(projectTitleTextField).offset(40)
             make.left.equalTo(23)
             make.right.equalTo(-23)
         }
@@ -273,7 +273,7 @@ final class CreateProjectMainView: UIView {
     // MARK: - Error Handling
     func displayProjectNameAlert() {
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
-        projectNameTextField.attributedPlaceholder = NSAttributedString(string: "New Project Name", attributes: [NSForegroundColorAttributeName: placeholderColor])
+        projectTitleTextField.attributedPlaceholder = NSAttributedString(string: "New Project Title", attributes: [NSForegroundColorAttributeName: placeholderColor])
     }
     
     func displayEmailAddressAlert() {

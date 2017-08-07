@@ -15,19 +15,21 @@ import UIKit
 final class CreateProjectViewController: UIViewController {
     
     fileprivate let mainView = CreateProjectMainView()
+    private let viewModel = CreateProjectViewModel()
     
     private enum State {
         case `default`
         case loading
         case viewDidAppear
         case cancelToAdd
-        case createProject
-        case failedToCreateProject(as: Error)
+        case didBeginToCreateProject
+        case createProject(with: Project)
+        case failedToCreateProject(as: CreateProjectError)
     }
     
-    private enum `Error` {
-        case projectNameAndEmailIsEmpty
-        case projectNameIsEmpty
+    private enum CreateProjectError: Error {
+        case projectTitleAndEmailIsEmpty
+        case projectTitleIsEmpty
         case emailAddressIsEmpty
     }
     
@@ -46,8 +48,12 @@ final class CreateProjectViewController: UIViewController {
             setCreateProjectButtonTarget()
             prepareTextFieldDelegates()
             prepareTextViewDelegate()
-        case .cancelToAdd, .createProject:
+        case .cancelToAdd:
             dismiss(animated: true, completion: nil)
+        case .didBeginToCreateProject:
+            createProjectDraft()
+        case .createProject(let data):
+            passDataToPresenterViewController(data: data)
         case .failedToCreateProject(let error):
             throwWarning(for: error)
         default:
@@ -55,12 +61,12 @@ final class CreateProjectViewController: UIViewController {
         }
     }
     
-    private func throwWarning(for error: Error) {
+    private func throwWarning(for error: CreateProjectError) {
         switch error {
-        case .projectNameAndEmailIsEmpty:
+        case .projectTitleAndEmailIsEmpty:
             mainView.displayProjectNameAlert()
             mainView.displayEmailAddressAlert()
-        case .projectNameIsEmpty:
+        case .projectTitleIsEmpty:
             mainView.displayProjectNameAlert()
         case .emailAddressIsEmpty:
             mainView.displayEmailAddressAlert()
@@ -78,11 +84,6 @@ final class CreateProjectViewController: UIViewController {
         state = .viewDidAppear
     }
     
-    // Miscellaneaous
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     // MARK: - Methods
     private func setCancelToCreateButtonTarget() {
         mainView.cancelToCreateButton.addTarget(self, action: #selector(didPressCancelToCreateButton), for: .touchUpInside)
@@ -97,39 +98,60 @@ final class CreateProjectViewController: UIViewController {
         mainView.createProjectButton.addTarget(self, action: #selector(didPressCreateProjectButton), for: .touchUpInside)
     }
     
-    private func createProjectInformationIsComplete() -> Bool {
-        
-        let projectName = mainView.projectNameTextField.text ?? ""
-        let emailAddress = mainView.emailAddressTextField.text ?? ""
-        
-        if projectName.isEmpty && emailAddress.isEmpty {
-            state = .failedToCreateProject(as: .projectNameAndEmailIsEmpty)
-            return false
-        } else if projectName.isEmpty {
-            state = .failedToCreateProject(as: .projectNameIsEmpty)
-            return false
-        } else if emailAddress.isEmpty {
-            state = .failedToCreateProject(as: .emailAddressIsEmpty)
-            return false
-        }
-        
-        return true
-    }
-    
     @objc
     private func didPressCreateProjectButton() {
-        if createProjectInformationIsComplete() {
-            state = .createProject
+        state = .didBeginToCreateProject
+    }
+    
+    private func createProjectDraft() {
+        
+        let projectName = mainView.projectTitleTextField.text ?? ""
+        let email = mainView.emailAddressTextField.text ?? ""
+        let description = mainView.projectDescriptionTextView.text ?? ""
+        
+        viewModel.createProject(title: projectName, email: email, description: description, completion: { [weak self] (error, data) in
+            if error == nil {
+                if let data = data {
+                    self?.state = .createProject(with: data)
+                }
+            } else {
+                self?.translateErrorMessage(error!)
+            } 
+        })
+    }
+    
+    private func passDataToPresenterViewController(data: Project) {
+        if let presenter = presentingViewController as? ProjectLibraryViewController {
+            presenter.viewModel.appendDraft(with: data)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // TODO: Create universal error state
+    private func translateErrorMessage(_ error: NSError) {
+        switch error.domain {
+        case "titleAndEmailIsEmpty":
+            state = .failedToCreateProject(as: .projectTitleAndEmailIsEmpty)
+        case "titleIsEmpty":
+            state = .failedToCreateProject(as: .projectTitleIsEmpty)
+        case "emailIsEmpty":
+            state = .failedToCreateProject(as: .emailAddressIsEmpty)
+        default:
+            break
         }
     }
     
+    // Miscellaneaous
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 
 extension CreateProjectViewController: UITextFieldDelegate {
     
     fileprivate func prepareTextFieldDelegates() {
-        mainView.projectNameTextField.delegate = self
+        mainView.projectTitleTextField.delegate = self
         mainView.emailAddressTextField.delegate = self
     }
     
@@ -140,10 +162,10 @@ extension CreateProjectViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        let projectNameTextField = mainView.projectNameTextField
+        let projectTitleTextField = mainView.projectTitleTextField
         let emailAddressTextField = mainView.emailAddressTextField
         
-        if textField.isEqual(projectNameTextField) {
+        if textField.isEqual(projectTitleTextField) {
             textField.placeholder = "New Project Name"
         }
         

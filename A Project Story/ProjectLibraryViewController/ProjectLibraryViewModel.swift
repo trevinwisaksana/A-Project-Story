@@ -15,14 +15,23 @@ import Foundation
 // MARK: - View Model
 final class ProjectLibraryViewModel {
     
-    private var listOfProjects = [ProjectDataModel]()
+    private var listOfProjects = [Project]()
+    private var listOfDrafts = [Project]()
+    
+    func appendDraft(with data: Project) {
+        listOfDrafts.append(data)
+    }
+    
+    func appendProject(with data: Project) {
+        listOfProjects.append(data)
+    }
     
     func numberOfItemsIn(section: Int) -> Int {
         return listOfProjects.count
     }
     
     func projectTitleAt(indexPath: IndexPath) -> String {
-        return listOfProjects[indexPath.row].projectName
+        return listOfProjects[indexPath.row].title
     }
     
     func didSelectItemAt(indexPath: IndexPath) {

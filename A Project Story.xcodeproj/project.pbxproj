@@ -14,7 +14,7 @@
 		DD65C6DB1F373B2800333190 /* CreateProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */; };
 		DD65C6DD1F373B7F00333190 /* ProjectLibraryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */; };
 		DD65C6E01F373BFD00333190 /* ProjectLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6DF1F373BFD00333190 /* ProjectLibraryViewModel.swift */; };
-		DD65C6E31F373C2F00333190 /* ProjectLibraryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */; };
+		DD65C6E31F373C2F00333190 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65C6E21F373C2F00333190 /* Project.swift */; };
 		DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */; };
 		DD65C7091F373E8700333190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7021F373E8700333190 /* Assets.xcassets */; };
 		DD65C70B1F373E8700333190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7051F373E8700333190 /* Images.xcassets */; };
@@ -25,6 +25,7 @@
 		DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879B11F2DBFAC004466BE /* AppDelegate.swift */; };
 		DD8879CA1F2DBFAD004466BE /* A_Project_StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879C91F2DBFAD004466BE /* A_Project_StoryTests.swift */; };
 		DD8879D51F2DBFAD004466BE /* A_Project_StoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8879D41F2DBFAD004466BE /* A_Project_StoryUITests.swift */; };
+		DD9A787C1F3848990023E0E4 /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A787B1F3848990023E0E4 /* CreateProjectViewModel.swift */; };
 		DDFDD9E31F35AAA7006FB0AE /* ProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E11F35AAA7006FB0AE /* ProjectMainView.swift */; };
 		DDFDD9E41F35AAA7006FB0AE /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E21F35AAA7006FB0AE /* ProjectViewController.swift */; };
 		DDFDD9E71F35ABBE006FB0AE /* ProjectLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */; };
@@ -64,7 +65,7 @@
 		DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProjectMainView.swift; sourceTree = "<group>"; };
 		DD65C6DC1F373B7F00333190 /* ProjectLibraryReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectLibraryReusableView.swift; path = ../ProjectLibraryReusableView.swift; sourceTree = "<group>"; };
 		DD65C6DF1F373BFD00333190 /* ProjectLibraryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewModel.swift; sourceTree = "<group>"; };
-		DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryDataModel.swift; sourceTree = "<group>"; };
+		DD65C6E21F373C2F00333190 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		DD65C7011F373E8700333190 /* A_Project_Story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A_Project_Story.xcdatamodel; sourceTree = "<group>"; };
 		DD65C7021F373E8700333190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD65C7051F373E8700333190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		DD8879D01F2DBFAD004466BE /* A Project StoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "A Project StoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8879D41F2DBFAD004466BE /* A_Project_StoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Project_StoryUITests.swift; sourceTree = "<group>"; };
 		DD8879D61F2DBFAD004466BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9A787B1F3848990023E0E4 /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
 		DDFDD9E11F35AAA7006FB0AE /* ProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainView.swift; sourceTree = "<group>"; };
 		DDFDD9E21F35AAA7006FB0AE /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				DD65C6D81F373A9C00333190 /* CreateProjectViewController.swift */,
-				DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */,
+				DD9A78781F38487E0023E0E4 /* ViewModel */,
+				DD9A78771F38469A0023E0E4 /* Views */,
 			);
 			name = CreateProjectViewController;
 			path = AddProjectViewController;
@@ -144,12 +147,12 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		DD65C6E11F373C1F00333190 /* DataModel */ = {
+		DD65C6E11F373C1F00333190 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				DD65C6E21F373C2F00333190 /* ProjectLibraryDataModel.swift */,
+				DD65C6E21F373C2F00333190 /* Project.swift */,
 			);
-			name = DataModel;
+			name = Data;
 			sourceTree = "<group>";
 		};
 		DD65C6FF1F373E8700333190 /* Supporting Files */ = {
@@ -200,6 +203,7 @@
 			children = (
 				DD8879B11F2DBFAC004466BE /* AppDelegate.swift */,
 				DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */,
+				DD9A78821F389FBD0023E0E4 /* Models */,
 				DDFDD9F41F35AFB5006FB0AE /* UINavigationController */,
 				DDFDD9E51F35ABB2006FB0AE /* ProjectLibraryViewController */,
 				DDFDD9E01F35AAA7006FB0AE /* ProjectViewController */,
@@ -227,6 +231,29 @@
 			path = "A Project StoryUITests";
 			sourceTree = "<group>";
 		};
+		DD9A78771F38469A0023E0E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD65C6DA1F373B2800333190 /* CreateProjectMainView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD9A78781F38487E0023E0E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD9A787B1F3848990023E0E4 /* CreateProjectViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD9A78821F389FBD0023E0E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DDFDD9E01F35AAA7006FB0AE /* ProjectViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFDD9E61F35ABBE006FB0AE /* ProjectLibraryViewController.swift */,
-				DD65C6E11F373C1F00333190 /* DataModel */,
+				DD65C6E11F373C1F00333190 /* Data */,
 				DD65C6DE1F373BF200333190 /* ViewModel */,
 				DDFDD9EC1F35AE56006FB0AE /* Views */,
 			);
@@ -589,8 +616,9 @@
 				DD65C6DB1F373B2800333190 /* CreateProjectMainView.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
+				DD9A787C1F3848990023E0E4 /* CreateProjectViewModel.swift in Sources */,
 				DD65C6D91F373A9C00333190 /* CreateProjectViewController.swift in Sources */,
-				DD65C6E31F373C2F00333190 /* ProjectLibraryDataModel.swift in Sources */,
+				DD65C6E31F373C2F00333190 /* Project.swift in Sources */,
 				DD65C6E01F373BFD00333190 /* ProjectLibraryViewModel.swift in Sources */,
 				DDFDD9F61F35AFCD006FB0AE /* UINavigationController.swift in Sources */,
 				DD65C6DD1F373B7F00333190 /* ProjectLibraryReusableView.swift in Sources */,
