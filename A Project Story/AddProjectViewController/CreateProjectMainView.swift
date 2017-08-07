@@ -40,7 +40,6 @@ final class CreateProjectMainView: UIView {
         prepareEmailAddressTextField()
     }
     
-    // Only for PDD
     private func setScreenSize() {
         let screenSize = UIScreen.main.bounds.size
         frame.size = screenSize
@@ -100,7 +99,7 @@ final class CreateProjectMainView: UIView {
     
     private func prepareProjectNameTextField() {
         
-        let width = frame.width * 0.8
+        let width = frame.width * 0.88
         let height = frame.height * 0.1
         
         let maxX = frame.maxX * 0.065
@@ -109,7 +108,9 @@ final class CreateProjectMainView: UIView {
         let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
         projectNameTextField.frame = textFieldFrame
         
-        projectNameTextField.placeholder = "Project Name"
+        projectNameTextField.returnKeyType = .done
+        
+        projectNameTextField.placeholder = "New Project Name"
         projectNameTextField.textColor = .black
         
         let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
@@ -122,6 +123,7 @@ final class CreateProjectMainView: UIView {
         projectNameTextField.snp.makeConstraints { (make) in
             make.top.equalTo(createProjectButton).offset(60)
             make.top.equalTo(cancelToCreateButton).offset(60)
+            make.width.equalTo(width)
             make.leading.equalTo(21.5)
         }
     }
@@ -153,14 +155,16 @@ final class CreateProjectMainView: UIView {
     
     private func prepareProjectDescriptionTextView() {
         
-        let width = frame.width * 0.9
-        let height = frame.height * 0.3
+        let width = frame.width * 0.88
+        let height = frame.height * 0.25
         
         let maxX = frame.maxX * 0.048
         let maxY = frame.maxY * 0.22
         
         let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
         projectDescriptionTextView.frame = textFieldFrame
+        
+        projectDescriptionTextView.returnKeyType = .default
         
         projectDescriptionTextView.text = "Enter your project description..."
         projectDescriptionTextView.textColor = .lightGray
@@ -175,8 +179,8 @@ final class CreateProjectMainView: UIView {
         
         projectDescriptionTextView.snp.makeConstraints { (make) in
             make.top.equalTo(projectNameLineSeparator).offset(5)
-            make.width.equalTo(frame.width * 0.88)
-            make.height.equalTo(frame.height * 0.3)
+            make.width.equalTo(width)
+            make.height.equalTo(height)
             make.left.equalTo(17)
             make.right.equalTo(-17)
         }
@@ -205,7 +209,7 @@ final class CreateProjectMainView: UIView {
         
         emailAddressTitleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(projectDescriptionTextView.snp.bottom).offset(0)
-            make.width.equalTo(frame.width * 0.4)
+            make.width.equalTo(width)
             make.left.equalTo(22)
         }
     }
@@ -228,7 +232,7 @@ final class CreateProjectMainView: UIView {
         
         emailAddressTitleLineSeparator.snp.makeConstraints { (make) in
             make.height.equalTo(1)
-            make.width.equalTo(frame.width * 0.88)
+            make.width.equalTo(width)
             make.top.equalTo(emailAddressTitleLabel.snp.bottom).offset(4)
             make.left.equalTo(23)
             make.right.equalTo(-23)
@@ -237,7 +241,7 @@ final class CreateProjectMainView: UIView {
     
     private func prepareEmailAddressTextField() {
         
-        let width = frame.width * 0.9
+        let width = frame.width * 0.88
         let height = frame.height * 0.04
         
         let maxX = frame.maxX * 0.05
@@ -245,6 +249,11 @@ final class CreateProjectMainView: UIView {
         
         let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
         emailAddressTextField.frame = textFieldFrame
+        
+        emailAddressTextField.returnKeyType = .done
+        emailAddressTextField.keyboardType = .emailAddress
+        emailAddressTextField.autocorrectionType = .no
+        emailAddressTextField.autocapitalizationType = .none
         
         emailAddressTextField.placeholder = "Enter your email address..."
         emailAddressTextField.textColor = .black
@@ -256,9 +265,20 @@ final class CreateProjectMainView: UIView {
         
         emailAddressTextField.snp.makeConstraints { (make) in
             make.top.equalTo(emailAddressTitleLineSeparator.snp.bottom).offset(8)
-            make.width.equalTo(frame.width * 0.88)
+            make.width.equalTo(width)
             make.leading.equalTo(22)
         }
+    }
+    
+    // MARK: - Error Handling
+    func displayProjectNameAlert() {
+        let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
+        projectNameTextField.attributedPlaceholder = NSAttributedString(string: "New Project Name", attributes: [NSForegroundColorAttributeName: placeholderColor])
+    }
+    
+    func displayEmailAddressAlert() {
+        let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
+        emailAddressTextField.attributedPlaceholder = NSAttributedString(string: "Enter your email address...", attributes: [NSForegroundColorAttributeName: placeholderColor])
     }
     
 }
