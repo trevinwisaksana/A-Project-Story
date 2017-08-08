@@ -64,10 +64,10 @@ final class CreateProjectViewController: UIViewController {
     private func throwWarning(for error: CreateProjectError) {
         switch error {
         case .projectTitleAndEmailIsEmpty:
-            mainView.displayProjectNameAlert()
+            mainView.displayProjectTitleAlert()
             mainView.displayEmailAddressAlert()
         case .projectTitleIsEmpty:
-            mainView.displayProjectNameAlert()
+            mainView.displayProjectTitleAlert()
         case .emailAddressIsEmpty:
             mainView.displayEmailAddressAlert()
         }

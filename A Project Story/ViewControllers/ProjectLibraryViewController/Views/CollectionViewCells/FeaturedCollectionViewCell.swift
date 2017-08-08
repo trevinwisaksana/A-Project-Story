@@ -1,5 +1,5 @@
 //
-//  ProjectLibraryCollectionViewCell.swift
+//  FeaturedCollectionViewCell.swift
 //  A Project Story
 //
 //  Created by Trevin Wisaksana on 8/5/17.
@@ -12,7 +12,7 @@ import UIKit
 // Collection View Cell //
 //////////////////////////
 
-final class ProjectLibraryCollectionViewCell: UICollectionViewCell {
+final class FeaturedCollectionViewCell: UICollectionViewCell {
     
     var containerView = UIView()
     var projectTitleLabel = UILabel()

@@ -12,6 +12,7 @@ final class ProjectViewController: UIViewController {
     
     // MARK: - Variables
     private let mainView = ProjectMainView()
+    let viewModel = ProjectViewModel()
     
     // MARK: - Initializers
     init(project: Project) {
@@ -38,7 +39,7 @@ final class ProjectViewController: UIViewController {
     private func didChange(_ state: State) {
         switch state {
         case .loading:
-            break
+            view = mainView
         default:
             break
         }
@@ -48,5 +49,10 @@ final class ProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         state = .loading
+    }
+    
+    // Miscellaneous
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }

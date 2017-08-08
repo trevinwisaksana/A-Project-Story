@@ -1,5 +1,5 @@
 //
-//  ProjectLibraryReusableView.swift
+//  FeaturedCollectionViewHeader.swift
 //  A Project Story
 //
 //  Created by Trevin Wisaksana on 8/6/17.
@@ -12,7 +12,7 @@ import UIKit
 // Reusable View //
 ///////////////////
 
-final class ProjectLibraryReusableView: UICollectionReusableView {
+final class FeaturedCollectionViewHeader: UICollectionReusableView {
     
     var sectionTitleLabel = UILabel()
     
@@ -34,8 +34,6 @@ final class ProjectLibraryReusableView: UICollectionReusableView {
         
         let sectionTitleFrame = CGRect(x: maxX, y: 0, width: width, height: height)
         sectionTitleLabel.frame = sectionTitleFrame
-        
-        sectionTitleLabel.text = "Featured"
         
         let titleFont = UIFont(name: "Averta-Bold", size: frame.width * 0.09)
         sectionTitleLabel.font = titleFont

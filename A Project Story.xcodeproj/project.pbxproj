@@ -26,9 +26,9 @@
 		DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2A51F394C530059C672 /* ProjectLibraryViewController.swift */; };
 		DDAEB2B61F394C530059C672 /* ProjectLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2A61F394C530059C672 /* ProjectLibraryViewModel.swift */; };
 		DDAEB2B71F394C530059C672 /* DraftCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2A91F394C530059C672 /* DraftCollectionViewCell.swift */; };
-		DDAEB2B81F394C530059C672 /* ProjectLibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AA1F394C530059C672 /* ProjectLibraryCollectionViewCell.swift */; };
+		DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AA1F394C530059C672 /* FeaturedCollectionViewCell.swift */; };
 		DDAEB2B91F394C530059C672 /* ProjectLibraryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AB1F394C530059C672 /* ProjectLibraryMainView.swift */; };
-		DDAEB2BA1F394C530059C672 /* ProjectLibraryReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AC1F394C530059C672 /* ProjectLibraryReusableView.swift */; };
+		DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */; };
 		DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */; };
 		DDAEB2BC1F394C530059C672 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */; };
 		DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2B11F394C530059C672 /* UINavigationController.swift */; };
@@ -36,6 +36,7 @@
 		DDAEB2C11F394CE50059C672 /* DraftMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C01F394CE50059C672 /* DraftMainView.swift */; };
 		DDAEB2C31F394D640059C672 /* DraftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C21F394D640059C672 /* DraftViewModel.swift */; };
 		DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C51F3951F10059C672 /* ProjectViewModel.swift */; };
+		DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C71F3989650059C672 /* DraftCollectionViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +87,9 @@
 		DDAEB2A51F394C530059C672 /* ProjectLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewController.swift; sourceTree = "<group>"; };
 		DDAEB2A61F394C530059C672 /* ProjectLibraryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryViewModel.swift; sourceTree = "<group>"; };
 		DDAEB2A91F394C530059C672 /* DraftCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftCollectionViewCell.swift; sourceTree = "<group>"; };
-		DDAEB2AA1F394C530059C672 /* ProjectLibraryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDAEB2AA1F394C530059C672 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		DDAEB2AB1F394C530059C672 /* ProjectLibraryMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectLibraryMainView.swift; sourceTree = "<group>"; };
-		DDAEB2AC1F394C530059C672 /* ProjectLibraryReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectLibraryReusableView.swift; path = ../ProjectLibraryReusableView.swift; sourceTree = "<group>"; };
+		DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedCollectionViewHeader.swift; path = ../FeaturedCollectionViewHeader.swift; sourceTree = "<group>"; };
 		DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainView.swift; sourceTree = "<group>"; };
 		DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		DDAEB2B11F394C530059C672 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		DDAEB2C01F394CE50059C672 /* DraftMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftMainView.swift; sourceTree = "<group>"; };
 		DDAEB2C21F394D640059C672 /* DraftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftViewModel.swift; sourceTree = "<group>"; };
 		DDAEB2C51F3951F10059C672 /* ProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		DDAEB2C71F3989650059C672 /* DraftCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftCollectionViewHeader.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,8 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2BE1F394CAA0059C672 /* DraftViewController.swift */,
-				DDAEB2C01F394CE50059C672 /* DraftMainView.swift */,
-				DDAEB2C21F394D640059C672 /* DraftViewModel.swift */,
+				DDAEB2CC1F399CCE0059C672 /* ViewModel */,
+				DDAEB2CB1F399CC60059C672 /* Views */,
 			);
 			path = DraftViewController;
 			sourceTree = "<group>";
@@ -272,9 +274,8 @@
 		DDAEB2A81F394C530059C672 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				DDAEB2AC1F394C530059C672 /* ProjectLibraryReusableView.swift */,
-				DDAEB2A91F394C530059C672 /* DraftCollectionViewCell.swift */,
-				DDAEB2AA1F394C530059C672 /* ProjectLibraryCollectionViewCell.swift */,
+				DDAEB2C91F3990940059C672 /* Headers */,
+				DDAEB2CA1F39909E0059C672 /* Cells */,
 			);
 			name = ReusableViews;
 			path = CollectionViewCells;
@@ -284,8 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */,
-				DDAEB2C51F3951F10059C672 /* ProjectViewModel.swift */,
 				DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */,
+				DDAEB2C51F3951F10059C672 /* ProjectViewModel.swift */,
 			);
 			path = ProjectViewController;
 			sourceTree = "<group>";
@@ -302,6 +303,40 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2A61F394C530059C672 /* ProjectLibraryViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDAEB2C91F3990940059C672 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */,
+				DDAEB2C71F3989650059C672 /* DraftCollectionViewHeader.swift */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		DDAEB2CA1F39909E0059C672 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2A91F394C530059C672 /* DraftCollectionViewCell.swift */,
+				DDAEB2AA1F394C530059C672 /* FeaturedCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DDAEB2CB1F399CC60059C672 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2C01F394CE50059C672 /* DraftMainView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DDAEB2CC1F399CCE0059C672 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2C21F394D640059C672 /* DraftViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -620,13 +655,14 @@
 				DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
 				DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */,
+				DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */,
 				DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */,
 				DDAEB2B21F394C530059C672 /* CreateProjectMainView.swift in Sources */,
 				DDAEB2B31F394C530059C672 /* CreateProjectViewController.swift in Sources */,
 				DDAEB2C31F394D640059C672 /* DraftViewModel.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
-				DDAEB2B81F394C530059C672 /* ProjectLibraryCollectionViewCell.swift in Sources */,
-				DDAEB2BA1F394C530059C672 /* ProjectLibraryReusableView.swift in Sources */,
+				DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */,
+				DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */,
 				DDAEB2C11F394CE50059C672 /* DraftMainView.swift in Sources */,
 				DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */,
 				DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */,

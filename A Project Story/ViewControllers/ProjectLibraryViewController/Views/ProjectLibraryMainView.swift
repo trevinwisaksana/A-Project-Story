@@ -45,9 +45,9 @@ final class ProjectLibraryMainView: UIView {
     private func prepareCollectionView() {
         
         let width = frame.width
-        let height = frame.height
+        let height = frame.height * 0.8
         
-        let maxY = frame.maxY * 0.07
+        let maxY = frame.maxY * 0.15
         
         let collectionViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
         

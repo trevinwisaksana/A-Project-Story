@@ -23,7 +23,7 @@ final class CreateProjectMainView: UIView {
     var emailAddressTextField = UITextField()
     
     // Lines
-    var projectNameLineSeparator = UIView()
+    var projectTitleLineSeparator = UIView()
     var emailAddressTitleLineSeparator = UIView()
     
     override func layoutSubviews() {
@@ -137,14 +137,14 @@ final class CreateProjectMainView: UIView {
         let maxY = frame.maxY * 0.2
         
         let lineSeparatorFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
-        projectNameLineSeparator.frame = lineSeparatorFrame
+        projectTitleLineSeparator.frame = lineSeparatorFrame
         
         let backgroundColor = UIColor(colorLiteralRed: 213/255, green: 213/255, blue: 213/255, alpha: 1)
-        projectNameLineSeparator.backgroundColor = backgroundColor
+        projectTitleLineSeparator.backgroundColor = backgroundColor
         
-        addSubview(projectNameLineSeparator)
+        addSubview(projectTitleLineSeparator)
         
-        projectNameLineSeparator.snp.makeConstraints { (make) in
+        projectTitleLineSeparator.snp.makeConstraints { (make) in
             make.height.equalTo(1)
             make.width.equalTo(frame.width * 0.88)
             make.top.equalTo(projectTitleTextField).offset(40)
@@ -178,7 +178,7 @@ final class CreateProjectMainView: UIView {
         addSubview(projectDescriptionTextView)
         
         projectDescriptionTextView.snp.makeConstraints { (make) in
-            make.top.equalTo(projectNameLineSeparator).offset(5)
+            make.top.equalTo(projectTitleLineSeparator).offset(5)
             make.width.equalTo(width)
             make.height.equalTo(height)
             make.left.equalTo(17)
@@ -271,7 +271,7 @@ final class CreateProjectMainView: UIView {
     }
     
     // MARK: - Error Handling
-    func displayProjectNameAlert() {
+    func displayProjectTitleAlert() {
         
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
         projectTitleTextField.attributedPlaceholder = NSAttributedString(string: "New Project Title", attributes: [NSForegroundColorAttributeName: placeholderColor])
