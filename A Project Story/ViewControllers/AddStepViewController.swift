@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class NewStepViewController: UIViewController {
+final class AddStepViewController: UIViewController {
     
-    private let mainView = NewStepMainView()
-    let viewModel = NewStepViewModel()
+    private let mainView = AddStepMainView()
+    let viewModel = AddStepViewModel()
     
     private enum State {
         case `default`

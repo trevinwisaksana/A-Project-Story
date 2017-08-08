@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class NewStepMainView: UIView {
+final class AddStepMainView: UIView {
     
     // Buttons
     var cancelButton = UIButton()

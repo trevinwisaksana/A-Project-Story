@@ -112,7 +112,7 @@ final class DraftViewController: UIViewController {
     }
     
     private func presentNewStepViewController() {
-        present(NewStepViewController(), animated: true, completion: nil)
+        present(AddStepViewController(), animated: true, completion: nil)
     }
     
 }

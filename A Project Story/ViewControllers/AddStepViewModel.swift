@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class NewStepViewModel {
+final class AddStepViewModel {
     
     
     
