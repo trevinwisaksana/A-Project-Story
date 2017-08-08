@@ -1,5 +1,5 @@
 //
-//  DraftViewModel.swift
+//  ProjectViewModel.swift
 //  A Project Story
 //
 //  Created by Trevin Wisaksana on 8/8/17.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-final class DraftViewModel {
+final class ProjectViewModel {
     
-    private var project: Project?
     
     
 }

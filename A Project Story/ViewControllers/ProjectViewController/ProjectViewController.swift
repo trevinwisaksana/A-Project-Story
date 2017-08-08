@@ -13,6 +13,16 @@ final class ProjectViewController: UIViewController {
     // MARK: - Variables
     private let mainView = ProjectMainView()
     
+    // MARK: - Initializers
+    init(project: Project) {
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - State Machine
     private enum State {
         case `default`

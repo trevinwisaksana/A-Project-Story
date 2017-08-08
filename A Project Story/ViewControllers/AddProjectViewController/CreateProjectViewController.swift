@@ -158,6 +158,7 @@ extension CreateProjectViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.placeholder = ""
         textField.textColor = .black
+        textField.alpha = 1
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

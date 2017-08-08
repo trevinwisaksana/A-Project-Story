@@ -42,6 +42,7 @@ final class ProjectLibraryViewController: UIViewController {
             /////////////
             let project = Project(title: "", ownerEmail: "", description: "")
             viewModel.appendDraft(with: project)
+            viewModel.appendDraft(with: project)
             viewModel.appendProject(with: project)
             viewModel.appendProject(with: project)
             
@@ -56,7 +57,7 @@ final class ProjectLibraryViewController: UIViewController {
             presentAddProjectViewController()
         case .cellSelected(let indexPath):
             let project = viewModel.didSelectItemAt(indexPath: indexPath)
-            presentDraftViewController(with: project)
+            determineViewControllerToPresent(with: indexPath, data: project)
         default:
             break
         }
@@ -117,8 +118,13 @@ final class ProjectLibraryViewController: UIViewController {
         present(CreateProjectViewController(), animated: true, completion: nil)
     }
     
-    private func presentDraftViewController(with data: Project) {
-        present(DraftViewController(project: data), animated: true, completion: nil)
+    private func determineViewControllerToPresent(with indexPath: IndexPath, data: Project) {
+        let section = indexPath.section
+        if section == 0 {
+            present(DraftViewController(project: data), animated: true, completion: nil)
+        } else {
+            present(ProjectViewController(project: data), animated: true, completion: nil)
+        }
     }
 }
 

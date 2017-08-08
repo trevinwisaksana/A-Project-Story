@@ -272,13 +272,30 @@ final class CreateProjectMainView: UIView {
     
     // MARK: - Error Handling
     func displayProjectNameAlert() {
+        
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
         projectTitleTextField.attributedPlaceholder = NSAttributedString(string: "New Project Title", attributes: [NSForegroundColorAttributeName: placeholderColor])
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat], animations: {
+            UIView.setAnimationRepeatCount(2)
+            self.projectTitleTextField.alpha = 0
+            self.projectTitleTextField.alpha = 0.6
+        }, completion: { (_) in
+            self.projectTitleTextField.alpha = 0.6
+        })
     }
     
     func displayEmailAddressAlert() {
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
         emailAddressTextField.attributedPlaceholder = NSAttributedString(string: "Enter your email address...", attributes: [NSForegroundColorAttributeName: placeholderColor])
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat], animations: {
+            UIView.setAnimationRepeatCount(2)
+            self.emailAddressTextField.alpha = 0
+            self.emailAddressTextField.alpha = 0.6
+        }, completion: { (_) in
+            self.emailAddressTextField.alpha = 0.6
+        })
     }
     
 }
