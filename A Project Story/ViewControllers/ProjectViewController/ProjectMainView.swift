@@ -49,7 +49,8 @@ final class ProjectMainView: UIView {
         addSubview(backButton)
         
         backButton.snp.makeConstraints { (make) in
-            make.leading.top.equalTo(22)
+            make.leading.equalTo(22)
+            make.top.equalTo(30)
         }
     }
 

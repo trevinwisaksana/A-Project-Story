@@ -178,7 +178,7 @@ final class CreateProjectMainView: UIView {
         addSubview(projectDescriptionTextView)
         
         projectDescriptionTextView.snp.makeConstraints { (make) in
-            make.top.equalTo(projectTitleLineSeparator).offset(5)
+            make.top.equalTo(projectTitleLineSeparator).offset(10)
             make.width.equalTo(width)
             make.height.equalTo(height)
             make.left.equalTo(17)
@@ -208,7 +208,7 @@ final class CreateProjectMainView: UIView {
         addSubview(emailAddressTitleLabel)
         
         emailAddressTitleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(projectDescriptionTextView.snp.bottom).offset(0)
+            make.top.equalTo(projectDescriptionTextView.snp.bottom).offset(10)
             make.width.equalTo(width)
             make.left.equalTo(22)
         }
@@ -276,26 +276,22 @@ final class CreateProjectMainView: UIView {
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
         projectTitleTextField.attributedPlaceholder = NSAttributedString(string: "New Project Title", attributes: [NSForegroundColorAttributeName: placeholderColor])
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.repeat], animations: {
             UIView.setAnimationRepeatCount(2)
             self.projectTitleTextField.alpha = 0
             self.projectTitleTextField.alpha = 0.6
-        }, completion: { (_) in
-            self.projectTitleTextField.alpha = 0.6
-        })
+        }, completion: nil)
     }
     
     func displayEmailAddressAlert() {
         let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
         emailAddressTextField.attributedPlaceholder = NSAttributedString(string: "Enter your email address...", attributes: [NSForegroundColorAttributeName: placeholderColor])
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat], animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.repeat], animations: {
             UIView.setAnimationRepeatCount(2)
             self.emailAddressTextField.alpha = 0
             self.emailAddressTextField.alpha = 0.6
-        }, completion: { (_) in
-            self.emailAddressTextField.alpha = 0.6
-        })
+        }, completion: nil)
     }
     
 }

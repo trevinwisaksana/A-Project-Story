@@ -50,7 +50,7 @@ final class ProjectLibraryViewController: UIViewController {
             setAddProjectButtonTarget()
             registerCollectionViewHeader()
             registerCollectionViewCells()
-            setCollectionViewDataSource()
+            setCollectionViewDelegate()
         case .viewDidAppear:
             break
         case .addProject:
@@ -94,7 +94,7 @@ final class ProjectLibraryViewController: UIViewController {
         state = .addProject
     }
     
-    private func setCollectionViewDataSource() {
+    private func setCollectionViewDelegate() {
         mainView.projectLibraryCollectionView.delegate = self
         mainView.projectLibraryCollectionView.dataSource = self
     }
@@ -177,6 +177,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             
             switch section {
             case 0:
+                
                 let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "DraftCollectionViewHeader", for: indexPath) as! DraftCollectionViewHeader
                 let sectionTitleLabel = reusableView.sectionTitleLabel
                 
@@ -184,6 +185,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
                     listOfSectionTitle.append("Drafts")
                 } else {
                     listOfSectionTitle.append("")
+                    reusableView.frame.size = CGSize.zero
                 }
                 
                 sectionTitleLabel.text = listOfSectionTitle[0]
@@ -197,6 +199,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
                     listOfSectionTitle.append("Featured")
                 } else {
                     listOfSectionTitle.append("")
+                    reusableView.frame.size = CGSize.zero
                 }
                 
                 sectionTitleLabel.text = listOfSectionTitle[0]
@@ -233,13 +236,25 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         
         switch section {
         case 0:
+            
+            if viewModel.numberOfItemsIn(section: 0) == 0 {
+                return CGSize.zero
+            }
+            
             let width = self.view.frame.width
             let height = self.view.frame.height * 0.07
             return CGSize(width: width, height: height)
+            
         case 1:
+            
+            if viewModel.numberOfItemsIn(section: 1) == 0 {
+                return CGSize.zero
+            }
+            
             let width = self.view.frame.width
             let height = self.view.frame.height * 0.1
             return CGSize(width: width, height: height)
+            
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -257,6 +272,13 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        // If the list of drafts is empty
+        // remove buffer space on top
+        if viewModel.numberOfItemsIn(section: 0) == 0 {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+        
         return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     

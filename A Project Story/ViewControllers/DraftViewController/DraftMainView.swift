@@ -12,24 +12,29 @@ final class DraftMainView: UIView {
     
     // Buttons
     var backButton = UIButton()
-    var saveButton = UIButton()
+    var nextButton = UIButton()
     
-    // Text Fields
-    var stepTitleTextField = UITextField()
+    // Text Field
     var projectTitleTextField = UITextField()
     
-    // Text Views
+    // Text View
+    var stepDescriptionTextView = UITextView()
     
     // Line Separator
     var projectTitleLineSeparator = UIView()
+    
+    // Collection View
+    var stepCollectionView: UICollectionView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
         setScreenSize()
         
         prepareBackButton()
+        prepareNextButton()
         prepareProjectTitleTextField()
         prepareLineSeparator()
+        prepareStepCollectionView()
     }
     
     private func setScreenSize() {
@@ -72,7 +77,7 @@ final class DraftMainView: UIView {
         
         projectTitleTextField.returnKeyType = .done
         
-        projectTitleTextField.placeholder = "New Project Title"
+        projectTitleTextField.text = "3D Printed Gearbox"
         projectTitleTextField.textColor = .black
         
         let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
@@ -86,6 +91,33 @@ final class DraftMainView: UIView {
             make.top.equalTo(backButton).offset(60)
             make.width.equalTo(width)
             make.leading.equalTo(21.5)
+        }
+    }
+    
+    private func prepareNextButton() {
+        
+        let width = frame.width * 0.2
+        let height = frame.height * 0.04
+        
+        let maxX = frame.maxX * 0.75
+        let maxY = frame.maxY * 0.03
+        
+        let buttonFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        nextButton.frame = buttonFrame
+        
+        nextButton.setTitle("Next", for: .normal)
+        
+        let fontColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
+        nextButton.setTitleColor(fontColor, for: .normal)
+        
+        let buttonFont = UIFont(name: "Avenir", size: frame.width * 0.05)
+        nextButton.titleLabel?.font = buttonFont
+        
+        addSubview(nextButton)
+        
+        nextButton.snp.makeConstraints { (make) in
+            make.top.equalTo(17)
+            make.right.equalTo(-22)
         }
     }
     
@@ -114,4 +146,29 @@ final class DraftMainView: UIView {
         }
     }
     
+    private func prepareStepCollectionView() {
+        
+        let width = frame.width
+        let height = frame.height * 0.7
+        
+        let maxY = frame.maxY * 0.15
+        
+        let collectionViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
+        
+        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        stepCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
+        stepCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+
+        
+        stepCollectionView.showsVerticalScrollIndicator = false
+        
+        addSubview(stepCollectionView)
+        
+        stepCollectionView.snp.makeConstraints { (make) in
+            make.width.equalTo(self.frame.width)
+            make.leading.trailing.bottom.equalTo(0)
+            make.top.equalTo(projectTitleLineSeparator.snp.bottom).offset(5)
+        }
+    }
 }

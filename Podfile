@@ -7,7 +7,6 @@ target 'A Project Story' do
 
   # Pods for A Project Story
   pod 'SnapKit', '~> 3.2.0'
-  pod 'IQKeyboardManager'
 
   target 'A Project StoryTests' do
     inherit! :search_paths

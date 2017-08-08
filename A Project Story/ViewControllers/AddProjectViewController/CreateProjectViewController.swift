@@ -163,11 +163,12 @@ extension CreateProjectViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
+        // Take care of this in Main View
         let projectTitleTextField = mainView.projectTitleTextField
         let emailAddressTextField = mainView.emailAddressTextField
         
         if textField.isEqual(projectTitleTextField) {
-            textField.placeholder = "New Project Name"
+            textField.placeholder = "New Project Title"
         }
         
         if textField.isEqual(emailAddressTextField) {
