@@ -22,18 +22,19 @@ final class DraftViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private enum State {
+    fileprivate enum State {
         case `default`
         case loading
         case viewDidLayoutSubviews
         case viewDidAppear
         case didBecomeActive
-        case backButtonPressed
-        case addStepButtonPressed
-        case nextButtonPressed
+        case didPressBackButton
+        case didPressAddStepButton
+        case didPressNextButton
+        case didSelectCell(at: IndexPath)
     }
     
-    private var state: State = .default {
+    fileprivate var state: State = .default {
         didSet {
             didChange(state)
         }
@@ -52,12 +53,15 @@ final class DraftViewController: UIViewController {
             setCollectionViewDelegate()
         case .viewDidAppear, .didBecomeActive:
             setAddStepButtonTarget()
-        case .backButtonPressed:
+        case .didPressBackButton:
             dismiss(animated: true, completion: nil)
-        case .addStepButtonPressed:
+        case .didPressAddStepButton:
             presentNewStepViewController()
-        case .nextButtonPressed:
+        case .didPressNextButton:
             presentPublishProjectViewController()
+        case .didSelectCell(let indexPath):
+            let step = viewModel.didSelectItemAt(indexPath: indexPath)
+            presentStepViewController(with: step)
         default:
             break
         }
@@ -99,7 +103,7 @@ final class DraftViewController: UIViewController {
     
     @objc
     private func didPressBackButton() {
-        state = .backButtonPressed
+        state = .didPressBackButton
     }
     
     // MARK: - Methods
@@ -123,7 +127,7 @@ final class DraftViewController: UIViewController {
     
     @objc
     private func didPressNextButton() {
-        state = .nextButtonPressed
+        state = .didPressNextButton
     }
     
     private func setAddStepButtonTarget() {
@@ -133,7 +137,7 @@ final class DraftViewController: UIViewController {
     
     @objc
     private func didPressAddStepButton() {
-        state = .addStepButtonPressed
+        state = .didPressAddStepButton
     }
     
     private func presentNewStepViewController() {
@@ -142,6 +146,10 @@ final class DraftViewController: UIViewController {
     
     private func presentPublishProjectViewController() {
         present(PublishProjectViewController(), animated: true, completion: nil)
+    }
+    
+    private func presentStepViewController(with data: Step) {
+        present(StepViewController(step: data), animated: true, completion: nil)
     }
     
 }
@@ -167,6 +175,10 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let height = collectionView.frame.height * 0.1
         let size = CGSize(width: width, height: height)
         return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        state = .didSelectCell(at: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -195,11 +207,24 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
         
         switch section {
         case 0:
-            let width = self.view.frame.width
+            let width = collectionView.frame.width
             let height = self.view.frame.height * 0.07
             return CGSize(width: width, height: height)
         default:
             return CGSize(width: 0, height: 0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 10
+        default:
+            return 0
         }
     }
 }

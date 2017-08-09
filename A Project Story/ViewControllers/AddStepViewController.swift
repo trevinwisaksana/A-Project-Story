@@ -17,9 +17,9 @@ final class AddStepViewController: UIViewController {
         case `default`
         case loading
         case viewDidLayoutSubviews
-        case cancelAdd
+        case didPressCancelButton
         case addingStep(Step)
-        case addButtonPressed
+        case didPressAddButton
         case failedToCreateStep(as: Error)
     }
     
@@ -36,11 +36,11 @@ final class AddStepViewController: UIViewController {
         case .viewDidLayoutSubviews:
             setCancelButtonTarget()
             setAddStepButtonTarget()
-        case .addButtonPressed:
+        case .didPressAddButton:
             addStep()
         case .addingStep(let step):
             passDataToPresenterViewController(data: step)
-        case .cancelAdd:
+        case .didPressCancelButton:
             dismiss(animated: true, completion: nil)
         case .failedToCreateStep(let error):
             throwWarning(for: error)
@@ -83,7 +83,7 @@ final class AddStepViewController: UIViewController {
     
     @objc
     private func didPressCancelButton() {
-        state = .cancelAdd
+        state = .didPressCancelButton
     }
     
     private func setAddStepButtonTarget() {
@@ -92,7 +92,7 @@ final class AddStepViewController: UIViewController {
     
     @objc
     private func didPressAddStepButton() {
-        state = .addButtonPressed
+        state = .didPressAddButton
     }
     
     private func passDataToPresenterViewController(data: Step) {

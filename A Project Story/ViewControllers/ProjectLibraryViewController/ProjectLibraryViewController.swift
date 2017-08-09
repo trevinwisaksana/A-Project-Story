@@ -23,7 +23,7 @@ final class ProjectLibraryViewController: UIViewController {
         case viewDidLayoutSubviews
         case viewDidAppear
         case addProject
-        case cellSelected(at: IndexPath)
+        case didSelectCell(at: IndexPath)
     }
     
     fileprivate var state: State = .default {
@@ -55,7 +55,7 @@ final class ProjectLibraryViewController: UIViewController {
             break
         case .addProject:
             presentAddProjectViewController()
-        case .cellSelected(let indexPath):
+        case .didSelectCell(let indexPath):
             let project = viewModel.didSelectItemAt(indexPath: indexPath)
             determineViewControllerToPresent(with: indexPath, data: project)
         default:
@@ -295,6 +295,6 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        state = .cellSelected(at: indexPath)
+        state = .didSelectCell(at: indexPath)
     }
 }

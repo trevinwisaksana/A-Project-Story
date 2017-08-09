@@ -16,8 +16,9 @@ final class PublishProjectViewController: UIViewController {
     private enum State {
         case `default`
         case loading
-        case backButonPressed
-        case publishButtonPressed
+        case viewDidLayoutSubviews
+        case didPressBackButton
+        case didPressPublishButton
     }
     
     private var state: State = .default {
@@ -30,6 +31,12 @@ final class PublishProjectViewController: UIViewController {
         switch state {
         case .loading:
             view = mainView
+        case .viewDidLayoutSubviews:
+            setBackButtonTarget()
+        case .didPressBackButton:
+            dismiss(animated: true, completion: nil)
+        case .didPressPublishButton:
+            break
         default:
             break
         }
@@ -43,7 +50,16 @@ final class PublishProjectViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        state = .viewDidLayoutSubviews
+    }
+    
+    private func setBackButtonTarget() {
+        mainView.backButton.addTarget(self, action: #selector(didPressBackButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func didPressBackButton() {
+        state = .didPressBackButton
     }
     
     // Miscellaneous

@@ -1,21 +1,19 @@
 //
-//  ProjectViewController.swift
+//  StepViewController.swift
 //  A Project Story
 //
-//  Created by Trevin Wisaksana on 8/5/17.
+//  Created by Trevin Wisaksana on 8/10/17.
 //  Copyright © 2017 Trevin Wisaksana. All rights reserved.
 //
 
 import UIKit
 
-final class ProjectViewController: UIViewController {
+final class StepViewController: UIViewController {
     
-    // MARK: - Variables
-    private let mainView = ProjectMainView()
-    let viewModel = ProjectViewModel()
+    private let mainView = StepMainView()
+    let viewModel = StepViewModel()
     
-    // MARK: - Initializers
-    init(project: Project) {
+    init(step: Step) {
         super.init(nibName: nil, bundle: nil)
         
     }
@@ -24,7 +22,6 @@ final class ProjectViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - State Machine
     private enum State {
         case `default`
         case loading
@@ -52,7 +49,6 @@ final class ProjectViewController: UIViewController {
         }
     }
     
-    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         state = .loading
@@ -76,4 +72,5 @@ final class ProjectViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
 }

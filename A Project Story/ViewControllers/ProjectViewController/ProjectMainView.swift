@@ -12,7 +12,7 @@ final class ProjectMainView: UIView {
     
     // Buttons
     var backButton = UIButton()
-    var saveButton = UIButton()
+    var editButton = UIButton()
     
     // Text Fields
     var stepTitleTextField = UITextField()
@@ -24,7 +24,6 @@ final class ProjectMainView: UIView {
         setScreenSize()
         
         prepareBackButton()
-        
     }
     
     private func setScreenSize() {
@@ -50,9 +49,10 @@ final class ProjectMainView: UIView {
         
         backButton.snp.makeConstraints { (make) in
             make.leading.equalTo(22)
-            make.top.equalTo(30)
+            make.top.equalTo(25)
         }
     }
+
 
     
 }

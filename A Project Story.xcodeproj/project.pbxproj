@@ -46,6 +46,10 @@
 		DDAEB2E51F3A077F0059C672 /* PublishProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */; };
 		DDAEB2E71F3A07870059C672 /* PublishProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2E61F3A07870059C672 /* PublishProjectViewModel.swift */; };
 		DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2EA1F3AD1E80059C672 /* Step.swift */; };
+		DDAEB2ED1F3B426C0059C672 /* DraftCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2EC1F3B426C0059C672 /* DraftCollectionViewFooter.swift */; };
+		DDAEB2F01F3BCFC40059C672 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2EF1F3BCFC40059C672 /* StepViewController.swift */; };
+		DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */; };
+		DDAEB2F91F3BD17E0059C672 /* StepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2F81F3BD17E0059C672 /* StepViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +120,10 @@
 		DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishProjectMainView.swift; sourceTree = "<group>"; };
 		DDAEB2E61F3A07870059C672 /* PublishProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishProjectViewModel.swift; sourceTree = "<group>"; };
 		DDAEB2EA1F3AD1E80059C672 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		DDAEB2EC1F3B426C0059C672 /* DraftCollectionViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftCollectionViewFooter.swift; sourceTree = "<group>"; };
+		DDAEB2EF1F3BCFC40059C672 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
+		DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepMainView.swift; sourceTree = "<group>"; };
+		DDAEB2F81F3BD17E0059C672 /* StepViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewModel.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +254,7 @@
 				DDAEB29F1F394C530059C672 /* CreateProjectViewController */,
 				DDAEB2A31F394C530059C672 /* DraftViewController */,
 				DDAEB2DA1F39F8AB0059C672 /* AddStepViewController */,
+				DDAEB2F11F3BCFC70059C672 /* StepViewcontroller */,
 				DDAEB2E31F3A06AE0059C672 /* PublishProjectViewController */,
 				DDAEB2AD1F394C530059C672 /* ProjectViewController */,
 				DDAEB2B01F394C530059C672 /* UINavigationController */,
@@ -296,6 +305,7 @@
 		DDAEB2A81F394C530059C672 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				DDAEB2EE1F3B42700059C672 /* Footers */,
 				DDAEB2C91F3990940059C672 /* Headers */,
 				DDAEB2CA1F39909E0059C672 /* Cells */,
 			);
@@ -469,6 +479,40 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DDAEB2EE1F3B42700059C672 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2EC1F3B426C0059C672 /* DraftCollectionViewFooter.swift */,
+			);
+			name = Footers;
+			sourceTree = "<group>";
+		};
+		DDAEB2F11F3BCFC70059C672 /* StepViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2EF1F3BCFC40059C672 /* StepViewController.swift */,
+				DDAEB2FA1F3BD1A80059C672 /* ViewModel */,
+				DDAEB2FB1F3BD1AD0059C672 /* Views */,
+			);
+			name = StepViewcontroller;
+			sourceTree = "<group>";
+		};
+		DDAEB2FA1F3BD1A80059C672 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2F81F3BD17E0059C672 /* StepViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDAEB2FB1F3BD1AD0059C672 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -787,11 +831,15 @@
 				DDAEB2B41F394C530059C672 /* CreateProjectViewModel.swift in Sources */,
 				DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
+				DDAEB2ED1F3B426C0059C672 /* DraftCollectionViewFooter.swift in Sources */,
 				DDAEB2DF1F39F98D0059C672 /* AddStepMainView.swift in Sources */,
+				DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */,
+				DDAEB2F01F3BCFC40059C672 /* StepViewController.swift in Sources */,
 				DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */,
 				DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */,
 				DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */,
 				DDAEB2B21F394C530059C672 /* CreateProjectMainView.swift in Sources */,
+				DDAEB2F91F3BD17E0059C672 /* StepViewModel.swift in Sources */,
 				DDAEB2E51F3A077F0059C672 /* PublishProjectMainView.swift in Sources */,
 				DDAEB2B31F394C530059C672 /* CreateProjectViewController.swift in Sources */,
 				DDAEB2E71F3A07870059C672 /* PublishProjectViewModel.swift in Sources */,

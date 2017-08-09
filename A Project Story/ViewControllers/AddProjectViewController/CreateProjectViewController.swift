@@ -21,7 +21,7 @@ final class CreateProjectViewController: UIViewController {
         case `default`
         case loading
         case viewDidAppear
-        case cancelToAdd
+        case didPressCancelButton
         case didBeginToCreateProject
         case createProject(with: Project)
         case failedToCreateProject(as: CreateProjectError)
@@ -48,7 +48,7 @@ final class CreateProjectViewController: UIViewController {
             setCreateProjectButtonTarget()
             prepareTextFieldDelegates()
             prepareTextViewDelegate()
-        case .cancelToAdd:
+        case .didPressCancelButton:
             dismiss(animated: true, completion: nil)
         case .didBeginToCreateProject:
             createProjectDraft()
@@ -91,7 +91,7 @@ final class CreateProjectViewController: UIViewController {
     
     @objc
     private func didPressCancelToCreateButton() {
-        state = .cancelToAdd
+        state = .didPressCancelButton
     }
     
     private func setCreateProjectButtonTarget() {

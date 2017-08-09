@@ -25,5 +25,9 @@ final class DraftViewModel {
             return -1
         }
     }
+    
+    func didSelectItemAt(indexPath: IndexPath) -> Step {
+        return listOfSteps[indexPath.row]
+    }
         
 }
