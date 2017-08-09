@@ -45,6 +45,7 @@
 		DDAEB2E21F3A06AA0059C672 /* PublishProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2E11F3A06AA0059C672 /* PublishProjectViewController.swift */; };
 		DDAEB2E51F3A077F0059C672 /* PublishProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */; };
 		DDAEB2E71F3A07870059C672 /* PublishProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2E61F3A07870059C672 /* PublishProjectViewModel.swift */; };
+		DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2EA1F3AD1E80059C672 /* Step.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		DDAEB2E11F3A06AA0059C672 /* PublishProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishProjectViewController.swift; sourceTree = "<group>"; };
 		DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishProjectMainView.swift; sourceTree = "<group>"; };
 		DDAEB2E61F3A07870059C672 /* PublishProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishProjectViewModel.swift; sourceTree = "<group>"; };
+		DDAEB2EA1F3AD1E80059C672 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB29C1F394B9D0059C672 /* Project.swift */,
+				DDAEB2EA1F3AD1E80059C672 /* Step.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				DDAEB2C31F394D640059C672 /* DraftViewModel.swift in Sources */,
 				DDAEB2D21F39C1DF0059C672 /* StepCell.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
+				DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */,
 				DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */,
 				DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */,
 				DDAEB2C11F394CE50059C672 /* DraftMainView.swift in Sources */,

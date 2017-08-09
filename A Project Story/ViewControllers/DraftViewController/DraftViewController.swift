@@ -106,6 +106,7 @@ final class DraftViewController: UIViewController {
     private func setCollectionViewDelegate() {
         mainView.stepCollectionView.delegate = self
         mainView.stepCollectionView.dataSource = self
+        mainView.stepCollectionView.reloadData()
     }
     
     private func registerCollectionViewCell() {
@@ -149,7 +150,7 @@ final class DraftViewController: UIViewController {
 extension DraftViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModel.numberOfItemsIn(section: section)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -157,10 +158,15 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StepCell", for: indexPath) as! StepCell
         return cell
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width * 0.88
+        let height = collectionView.frame.height * 0.1
+        let size = CGSize(width: width, height: height)
+        return size
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

@@ -85,5 +85,4 @@ final class ProjectLibraryMainView: UIView {
             make.leading.top.equalTo(22)
         }
     }
-    
 }

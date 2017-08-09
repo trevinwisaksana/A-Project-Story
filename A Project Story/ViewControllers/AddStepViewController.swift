@@ -1,5 +1,5 @@
 //
-//  NewStepViewController.swift
+//  AddStepViewController.swift
 //  A Project Story
 //
 //  Created by Trevin Wisaksana on 8/8/17.
@@ -18,6 +18,9 @@ final class AddStepViewController: UIViewController {
         case loading
         case viewDidLayoutSubviews
         case cancelAdd
+        case addingStep(Step)
+        case addButtonPressed
+        case failedToCreateStep(as: Error)
     }
     
     private var state: State = .default {
@@ -32,14 +35,32 @@ final class AddStepViewController: UIViewController {
             view = mainView
         case .viewDidLayoutSubviews:
             setCancelButtonTarget()
+            setAddStepButtonTarget()
+        case .addButtonPressed:
+            addStep()
+        case .addingStep(let step):
+            passDataToPresenterViewController(data: step)
         case .cancelAdd:
             dismiss(animated: true, completion: nil)
-            // postNotification()
+        case .failedToCreateStep(let error):
+            throwWarning(for: error)
         default:
             break
         }
     }
     
+    // MARK: - Error Handler
+    fileprivate enum `Error` {
+        case stepTitleIsEmpty
+    }
+    
+    private func throwWarning(for error: Error) {
+        switch error {
+        case .stepTitleIsEmpty:
+            mainView.displayStepTitleAlert()
+        }
+    }
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,11 +86,48 @@ final class AddStepViewController: UIViewController {
         state = .cancelAdd
     }
     
-    private func postNotification() {
-        let notificationName = Notification.Name.init(rawValue: "DraftViewControllerPresented")
-        let notification = Notification(name: notificationName)
-        NotificationCenter.default.post(notification)
+    private func setAddStepButtonTarget() {
+        mainView.addStepButton.addTarget(self, action: #selector(didPressAddStepButton), for: .touchUpInside)
     }
     
+    @objc
+    private func didPressAddStepButton() {
+        state = .addButtonPressed
+    }
+    
+    private func passDataToPresenterViewController(data: Step) {
+        if let presenter = presentingViewController as? DraftViewController {
+            presenter.viewModel.appendStep(with: data)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func addStep() {
+        
+        let stepName = mainView.stepTitleTextField.text ?? ""
+        let stepDescription = mainView.stepDescriptionTextView.text ?? ""
+        
+        viewModel.addStep(title: stepName, description: stepDescription, completion: { [weak self] (error, data) in
+            
+            switch error {
+            case nil:
+                if let data = data {
+                    self?.state = .addingStep(data)
+                }
+            default:
+                self?.translateErrorMessage(error!)
+            }
+        })
+    }
+    
+    // TODO: Create a universal error state
+    private func translateErrorMessage(_ error: NSError) {
+        switch error.domain {
+        case "titleIsEmpty":
+            state = .failedToCreateStep(as: .stepTitleIsEmpty)
+        default:
+            break
+        }
+    }
     
 }

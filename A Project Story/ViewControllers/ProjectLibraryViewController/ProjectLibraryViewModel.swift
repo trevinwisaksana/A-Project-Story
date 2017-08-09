@@ -27,11 +27,12 @@ final class ProjectLibraryViewModel {
     }
     
     func numberOfItemsIn(section: Int) -> Int {
-        if section == 0 {
+        switch section {
+        case 0:
             return listOfDrafts.count
-        } else if section == 1 {
+        case 1:
             return listOfProjects.count
-        } else {
+        default:
             return -1
         }
     }

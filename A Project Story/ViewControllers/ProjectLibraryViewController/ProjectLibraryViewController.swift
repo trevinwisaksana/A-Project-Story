@@ -37,8 +37,6 @@ final class ProjectLibraryViewController: UIViewController {
         case .loading:
             view = mainView
             
-            
-            
             /////////////
             // Testing //
             /////////////
@@ -99,6 +97,7 @@ final class ProjectLibraryViewController: UIViewController {
     private func setCollectionViewDelegate() {
         mainView.projectLibraryCollectionView.delegate = self
         mainView.projectLibraryCollectionView.dataSource = self
+        mainView.projectLibraryCollectionView.reloadData()
     }
     
     private func registerCollectionViewCells() {
@@ -239,7 +238,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         switch section {
         case 0:
             
-            if viewModel.numberOfItemsIn(section: 0) == 0 {
+            if viewModel.numberOfItemsIn(section: section) == 0 {
                 return CGSize.zero
             }
             
@@ -249,7 +248,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             
         case 1:
             
-            if viewModel.numberOfItemsIn(section: 1) == 0 {
+            if viewModel.numberOfItemsIn(section: section) == 0 {
                 return CGSize.zero
             }
             

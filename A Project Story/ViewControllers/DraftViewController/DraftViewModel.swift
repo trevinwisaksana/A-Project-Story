@@ -10,7 +10,20 @@ import Foundation
 
 final class DraftViewModel {
     
-    private var project: Project?
+    private var listOfSteps = [Step]()
+    private var step: Step?
     
+    func appendStep(with data: Step) {
+        listOfSteps.append(data)
+    }
     
+    func numberOfItemsIn(section: Int) -> Int {
+        switch section {
+        case 0:
+            return listOfSteps.count
+        default:
+            return -1
+        }
+    }
+        
 }

@@ -178,5 +178,17 @@ final class AddStepMainView: UIView {
         }
     }
 
+    // MARK: - Error Handling
+    func displayStepTitleAlert() {
+        
+        let placeholderColor = UIColor(colorLiteralRed: 225/255, green: 0/255, blue: 2/255, alpha: 0.6)
+        stepTitleTextField.attributedPlaceholder = NSAttributedString(string: "Step 1: New Title", attributes: [NSForegroundColorAttributeName: placeholderColor])
+        
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.repeat], animations: {
+            UIView.setAnimationRepeatCount(2)
+            self.stepTitleTextField.alpha = 0
+            self.stepTitleTextField.alpha = 0.6
+        }, completion: nil)
+    }
     
 }

@@ -10,6 +10,13 @@ import UIKit
 
 final class StepCell: UICollectionViewCell {
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .yellow
+    }
     
+    func configure() {
+        
+    }
     
 }
