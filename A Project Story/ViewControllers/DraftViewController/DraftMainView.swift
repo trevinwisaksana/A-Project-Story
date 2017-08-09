@@ -26,8 +26,8 @@ final class DraftMainView: UIView {
     // Collection View
     var stepCollectionView: UICollectionView!
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setScreenSize()
         
         prepareBackButton()
@@ -35,6 +35,15 @@ final class DraftMainView: UIView {
         prepareProjectTitleTextField()
         prepareLineSeparator()
         prepareStepCollectionView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Other setup
     }
     
     private func setScreenSize() {
@@ -61,6 +70,33 @@ final class DraftMainView: UIView {
         backButton.snp.makeConstraints { (make) in
             make.leading.equalTo(22)
             make.top.equalTo(25)
+        }
+    }
+    
+    private func prepareNextButton() {
+        
+        let width = frame.width * 0.2
+        let height = frame.height * 0.04
+        
+        let maxX = frame.maxX * 0.75
+        let maxY = frame.maxY * 0.03
+        
+        let buttonFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        nextButton.frame = buttonFrame
+        
+        nextButton.setTitle("Next", for: .normal)
+        
+        let fontColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
+        nextButton.setTitleColor(fontColor, for: .normal)
+        
+        let buttonFont = UIFont(name: "Avenir", size: frame.width * 0.05)
+        nextButton.titleLabel?.font = buttonFont
+        
+        addSubview(nextButton)
+        
+        nextButton.snp.makeConstraints { (make) in
+            make.top.equalTo(17)
+            make.right.equalTo(-22)
         }
     }
     
@@ -94,32 +130,6 @@ final class DraftMainView: UIView {
         }
     }
     
-    private func prepareNextButton() {
-        
-        let width = frame.width * 0.2
-        let height = frame.height * 0.04
-        
-        let maxX = frame.maxX * 0.75
-        let maxY = frame.maxY * 0.03
-        
-        let buttonFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
-        nextButton.frame = buttonFrame
-        
-        nextButton.setTitle("Next", for: .normal)
-        
-        let fontColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
-        nextButton.setTitleColor(fontColor, for: .normal)
-        
-        let buttonFont = UIFont(name: "Avenir", size: frame.width * 0.05)
-        nextButton.titleLabel?.font = buttonFont
-        
-        addSubview(nextButton)
-        
-        nextButton.snp.makeConstraints { (make) in
-            make.top.equalTo(17)
-            make.right.equalTo(-22)
-        }
-    }
     
     private func prepareLineSeparator() {
         

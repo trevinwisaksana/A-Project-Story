@@ -14,7 +14,7 @@ import UIKit
 
 final class ProjectLibraryViewController: UIViewController {
     
-    private var mainView = ProjectLibraryMainView()
+    fileprivate var mainView = ProjectLibraryMainView()
     let viewModel = ProjectLibraryViewModel()
     
     fileprivate enum State {
@@ -36,6 +36,8 @@ final class ProjectLibraryViewController: UIViewController {
         switch state {
         case .loading:
             view = mainView
+            
+            
             
             /////////////
             // Testing //
@@ -280,6 +282,17 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         }
         
         return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        /*
+        // Displays the featured section when first initialized
+        if view.isKind(of: FeaturedCollectionViewHeader.self) {
+            let topOfHeader = view.frame.minY
+            let contentOffset = CGPoint(x: 0, y: topOfHeader)
+            collectionView.setContentOffset(contentOffset, animated: false)
+        }
+        */
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

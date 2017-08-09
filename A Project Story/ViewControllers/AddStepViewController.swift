@@ -34,6 +34,7 @@ final class AddStepViewController: UIViewController {
             setCancelButtonTarget()
         case .cancelAdd:
             dismiss(animated: true, completion: nil)
+            // postNotification()
         default:
             break
         }
@@ -62,6 +63,12 @@ final class AddStepViewController: UIViewController {
     @objc
     private func didPressCancelButton() {
         state = .cancelAdd
+    }
+    
+    private func postNotification() {
+        let notificationName = Notification.Name.init(rawValue: "DraftViewControllerPresented")
+        let notification = Notification(name: notificationName)
+        NotificationCenter.default.post(notification)
     }
     
     

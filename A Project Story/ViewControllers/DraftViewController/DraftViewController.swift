@@ -27,8 +27,10 @@ final class DraftViewController: UIViewController {
         case loading
         case viewDidLayoutSubviews
         case viewDidAppear
+        case didBecomeActive
         case backButtonPressed
         case addStepButtonPressed
+        case nextButtonPressed
     }
     
     private var state: State = .default {
@@ -41,17 +43,21 @@ final class DraftViewController: UIViewController {
         switch state {
         case .loading:
             view = mainView
+            setViewDidBecomeActiveNotification()
         case .viewDidLayoutSubviews:
             setBackButtonTarget()
+            setNextButtonTarget()
             registerCollectionViewCell()
             registerCollectionViewHeader()
             setCollectionViewDelegate()
-        case .viewDidAppear:
+        case .viewDidAppear, .didBecomeActive:
             setAddStepButtonTarget()
         case .backButtonPressed:
             dismiss(animated: true, completion: nil)
         case .addStepButtonPressed:
             presentNewStepViewController()
+        case .nextButtonPressed:
+            presentPublishProjectViewController()
         default:
             break
         }
@@ -73,9 +79,18 @@ final class DraftViewController: UIViewController {
         state = .viewDidAppear
     }
     
+    @objc
+    private func didBecomeActive() {
+        state = .didBecomeActive
+    }
+    
     // Miscellaneous
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    private func setViewDidBecomeActiveNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
     private func setBackButtonTarget() {
@@ -101,6 +116,15 @@ final class DraftViewController: UIViewController {
         mainView.stepCollectionView.register(StepCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepCollectionViewHeader")
     }
     
+    private func setNextButtonTarget() {
+        mainView.nextButton.addTarget(self, action: #selector(didPressNextButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func didPressNextButton() {
+        state = .nextButtonPressed
+    }
+    
     private func setAddStepButtonTarget() {
         let sectionHeader = mainView.stepCollectionView.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionHeader)[0] as! StepCollectionViewHeader
         sectionHeader.addStepButton.addTarget(self, action: #selector(didPressAddStepButton), for: .touchUpInside)
@@ -113,6 +137,10 @@ final class DraftViewController: UIViewController {
     
     private func presentNewStepViewController() {
         present(AddStepViewController(), animated: true, completion: nil)
+    }
+    
+    private func presentPublishProjectViewController() {
+        present(PublishProjectViewController(), animated: true, completion: nil)
     }
     
 }

@@ -21,7 +21,9 @@ final class ProjectLibraryMainView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // Other setups
+        setScreenSize()
+        prepareAddProjectButton()
+        prepareCollectionView()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,9 +32,7 @@ final class ProjectLibraryMainView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setScreenSize()
-        prepareAddProjectButton()
-        prepareCollectionView()
+        // Other setups
     }
     
     // Only for PDD
