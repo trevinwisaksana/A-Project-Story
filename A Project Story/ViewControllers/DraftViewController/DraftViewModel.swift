@@ -10,12 +10,15 @@ import Foundation
 
 final class DraftViewModel {
     
-    private var listOfSteps = [Step]()
     private var project: Project?
     private var step: Step?
     
     func appendStep(with data: Step) {
-        listOfSteps.append(data)
+        project?.steps.append(data)
+    }
+    
+    func passListOfSteps() -> [Step]? {
+        return project?.steps ?? nil
     }
     
     func assignData(with data: Project) {
@@ -29,14 +32,14 @@ final class DraftViewModel {
     func numberOfItemsIn(section: Int) -> Int {
         switch section {
         case 0:
-            return listOfSteps.count
+            return project?.steps.count ?? 0
         default:
             return -1
         }
     }
     
-    func didSelectItemAt(indexPath: IndexPath) -> Step {
-        return listOfSteps[indexPath.row]
+    func didSelectItemAt(indexPath: IndexPath) -> Step? {
+        return project?.steps[indexPath.row] ?? nil
     }
         
 }

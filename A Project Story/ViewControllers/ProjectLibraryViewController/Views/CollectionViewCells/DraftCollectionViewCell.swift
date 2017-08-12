@@ -71,21 +71,18 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         let width = frame.width * 0.9
         let height = frame.width * 0.3
         
-        let maxX = frame.maxX * 0.05
-        
-        let projectTitleFrame = CGRect(x: maxX, y: 0, width: width, height: height)
+        let projectTitleFrame = CGRect(x: 0, y: 0, width: width, height: height)
         projectTitleLabel.frame = projectTitleFrame
         
         projectTitleLabel.text = "3D Printed Gearbox"
-        projectTitleLabel.font = UIFont(name: "Averta-Semibold", size: frame.width * 0.052)
+        projectTitleLabel.font = UIFont(name: "Averta-Semibold", size: frame.width * 0.06)
         projectTitleLabel.textColor = .black
         
         addSubview(projectTitleLabel)
         
-        
         projectTitleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(22)
-            make.top.equalTo(5)
+            make.left.equalTo(21)
+            make.top.equalTo(2)
         }
     }
     
@@ -94,10 +91,9 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         let width = frame.width * 0.9
         let height = frame.width * 0.3
         
-        let maxX = frame.maxX * 0.05
         let maxY = containerView.frame.height * 0.2
         
-        let unpublishedLabelFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
+        let unpublishedLabelFrame = CGRect(x: 0, y: maxY, width: width, height: height)
         unpublishedLabel.frame = unpublishedLabelFrame
         
         unpublishedLabel.text = "Unpublished"
@@ -107,7 +103,7 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         addSubview(unpublishedLabel)
         
         unpublishedLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(22)
+            make.left.equalTo(21)
             make.bottom.equalTo(lineSeparator.snp.top).offset(-2)
         }
     }

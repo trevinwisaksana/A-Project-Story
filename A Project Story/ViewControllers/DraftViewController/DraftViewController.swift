@@ -57,11 +57,12 @@ final class DraftViewController: UIViewController {
         case .didPressBackButton:
             dismiss(animated: true, completion: nil)
         case .didPressAddStepButton:
-            presentNewStepViewController()
+            presentAddStepViewController()
         case .didPressNextButton:
             presentPublishProjectViewController()
         case .didSelectCell(let indexPath):
-            let step = viewModel.didSelectItemAt(indexPath: indexPath)
+            let stepData = viewModel.didSelectItemAt(indexPath: indexPath)
+            guard let step = stepData else { return }
             presentStepViewController(with: step)
         default:
             break
@@ -141,7 +142,7 @@ final class DraftViewController: UIViewController {
         state = .didPressAddStepButton
     }
     
-    private func presentNewStepViewController() {
+    private func presentAddStepViewController() {
         present(AddStepViewController(), animated: true, completion: nil)
     }
     
@@ -156,8 +157,7 @@ final class DraftViewController: UIViewController {
     private func assignProjectTitle() {
         let projectTitle = viewModel.projectTitle()
         mainView.assignProjectTitle(with: projectTitle)
-    }
-    
+    } 
 }
 
 

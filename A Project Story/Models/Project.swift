@@ -14,6 +14,7 @@ final class Project {
     var title: String
     let ownerEmail: String
     var description: String
+    var steps: [Step] = []
     
     init(title: String, ownerEmail: String, description: String) {
         self.title = title

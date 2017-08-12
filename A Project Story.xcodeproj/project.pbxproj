@@ -332,7 +332,7 @@
 			children = (
 				DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */,
 				DDAEB2D01F39BCAB0059C672 /* ViewModel */,
-				DDAEB2CF1F39BCA70059C672 /* MainView */,
+				DDAEB2CF1F39BCA70059C672 /* Views */,
 			);
 			path = ProjectViewController;
 			sourceTree = "<group>";
@@ -404,12 +404,12 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
-		DDAEB2CF1F39BCA70059C672 /* MainView */ = {
+		DDAEB2CF1F39BCA70059C672 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */,
 			);
-			name = MainView;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		DDAEB2D01F39BCAB0059C672 /* ViewModel */ = {
