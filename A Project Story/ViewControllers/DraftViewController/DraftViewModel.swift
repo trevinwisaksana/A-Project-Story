@@ -11,10 +11,19 @@ import Foundation
 final class DraftViewModel {
     
     private var listOfSteps = [Step]()
+    private var project: Project?
     private var step: Step?
     
     func appendStep(with data: Step) {
         listOfSteps.append(data)
+    }
+    
+    func assignData(with data: Project) {
+        project = data
+    }
+    
+    func projectTitle() -> String {
+        return project?.title ?? ""
     }
     
     func numberOfItemsIn(section: Int) -> Int {

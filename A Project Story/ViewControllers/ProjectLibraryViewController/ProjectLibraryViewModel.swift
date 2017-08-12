@@ -17,6 +17,7 @@ final class ProjectLibraryViewModel {
     
     private var listOfProjects = [Project]()
     private var listOfDrafts = [Project]()
+    var didEnlargeDraftSection = false
     
     func appendDraft(with data: Project) {
         listOfDrafts.append(data)
@@ -26,10 +27,25 @@ final class ProjectLibraryViewModel {
         listOfProjects.append(data)
     }
     
+    func showMoreDrafts() {
+        didEnlargeDraftSection = true
+    }
+    
+    func showLessDrafts() {
+        didEnlargeDraftSection = false
+    }
+    
     func numberOfItemsIn(section: Int) -> Int {
         switch section {
         case 0:
-            return listOfDrafts.count
+            let numberOfDrafts = listOfDrafts.count
+            if didEnlargeDraftSection {
+                return numberOfDrafts
+            } else if numberOfDrafts == 0 {
+                return 0
+            } else {
+                return 1
+            }
         case 1:
             return listOfProjects.count
         default:
@@ -38,7 +54,11 @@ final class ProjectLibraryViewModel {
     }
     
     func projectTitleAt(indexPath: IndexPath) -> String {
-        return listOfProjects[indexPath.row].title
+        if didEnlargeDraftSection {
+            return listOfDrafts[indexPath.row].title
+        } else {
+            return listOfDrafts[0].title
+        }
     }
     
     func didSelectItemAt(indexPath: IndexPath) -> Project {

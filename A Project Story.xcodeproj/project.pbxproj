@@ -50,6 +50,12 @@
 		DDAEB2F01F3BCFC40059C672 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2EF1F3BCFC40059C672 /* StepViewController.swift */; };
 		DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */; };
 		DDAEB2F91F3BD17E0059C672 /* StepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2F81F3BD17E0059C672 /* StepViewModel.swift */; };
+		DDAEB2FD1F3C5B370059C672 /* ArtworkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2FC1F3C5B370059C672 /* ArtworkSection.swift */; };
+		DDAEB3021F3C5B780059C672 /* ProjectDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3011F3C5B780059C672 /* ProjectDescriptionSection.swift */; };
+		DDAEB3041F3C691F0059C672 /* ProjectDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3031F3C691F0059C672 /* ProjectDescriptionCell.swift */; };
+		DDAEB3061F3C69290059C672 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3051F3C69290059C672 /* ArtworkCell.swift */; };
+		DDAEB30A1F3D89190059C672 /* Averta.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDAEB3091F3D89190059C672 /* Averta.otf */; };
+		DDAEB30C1F3D898B0059C672 /* Averta-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDAEB30B1F3D898B0059C672 /* Averta-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +130,12 @@
 		DDAEB2EF1F3BCFC40059C672 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
 		DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepMainView.swift; sourceTree = "<group>"; };
 		DDAEB2F81F3BD17E0059C672 /* StepViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewModel.swift; sourceTree = "<group>"; };
+		DDAEB2FC1F3C5B370059C672 /* ArtworkSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkSection.swift; sourceTree = "<group>"; };
+		DDAEB3011F3C5B780059C672 /* ProjectDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDescriptionSection.swift; sourceTree = "<group>"; };
+		DDAEB3031F3C691F0059C672 /* ProjectDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDescriptionCell.swift; sourceTree = "<group>"; };
+		DDAEB3051F3C69290059C672 /* ArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
+		DDAEB3091F3D89190059C672 /* Averta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Averta.otf; sourceTree = "<group>"; };
+		DDAEB30B1F3D898B0059C672 /* Averta-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Averta-Semibold.otf"; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,7 +193,9 @@
 		DD65C7031F373E8700333190 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				DDAEB3091F3D89190059C672 /* Averta.otf */,
 				DD65C7131F37415A00333190 /* Averta-Bold.otf */,
+				DDAEB30B1F3D898B0059C672 /* Averta-Semibold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -342,8 +356,8 @@
 		DDAEB2C91F3990940059C672 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */,
 				DDAEB2C71F3989650059C672 /* DraftCollectionViewHeader.swift */,
+				DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -479,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2E41F3A077F0059C672 /* PublishProjectMainView.swift */,
+				DDAEB2FE1F3C5B3B0059C672 /* ReusableViews */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -515,6 +530,33 @@
 				DDAEB2F21F3BD02B0059C672 /* StepMainView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		DDAEB2FE1F3C5B3B0059C672 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB3071F3C69310059C672 /* Sections */,
+				DDAEB3081F3C69360059C672 /* Cells */,
+			);
+			name = ReusableViews;
+			sourceTree = "<group>";
+		};
+		DDAEB3071F3C69310059C672 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB2FC1F3C5B370059C672 /* ArtworkSection.swift */,
+				DDAEB3011F3C5B780059C672 /* ProjectDescriptionSection.swift */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		DDAEB3081F3C69360059C672 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB3051F3C69290059C672 /* ArtworkCell.swift */,
+				DDAEB3031F3C691F0059C672 /* ProjectDescriptionCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */ = {
@@ -660,7 +702,9 @@
 				DD65C7111F3740D000333190 /* A_Project_Story.xcdatamodeld in Resources */,
 				DD65C70B1F373E8700333190 /* Images.xcassets in Resources */,
 				DD65C7141F37415A00333190 /* Averta-Bold.otf in Resources */,
+				DDAEB30A1F3D89190059C672 /* Averta.otf in Resources */,
 				DD65C7091F373E8700333190 /* Assets.xcassets in Resources */,
+				DDAEB30C1F3D898B0059C672 /* Averta-Semibold.otf in Resources */,
 				DD65C70D1F373E8700333190 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,6 +878,7 @@
 				DDAEB2ED1F3B426C0059C672 /* DraftCollectionViewFooter.swift in Sources */,
 				DDAEB2DF1F39F98D0059C672 /* AddStepMainView.swift in Sources */,
 				DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */,
+				DDAEB3041F3C691F0059C672 /* ProjectDescriptionCell.swift in Sources */,
 				DDAEB2F01F3BCFC40059C672 /* StepViewController.swift in Sources */,
 				DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */,
 				DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */,
@@ -849,12 +894,15 @@
 				DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */,
 				DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */,
 				DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */,
+				DDAEB3061F3C69290059C672 /* ArtworkCell.swift in Sources */,
 				DDAEB2C11F394CE50059C672 /* DraftMainView.swift in Sources */,
 				DDAEB2D51F39C21C0059C672 /* StepCollectionViewHeader.swift in Sources */,
 				DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */,
+				DDAEB2FD1F3C5B370059C672 /* ArtworkSection.swift in Sources */,
 				DDAEB2D91F39F8A70059C672 /* AddStepViewController.swift in Sources */,
 				DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */,
 				DDAEB2BC1F394C530059C672 /* ProjectViewController.swift in Sources */,
+				DDAEB3021F3C5B780059C672 /* ProjectDescriptionSection.swift in Sources */,
 				DDAEB2E21F3A06AA0059C672 /* PublishProjectViewController.swift in Sources */,
 				DDAEB29D1F394B9D0059C672 /* Project.swift in Sources */,
 			);

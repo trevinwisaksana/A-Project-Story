@@ -22,7 +22,7 @@ final class CreateProjectViewController: UIViewController {
         case loading
         case viewDidAppear
         case didPressCancelButton
-        case didBeginToCreateProject
+        case didPressCreateButton
         case createProject(with: Project)
         case failedToCreateProject(as: CreateProjectError)
     }
@@ -50,7 +50,7 @@ final class CreateProjectViewController: UIViewController {
             prepareTextViewDelegate()
         case .didPressCancelButton:
             dismiss(animated: true, completion: nil)
-        case .didBeginToCreateProject:
+        case .didPressCreateButton:
             createProjectDraft()
         case .createProject(let data):
             passDataToPresenterViewController(data: data)
@@ -100,7 +100,7 @@ final class CreateProjectViewController: UIViewController {
     
     @objc
     private func didPressCreateProjectButton() {
-        state = .didBeginToCreateProject
+        state = .didPressCreateButton
     }
     
     private func createProjectDraft() {

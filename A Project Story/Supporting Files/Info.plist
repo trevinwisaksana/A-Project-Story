@@ -24,6 +24,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Averta-Semibold.otf</string>
+		<string>Averta.otf</string>
 		<string>Averta-Bold.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

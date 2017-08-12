@@ -13,11 +13,19 @@ final class PublishProjectMainView: UIView {
     // Back button
     var backButton = UIButton()
     var publishButton = UIButton()
+    var publishCollectionView: UICollectionView!
+    
+    // Image View
+    var artworkImageView = UIImageView()
+    
+    // Text View
+    var descriptionTextView = UITextView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
         setScreenSize()
         
+        preparePublishCollectionView()
         prepareBackButton()
         preparePublishButton()
     }
@@ -75,6 +83,28 @@ final class PublishProjectMainView: UIView {
             make.right.equalTo(-22)
         }
     }
-
+    
+    private func preparePublishCollectionView() {
+        
+        let width = frame.width
+        let height = frame.height * 0.8
+        
+        let maxY = frame.maxY * 0.15
+        
+        let collectionViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
+        
+        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        publishCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
+        publishCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        publishCollectionView.showsVerticalScrollIndicator = false
+        
+        addSubview(publishCollectionView)
+        
+        publishCollectionView.snp.makeConstraints { (make) in
+            make.width.equalTo(self.frame.width)
+            make.leading.trailing.top.bottom.equalTo(0)
+        }
+    }
     
 }

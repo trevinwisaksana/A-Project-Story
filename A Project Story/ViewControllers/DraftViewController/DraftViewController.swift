@@ -15,7 +15,7 @@ final class DraftViewController: UIViewController {
     
     init(project: Project) {
         super.init(nibName: nil, bundle: nil)
-        
+        viewModel.assignData(with: project)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,6 +51,7 @@ final class DraftViewController: UIViewController {
             registerCollectionViewCell()
             registerCollectionViewHeader()
             setCollectionViewDelegate()
+            assignProjectTitle()
         case .viewDidAppear, .didBecomeActive:
             setAddStepButtonTarget()
         case .didPressBackButton:
@@ -150,6 +151,11 @@ final class DraftViewController: UIViewController {
     
     private func presentStepViewController(with data: Step) {
         present(StepViewController(step: data), animated: true, completion: nil)
+    }
+    
+    private func assignProjectTitle() {
+        let projectTitle = viewModel.projectTitle()
+        mainView.assignProjectTitle(with: projectTitle)
     }
     
 }

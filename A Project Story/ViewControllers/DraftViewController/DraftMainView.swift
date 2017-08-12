@@ -181,4 +181,8 @@ final class DraftMainView: UIView {
             make.top.equalTo(projectTitleLineSeparator.snp.bottom).offset(5)
         }
     }
+    
+    func assignProjectTitle(with title: String) {
+        projectTitleTextField.text = title
+    }
 }
