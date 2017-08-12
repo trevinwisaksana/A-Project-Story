@@ -12,6 +12,7 @@ final class Step {
     
     var title: String
     var description: String
+    var index = 0
     
     init(title: String, description: String) {
         self.title = title

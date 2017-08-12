@@ -15,7 +15,7 @@ final class StepViewController: UIViewController {
     
     init(step: Step) {
         super.init(nibName: nil, bundle: nil)
-        
+        mainView.assignData(with: step)
     }
     
     required init?(coder aDecoder: NSCoder) {

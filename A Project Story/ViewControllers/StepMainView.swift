@@ -101,7 +101,6 @@ final class StepMainView: UIView {
         
         stepTitleTextField.returnKeyType = .done
         
-        stepTitleTextField.text = "Step 1: Buy New Tools"
         stepTitleTextField.textColor = .black
         
         let fontURL = Bundle.main.url(forResource: "Averta-Bold", withExtension: "otf")! as CFURL
@@ -156,7 +155,6 @@ final class StepMainView: UIView {
         
         stepDescriptionTextView.returnKeyType = .default
         
-        stepDescriptionTextView.text = "Describe this step of your project..."
         stepDescriptionTextView.textColor = .black
         
         let backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
@@ -174,6 +172,11 @@ final class StepMainView: UIView {
             make.left.equalTo(17)
             make.right.equalTo(-17)
         }
+    }
+    
+    func assignData(with step: Step) {
+        stepTitleTextField.text = step.title
+        stepDescriptionTextView.text = step.description
     }
     
     // MARK: - Error Handling

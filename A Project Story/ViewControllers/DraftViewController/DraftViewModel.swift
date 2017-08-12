@@ -11,14 +11,13 @@ import Foundation
 final class DraftViewModel {
     
     private var project: Project?
-    private var step: Step?
     
     func appendStep(with data: Step) {
         project?.steps.append(data)
     }
-    
-    func passListOfSteps() -> [Step]? {
-        return project?.steps ?? nil
+
+    func passStep(at indexPath: IndexPath) -> Step? {
+        return project?.steps[indexPath.row] ?? nil
     }
     
     func assignData(with data: Project) {

@@ -14,6 +14,7 @@ final class StepCell: UICollectionViewCell {
     var containerView = UIView()
     var stepCountLabel = UILabel()
     var lineSeparator = UIView()
+    var stepTitleLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +22,7 @@ final class StepCell: UICollectionViewCell {
         
         prepareContainerView()
         prepareLineSeparator()
-        prepareStepCount()
+        prepareStepCountLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,7 +35,7 @@ final class StepCell: UICollectionViewCell {
     }
     
     func configure(with data: Step) {
-        
+        stepCountLabel.text = "\(data.index)"
     }
     
     private func prepareContainerView() {
@@ -44,7 +45,7 @@ final class StepCell: UICollectionViewCell {
         
         let containerViewFrame = CGRect(x: 0, y: 0, width: width, height: height)
         containerView.frame = containerViewFrame
-        containerView.backgroundColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
+        containerView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         
         addSubview(containerView)
     }
@@ -61,7 +62,7 @@ final class StepCell: UICollectionViewCell {
         addSubview(lineSeparator)
     }
     
-    private func prepareStepCount() {
+    private func prepareStepCountLabel() {
         
         let width = frame.width
         let height = frame.height
@@ -69,17 +70,21 @@ final class StepCell: UICollectionViewCell {
         let stepCountLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         stepCountLabel.frame = stepCountLabelFrame
         stepCountLabel.text = "1"
-        stepCountLabel.font = UIFont(name: "Averta-Bold", size: width * 0.2)
+        stepCountLabel.font = UIFont(name: "Averta-Bold", size: width * 0.1)
+        stepCountLabel.textColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         
         addSubview(stepCountLabel)
         
         stepCountLabel.snp.makeConstraints { (make) in
-            make.bottom.equalTo(lineSeparator.snp.top).offset(2)
-            make.left.equalTo(0)
+            make.height.equalTo(height)
+            make.width.equalTo(width)
+            make.bottom.equalTo(lineSeparator.snp.top).offset(5)
             make.left.equalTo(0)
         }
     }
     
-    
-    
+    private func prepareStepTitleLabel() {
+        
+        
+    }
 }

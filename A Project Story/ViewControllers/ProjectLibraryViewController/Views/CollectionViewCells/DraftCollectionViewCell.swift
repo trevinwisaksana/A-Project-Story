@@ -81,7 +81,7 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         addSubview(projectTitleLabel)
         
         projectTitleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(21)
+            make.left.equalTo(20)
             make.top.equalTo(2)
         }
     }
@@ -103,7 +103,7 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         addSubview(unpublishedLabel)
         
         unpublishedLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(21)
+            make.left.equalTo(20)
             make.bottom.equalTo(lineSeparator.snp.top).offset(-2)
         }
     }

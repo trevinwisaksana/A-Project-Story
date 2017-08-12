@@ -51,6 +51,7 @@ final class DraftViewController: UIViewController {
             registerCollectionViewCell()
             registerCollectionViewHeader()
             setCollectionViewDelegate()
+            addCollectionViewLongPressGestureRecognizer()
             assignProjectTitle()
         case .viewDidAppear, .didBecomeActive:
             setAddStepButtonTarget()
@@ -142,6 +143,33 @@ final class DraftViewController: UIViewController {
         state = .didPressAddStepButton
     }
     
+    private func addCollectionViewLongPressGestureRecognizer() {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longGestureHandler(gesture:)))
+        mainView.stepCollectionView.addGestureRecognizer(longPressGesture)
+    }
+    
+    @objc
+    private func longGestureHandler(gesture: UILongPressGestureRecognizer) {
+        // Step Collection View
+        let collectionView = mainView.stepCollectionView
+        
+        switch gesture.state {
+        case .began:
+            let gestureLocation = gesture.location(in: collectionView)
+            guard let selectedIndexPath = collectionView?.indexPathForItem(at: gestureLocation) else {
+                break
+            }
+            collectionView?.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case .changed:
+            let gestureLocation = gesture.location(in: gesture.view)
+            collectionView?.updateInteractiveMovementTargetPosition(gestureLocation)
+        case .ended:
+            collectionView?.endInteractiveMovement()
+        default:
+            mainView.stepCollectionView.cancelInteractiveMovement()
+        }
+    }
+    
     private func presentAddStepViewController() {
         present(AddStepViewController(), animated: true, completion: nil)
     }
@@ -173,12 +201,17 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StepCell", for: indexPath) as! StepCell
+        guard let step = viewModel.passStep(at: indexPath) else {
+            assert(false, "Data unavailable")
+        }
+        step.index = indexPath.row + 1
+        cell.configure(with: step)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width * 0.88
-        let height = collectionView.frame.height * 0.1
+        let height = collectionView.frame.height * 0.09
         let size = CGSize(width: width, height: height)
         return size
     }
@@ -197,9 +230,7 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
             switch section {
             case 0:
                 let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepCollectionViewHeader", for: indexPath) as! StepCollectionViewHeader
-                
                 return reusableView
-                
             default:
                 assert(false, "Section out of range")
             }
@@ -222,7 +253,7 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 25, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
