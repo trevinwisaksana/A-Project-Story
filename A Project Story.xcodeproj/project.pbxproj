@@ -56,6 +56,10 @@
 		DDAEB3061F3C69290059C672 /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3051F3C69290059C672 /* ArtworkCell.swift */; };
 		DDAEB30A1F3D89190059C672 /* Averta.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDAEB3091F3D89190059C672 /* Averta.otf */; };
 		DDAEB30C1F3D898B0059C672 /* Averta-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDAEB30B1F3D898B0059C672 /* Averta-Semibold.otf */; };
+		DDAEB30E1F3FAED70059C672 /* PublishedArtworkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB30D1F3FAED70059C672 /* PublishedArtworkSection.swift */; };
+		DDAEB3101F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB30F1F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift */; };
+		DDAEB3141F3FB1AF0059C672 /* PublishedArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3131F3FB1AF0059C672 /* PublishedArtworkCell.swift */; };
+		DDAEB3161F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		DDAEB3051F3C69290059C672 /* ArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
 		DDAEB3091F3D89190059C672 /* Averta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Averta.otf; sourceTree = "<group>"; };
 		DDAEB30B1F3D898B0059C672 /* Averta-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Averta-Semibold.otf"; sourceTree = "<group>"; };
+		DDAEB30D1F3FAED70059C672 /* PublishedArtworkSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedArtworkSection.swift; sourceTree = "<group>"; };
+		DDAEB30F1F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedProjectDescriptionSection.swift; sourceTree = "<group>"; };
+		DDAEB3131F3FB1AF0059C672 /* PublishedArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedArtworkCell.swift; sourceTree = "<group>"; };
+		DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedProjectDescriptionCell.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -408,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */,
+				DDAEB3111F3FAEEB0059C672 /* ReusableViews */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -555,6 +564,33 @@
 			children = (
 				DDAEB3051F3C69290059C672 /* ArtworkCell.swift */,
 				DDAEB3031F3C691F0059C672 /* ProjectDescriptionCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DDAEB3111F3FAEEB0059C672 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB3121F3FAEFA0059C672 /* Sections */,
+				DDAEB3171F3FB1C70059C672 /* Cells */,
+			);
+			name = ReusableViews;
+			sourceTree = "<group>";
+		};
+		DDAEB3121F3FAEFA0059C672 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB30D1F3FAED70059C672 /* PublishedArtworkSection.swift */,
+				DDAEB30F1F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		DDAEB3171F3FB1C70059C672 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB3131F3FB1AF0059C672 /* PublishedArtworkCell.swift */,
+				DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -890,6 +926,7 @@
 				DDAEB2E71F3A07870059C672 /* PublishProjectViewModel.swift in Sources */,
 				DDAEB2C31F394D640059C672 /* DraftViewModel.swift in Sources */,
 				DDAEB2D21F39C1DF0059C672 /* StepCell.swift in Sources */,
+				DDAEB3161F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
 				DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */,
 				DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */,
@@ -899,10 +936,13 @@
 				DDAEB2D51F39C21C0059C672 /* StepCollectionViewHeader.swift in Sources */,
 				DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */,
 				DDAEB2FD1F3C5B370059C672 /* ArtworkSection.swift in Sources */,
+				DDAEB3141F3FB1AF0059C672 /* PublishedArtworkCell.swift in Sources */,
 				DDAEB2D91F39F8A70059C672 /* AddStepViewController.swift in Sources */,
 				DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */,
+				DDAEB30E1F3FAED70059C672 /* PublishedArtworkSection.swift in Sources */,
 				DDAEB2BC1F394C530059C672 /* ProjectViewController.swift in Sources */,
 				DDAEB3021F3C5B780059C672 /* ProjectDescriptionSection.swift in Sources */,
+				DDAEB3101F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift in Sources */,
 				DDAEB2E21F3A06AA0059C672 /* PublishProjectViewController.swift in Sources */,
 				DDAEB29D1F394B9D0059C672 /* Project.swift in Sources */,
 			);

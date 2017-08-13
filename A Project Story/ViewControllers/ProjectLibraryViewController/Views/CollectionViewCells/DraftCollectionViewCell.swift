@@ -20,8 +20,8 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         prepareContainerView()
         prepareLineSeparator()
-        prepareProjectTitleLabel()
         prepareUnpublishedLabel()
+        prepareProjectTitleLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,12 +54,11 @@ final class DraftCollectionViewCell: UICollectionViewCell {
     
     private func prepareLineSeparator() {
         
-        let width = frame.width * 0.9
+        let height = frame.height
         
         let maxX = frame.maxX * 0.05
-        let maxY = containerView.frame.maxY
         
-        let lineSeparatorFrame = CGRect(x: maxX, y: maxY, width: width, height: 1)
+        let lineSeparatorFrame = CGRect(x: maxX, y: 0, width: 1, height: height)
         lineSeparator.frame = lineSeparatorFrame
         lineSeparator.backgroundColor = UIColor(colorLiteralRed: 231/255, green: 231/255, blue: 231/255, alpha: 1)
         
@@ -75,14 +74,14 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         projectTitleLabel.frame = projectTitleFrame
         
         projectTitleLabel.text = "3D Printed Gearbox"
-        projectTitleLabel.font = UIFont(name: "Averta-Semibold", size: frame.width * 0.06)
+        projectTitleLabel.font = UIFont(name: "Averta-Bold", size: frame.width * 0.06)
         projectTitleLabel.textColor = .black
         
         addSubview(projectTitleLabel)
         
         projectTitleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(20)
-            make.top.equalTo(2)
+            make.left.equalTo(lineSeparator.snp.right).offset(10)
+            make.bottom.equalTo(unpublishedLabel.snp.top).offset(-2)
         }
     }
     
@@ -97,14 +96,14 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         unpublishedLabel.frame = unpublishedLabelFrame
         
         unpublishedLabel.text = "Unpublished"
-        unpublishedLabel.font = UIFont(name: "Avenir", size: frame.width * 0.03)
+        unpublishedLabel.font = UIFont(name: "Avenir-Medium", size: frame.width * 0.03)
         unpublishedLabel.textColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         
         addSubview(unpublishedLabel)
         
         unpublishedLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(20)
-            make.bottom.equalTo(lineSeparator.snp.top).offset(-2)
+            make.left.equalTo(lineSeparator.snp.right).offset(10)
+            make.bottom.equalTo(-2)
         }
     }
 }

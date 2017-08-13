@@ -336,7 +336,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         switch section {
         case 0:
-            return 15
+            return 10
         case 1:
             return 20
         default:
