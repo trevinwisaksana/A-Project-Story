@@ -48,8 +48,8 @@ final class DraftViewController: UIViewController {
         case .viewDidLayoutSubviews:
             setBackButtonTarget()
             setNextButtonTarget()
-            registerCollectionViewCell()
-            registerCollectionViewHeader()
+            mainView.registerCollectionViewCell()
+            mainView.registerCollectionViewHeader()
             setCollectionViewDelegate()
             addCollectionViewLongPressGestureRecognizer()
             assignProjectTitle()
@@ -114,14 +114,6 @@ final class DraftViewController: UIViewController {
         mainView.stepCollectionView.delegate = self
         mainView.stepCollectionView.dataSource = self
         mainView.stepCollectionView.reloadData()
-    }
-    
-    private func registerCollectionViewCell() {
-        mainView.stepCollectionView.register(StepCell.self, forCellWithReuseIdentifier: "StepCell")
-    }
-    
-    private func registerCollectionViewHeader() {
-        mainView.stepCollectionView.register(StepCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepCollectionViewHeader")
     }
     
     private func setNextButtonTarget() {
@@ -211,7 +203,7 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width * 0.88
-        let height = collectionView.frame.height * 0.09
+        let height = collectionView.frame.height * 0.15
         let size = CGSize(width: width, height: height)
         return size
     }
@@ -253,7 +245,7 @@ extension DraftViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 25, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

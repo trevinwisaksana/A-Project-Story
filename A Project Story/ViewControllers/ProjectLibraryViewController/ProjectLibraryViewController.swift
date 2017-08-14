@@ -44,8 +44,7 @@ final class ProjectLibraryViewController: UIViewController {
             /////////////
             // Testing //
             /////////////
-            let project = Project(title: "Testing", ownerEmail: "testing", description: "Hello, this is a new project.")
-            viewModel.appendDraft(with: project)
+            let project = Project(title: "Sample Project", ownerEmail: "testing", description: "Hello, this is a new project.")
             viewModel.appendDraft(with: project)
             viewModel.appendProject(with: project)
             viewModel.appendProject(with: project)

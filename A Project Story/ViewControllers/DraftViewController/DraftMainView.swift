@@ -130,7 +130,6 @@ final class DraftMainView: UIView {
         }
     }
     
-    
     private func prepareLineSeparator() {
         
         let width = frame.width * 0.88
@@ -154,6 +153,14 @@ final class DraftMainView: UIView {
             make.left.equalTo(23)
             make.right.equalTo(-23)
         }
+    }
+    
+    func registerCollectionViewCell() {
+        stepCollectionView.register(StepCell.self, forCellWithReuseIdentifier: "StepCell")
+    }
+    
+    func registerCollectionViewHeader() {
+        stepCollectionView.register(StepCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepCollectionViewHeader")
     }
     
     private func prepareStepCollectionView() {

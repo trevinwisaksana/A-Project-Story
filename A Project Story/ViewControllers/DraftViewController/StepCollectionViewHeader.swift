@@ -36,7 +36,7 @@ final class StepCollectionViewHeader: UICollectionReusableView {
         
         let titleFont = UIFont(name: "Averta-Bold", size: frame.width * 0.07)
         sectionTitleLabel.font = titleFont
-        sectionTitleLabel.text = "Steps"
+        sectionTitleLabel.text = "Step"
         
         addSubview(sectionTitleLabel)
     }

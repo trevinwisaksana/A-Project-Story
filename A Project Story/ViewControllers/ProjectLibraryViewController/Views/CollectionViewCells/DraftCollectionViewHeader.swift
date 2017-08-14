@@ -31,7 +31,7 @@ final class DraftCollectionViewHeader: UICollectionReusableView {
         let sectionTitleFrame = CGRect(x: maxX, y: 0, width: width, height: height)
         sectionTitleLabel.frame = sectionTitleFrame
         
-        let titleFont = UIFont(name: "Averta-Bold", size: frame.width * 0.075)
+        let titleFont = UIFont(name: "Averta-Bold", size: frame.width * 0.07)
         sectionTitleLabel.font = titleFont
         
         addSubview(sectionTitleLabel)
