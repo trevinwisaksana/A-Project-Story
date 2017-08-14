@@ -97,7 +97,9 @@ final class PublishProjectMainView: UIView {
         
         publishCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
         publishCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        
         publishCollectionView.showsVerticalScrollIndicator = false
+        publishCollectionView.alwaysBounceVertical = true
         
         addSubview(publishCollectionView)
         

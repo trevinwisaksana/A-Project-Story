@@ -24,7 +24,7 @@ final class ProjectLibraryViewController: UIViewController {
         case viewDidAppear
         case didBecomeActive
         case didPressAddProjectButton
-        case didPressShowMoreButton
+        case didPressShowMoreButton(sender: UIButton)
         case didSelectCell(at: IndexPath)
     }
     
@@ -51,9 +51,9 @@ final class ProjectLibraryViewController: UIViewController {
             
         case .viewDidLayoutSubviews:
             setAddProjectButtonTarget()
-            registerCollectionViewHeader()
-            registerCollectionViewFooter()
-            registerCollectionViewCells()
+            mainView.registerCollectionViewHeader()
+            mainView.registerCollectionViewFooter()
+            mainView.registerCollectionViewCells()
             setCollectionViewDelegate()
         case .viewDidAppear:
             setShowMoreButtonTarget()
@@ -64,8 +64,8 @@ final class ProjectLibraryViewController: UIViewController {
         case .didSelectCell(let indexPath):
             let project = viewModel.didSelectItemAt(indexPath: indexPath)
             determineViewControllerToPresent(with: indexPath, data: project)
-        case .didPressShowMoreButton:
-            minimizeOrExpandDraftSection()
+        case .didPressShowMoreButton(let button):
+            minimizeOrExpandDraftSection(with: button)
         default:
             break
         }
@@ -117,26 +117,6 @@ final class ProjectLibraryViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
     }
     
-    private func registerCollectionViewCells() {
-        mainView.projectLibraryCollectionView.register(
-            FeaturedCollectionViewCell.self,
-            forCellWithReuseIdentifier: "FeaturedCell"
-        )
-        mainView.projectLibraryCollectionView.register(
-            DraftCollectionViewCell.self,
-            forCellWithReuseIdentifier: "DraftCell"
-        )
-    }
-    
-    private func registerCollectionViewHeader() {
-        mainView.projectLibraryCollectionView.register(FeaturedCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FeaturedCollectionViewHeader")
-        mainView.projectLibraryCollectionView.register(DraftCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "DraftCollectionViewHeader")
-    }
-    
-    private func registerCollectionViewFooter() {
-        mainView.projectLibraryCollectionView.register(DraftCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "DraftCollectionViewFooter")
-    }
-    
     private func setShowMoreButtonTarget() {
         let collectionView = mainView.projectLibraryCollectionView
         let numberOfDrafts = viewModel.numberOfItemsIn(section: 0)
@@ -144,20 +124,23 @@ final class ProjectLibraryViewController: UIViewController {
         if numberOfDrafts > 0 {
             let sectionFooter = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionFooter)[0] as! DraftCollectionViewFooter
             let showMoreButton = sectionFooter.showMoreButton
+            showMoreButton.tag = 1
             showMoreButton.addTarget(self, action: #selector(didPressShowMoreButton), for: .touchUpInside)
         }
     }
     
     @objc
-    private func didPressShowMoreButton() {
-        state = .didPressShowMoreButton
+    private func didPressShowMoreButton(sender: UIButton) {
+        state = .didPressShowMoreButton(sender: sender)
     }
     
-    private func minimizeOrExpandDraftSection() {
+    private func minimizeOrExpandDraftSection(with sender: UIButton) {
         if viewModel.didEnlargeDraftSection {
             viewModel.showLessDrafts()
+            sender.setTitle("Show more", for: .normal)
         } else {
             viewModel.showMoreDrafts()
+            sender.setTitle("Show less", for: .normal)
         }
         mainView.projectLibraryCollectionView.reloadData()
     }
@@ -259,6 +242,14 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             switch section {
             case 0:
                 let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "DraftCollectionViewFooter", for: indexPath) as! DraftCollectionViewFooter
+                
+                // Hides the show more button if the list of draft count is < 2
+                if viewModel.listOfDraftsCount() < 2 {
+                    reusableView.hideShowMoreButton()
+                } else {
+                    reusableView.unhideShowMoreButton()
+                }
+                
                 return reusableView
             default:
                 assert(false, "Section out of range")
@@ -323,10 +314,11 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             
             if numberOfDrafts == 0 {
                 return CGSize.zero
+            } else if viewModel.listOfDraftsCount() < 2 {
+                return CGSize(width: width, height: 1)
             } else {
                 return CGSize(width: width, height: height)
             }
-    
         default:
             return CGSize.zero
         }
@@ -350,7 +342,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
         
-        return UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

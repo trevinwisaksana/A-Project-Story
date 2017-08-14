@@ -122,7 +122,8 @@ final class CreateProjectViewController: UIViewController {
     
     private func passDataToPresenterViewController(data: Project) {
         if let presenter = presentingViewController as? ProjectLibraryViewController {
-            presenter.viewModel.appendDraft(with: data)
+            // Insert at 0 because users can see the latest draft
+            presenter.viewModel.insertProjectDraft(at: 0, data: data)
         }
         dismiss(animated: true, completion: nil)
     }

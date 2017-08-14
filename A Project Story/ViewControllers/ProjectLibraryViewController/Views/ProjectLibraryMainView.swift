@@ -85,4 +85,25 @@ final class ProjectLibraryMainView: UIView {
             make.leading.top.equalTo(22)
         }
     }
+    
+    // MARK: - Register Cells
+    func registerCollectionViewCells() {
+        projectLibraryCollectionView.register(
+            FeaturedCollectionViewCell.self,
+            forCellWithReuseIdentifier: "FeaturedCell"
+        )
+        projectLibraryCollectionView.register(
+            DraftCollectionViewCell.self,
+            forCellWithReuseIdentifier: "DraftCell"
+        )
+    }
+    
+    func registerCollectionViewHeader() {
+        projectLibraryCollectionView.register(FeaturedCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "FeaturedCollectionViewHeader")
+        projectLibraryCollectionView.register(DraftCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "DraftCollectionViewHeader")
+    }
+    
+    func registerCollectionViewFooter() {
+        projectLibraryCollectionView.register(DraftCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "DraftCollectionViewFooter")
+    }
 }

@@ -23,6 +23,10 @@ final class ProjectLibraryViewModel {
         listOfDrafts.append(data)
     }
     
+    func insertProjectDraft(at index: Int, data: Project) {
+        listOfDrafts.insert(data, at: index)
+    }
+    
     func appendProject(with data: Project) {
         listOfProjects.append(data)
     }
@@ -33,6 +37,10 @@ final class ProjectLibraryViewModel {
     
     func showLessDrafts() {
         didEnlargeDraftSection = false
+    }
+    
+    func listOfDraftsCount() -> Int {
+        return listOfDrafts.count
     }
     
     func numberOfItemsIn(section: Int) -> Int {

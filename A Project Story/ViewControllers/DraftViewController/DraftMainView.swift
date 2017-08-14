@@ -179,6 +179,7 @@ final class DraftMainView: UIView {
 
         
         stepCollectionView.showsVerticalScrollIndicator = false
+        stepCollectionView.alwaysBounceVertical = true
         
         addSubview(stepCollectionView)
         
