@@ -12,9 +12,14 @@ final class CreateProjectViewModel {
     
     private var project: Project?
     
-    func createProject(title: String, email: String, description: String, completion: ((NSError?, Project?) -> Void)?) {
+    func createProject(title: String, email: String, description: inout String, completion: ((NSError?, Project?) -> Void)?) {
         
-        let result = validateProject(title: title, email: email)
+        let result = validateProject(title: title, email: email, description: description)
+        // Prevents the default description from being passed as a string
+        let placeholderText = "Enter your project description..."
+        if description == placeholderText {
+            description = ""
+        }
         
         if result.isEmpty {
             project = Project(title: title, ownerEmail: email, description: description)
@@ -26,7 +31,8 @@ final class CreateProjectViewModel {
         }
     }
     
-    private func validateProject(title: String, email: String) -> String {
+    private func validateProject(title: String, email: String, description: String) -> String {
+        
         if title.isEmpty && email.isEmpty {
             return "titleAndEmailIsEmpty"
         } else if title.isEmpty {

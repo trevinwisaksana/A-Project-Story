@@ -107,9 +107,9 @@ final class CreateProjectViewController: UIViewController {
         
         let projectName = mainView.projectTitleTextField.text ?? ""
         let email = mainView.emailAddressTextField.text ?? ""
-        let description = mainView.projectDescriptionTextView.text ?? ""
+        var description = mainView.projectDescriptionTextView.text ?? ""
         
-        viewModel.createProject(title: projectName, email: email, description: description, completion: { [weak self] (error, data) in
+        viewModel.createProject(title: projectName, email: email, description: &description, completion: { [weak self] (error, data) in
             if error == nil {
                 if let data = data {
                     self?.state = .createProject(with: data)

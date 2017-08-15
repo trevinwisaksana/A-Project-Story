@@ -15,7 +15,7 @@ final class DraftViewController: UIViewController {
     
     init(project: Project) {
         super.init(nibName: nil, bundle: nil)
-        viewModel.assignData(with: project)
+        viewModel.assignProject(data: project)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -30,7 +30,7 @@ final class DraftViewController: UIViewController {
         case didBecomeActive
         case didPressBackButton
         case didPressAddStepButton
-        case didPressNextButton
+        case didPressNextButton(passing: Project)
         case didSelectCell(at: IndexPath)
     }
     
@@ -59,8 +59,8 @@ final class DraftViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         case .didPressAddStepButton:
             presentAddStepViewController()
-        case .didPressNextButton:
-            presentPublishProjectViewController()
+        case .didPressNextButton(let project):
+            presentPublishProjectViewController(with: project)
         case .didSelectCell(let indexPath):
             let stepData = viewModel.didSelectItemAt(indexPath: indexPath)
             guard let step = stepData else { return }
@@ -122,7 +122,8 @@ final class DraftViewController: UIViewController {
     
     @objc
     private func didPressNextButton() {
-        state = .didPressNextButton
+        guard let project = viewModel.passProjectData() else { return }
+        state = .didPressNextButton(passing: project)
     }
     
     private func setAddStepButtonTarget() {
@@ -166,8 +167,9 @@ final class DraftViewController: UIViewController {
         present(AddStepViewController(), animated: true, completion: nil)
     }
     
-    private func presentPublishProjectViewController() {
-        present(PublishProjectViewController(), animated: true, completion: nil)
+    private func presentPublishProjectViewController(with data: Project) {
+        let targetViewController = PublishProjectViewController(project: data)
+        present(targetViewController, animated: true, completion: nil)
     }
     
     private func presentStepViewController(with data: Step) {

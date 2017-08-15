@@ -60,6 +60,8 @@
 		DDAEB3101F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB30F1F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift */; };
 		DDAEB3141F3FB1AF0059C672 /* PublishedArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3131F3FB1AF0059C672 /* PublishedArtworkCell.swift */; };
 		DDAEB3161F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */; };
+		DDAEB3191F41D8510059C672 /* StepsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3181F41D8510059C672 /* StepsSection.swift */; };
+		DDAEB31B1F41D8640059C672 /* StepsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB31A1F41D8640059C672 /* StepsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,8 @@
 		DDAEB30F1F3FAEE70059C672 /* PublishedProjectDescriptionSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedProjectDescriptionSection.swift; sourceTree = "<group>"; };
 		DDAEB3131F3FB1AF0059C672 /* PublishedArtworkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedArtworkCell.swift; sourceTree = "<group>"; };
 		DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedProjectDescriptionCell.swift; sourceTree = "<group>"; };
+		DDAEB3181F41D8510059C672 /* StepsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsSection.swift; sourceTree = "<group>"; };
+		DDAEB31A1F41D8640059C672 /* StepsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsCell.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -555,6 +559,7 @@
 			children = (
 				DDAEB2FC1F3C5B370059C672 /* ArtworkSection.swift */,
 				DDAEB3011F3C5B780059C672 /* ProjectDescriptionSection.swift */,
+				DDAEB3181F41D8510059C672 /* StepsSection.swift */,
 			);
 			name = Sections;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 			children = (
 				DDAEB3051F3C69290059C672 /* ArtworkCell.swift */,
 				DDAEB3031F3C691F0059C672 /* ProjectDescriptionCell.swift */,
+				DDAEB31A1F41D8640059C672 /* StepsCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -907,6 +913,7 @@
 				DDAEB2B91F394C530059C672 /* ProjectLibraryMainView.swift in Sources */,
 				DDAEB2B71F394C530059C672 /* DraftCollectionViewCell.swift in Sources */,
 				DDAEB2B61F394C530059C672 /* ProjectLibraryViewModel.swift in Sources */,
+				DDAEB3191F41D8510059C672 /* StepsSection.swift in Sources */,
 				DDAEB2DC1F39F94D0059C672 /* AddStepViewModel.swift in Sources */,
 				DDAEB2B41F394C530059C672 /* CreateProjectViewModel.swift in Sources */,
 				DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */,
@@ -918,6 +925,7 @@
 				DDAEB2F01F3BCFC40059C672 /* StepViewController.swift in Sources */,
 				DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */,
 				DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */,
+				DDAEB31B1F41D8640059C672 /* StepsCell.swift in Sources */,
 				DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */,
 				DDAEB2B21F394C530059C672 /* CreateProjectMainView.swift in Sources */,
 				DDAEB2F91F3BD17E0059C672 /* StepViewModel.swift in Sources */,

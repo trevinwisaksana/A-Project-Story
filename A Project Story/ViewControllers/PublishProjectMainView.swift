@@ -109,4 +109,16 @@ final class PublishProjectMainView: UIView {
         }
     }
     
+    func registerCollectionViewCells() {
+        publishCollectionView.register(ArtworkCell.self, forCellWithReuseIdentifier: "ArtworkCell")
+        publishCollectionView.register(ProjectDescriptionCell.self, forCellWithReuseIdentifier: "ProjectDescriptionCell")
+        publishCollectionView.register(StepsCell.self, forCellWithReuseIdentifier: "StepsCell")
+    }
+    
+    func registerCollectionViewSections() {
+        publishCollectionView.register(ProjectDescriptionSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectDescriptionSection")
+        publishCollectionView.register(ArtworkSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ArtworkSection")
+        publishCollectionView.register(StepSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepsSection")
+    }
+    
 }

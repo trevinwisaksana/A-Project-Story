@@ -124,7 +124,7 @@ final class ProjectLibraryViewController: UIViewController {
         if numberOfDrafts > 0 {
             let sectionFooter = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionFooter)[0] as! DraftCollectionViewFooter
             let showMoreButton = sectionFooter.showMoreButton
-            showMoreButton.tag = 1
+            showMoreButton.setTitle("Show more", for: .normal)
             showMoreButton.addTarget(self, action: #selector(didPressShowMoreButton), for: .touchUpInside)
         }
     }

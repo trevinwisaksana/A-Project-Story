@@ -20,8 +20,12 @@ final class DraftViewModel {
         return project?.steps[indexPath.row] ?? nil
     }
     
-    func assignData(with data: Project) {
+    func assignProject(data: Project) {
         project = data
+    }
+    
+    func passProjectData() -> Project? {
+        return project
     }
     
     func projectTitle() -> String {

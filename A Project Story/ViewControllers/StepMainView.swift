@@ -28,7 +28,7 @@ final class StepMainView: UIView {
         setScreenSize()
         
         prepareBackButton()
-        prepareEditStepButton()
+        // prepareEditStepButton()
         prepareStepTitleTextField()
         prepareLineSeparator()
         prepareStepDescriptionTextView()

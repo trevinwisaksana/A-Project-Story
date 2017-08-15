@@ -11,11 +11,12 @@ import SnapKit
 
 final class DraftCollectionViewFooter: UICollectionReusableView {
     
-    var showMoreButton = UIButton()
+    var showMoreButton = UIButton(type: .custom)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         // Other setup
+        prepareShowMoreButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,41 +25,39 @@ final class DraftCollectionViewFooter: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        prepareShowMoreButton()
+        
     }
     
     private func prepareShowMoreButton() {
         
-        let width = frame.width * 0.3
+        let width = frame.width
         let height = frame.height 
         
         let showMoreButtonFrame = CGRect(x: 0, y: 0, width: width, height: height)
         showMoreButton.frame = showMoreButtonFrame
-        
-        showMoreButton.setTitle("Show more", for: .normal)
         
         let titleColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         showMoreButton.setTitleColor(titleColor, for: .normal)
         
         let titleFont = UIFont(name: "Avenir", size: frame.width * 0.04)
         showMoreButton.titleLabel?.font = titleFont
+        showMoreButton.contentHorizontalAlignment = .left
         
         addSubview(showMoreButton)
         
         showMoreButton.snp.makeConstraints { (make) in
-            make.left.equalTo(0)
+            make.left.equalTo(22)
             make.width.equalTo(width)
             make.height.equalTo(height)
+            make.top.bottom.equalTo(0)
         }
-        
     }
     
     func hideShowMoreButton() {
-        showMoreButton.isHidden = true
+        showMoreButton.alpha = 0
     }
     
     func unhideShowMoreButton() {
-        showMoreButton.isHidden = false
+        showMoreButton.alpha = 1
     }
-    
 }

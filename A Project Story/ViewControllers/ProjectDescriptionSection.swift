@@ -15,12 +15,16 @@ final class ProjectDescriptionSection: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         prepareProjectDescriptionTextView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(with data: Project) {
+        projectDescriptionTextView.text = data.description
     }
     
     private func prepareProjectDescriptionTextView() {
@@ -30,13 +34,17 @@ final class ProjectDescriptionSection: UICollectionReusableView {
         
         let artworkFrame = CGRect(x: 0, y: 0, width: width, height: height)
         projectDescriptionTextView.frame = artworkFrame
+        projectDescriptionTextView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        
+        projectDescriptionTextView.font = UIFont(name: "Avenir-Medium", size: width * 0.045)
         
         addSubview(projectDescriptionTextView)
         
         projectDescriptionTextView.snp.makeConstraints { (make) in
-            make.left.equalTo(22)
-            make.right.equalTo(-22)
-            make.top.bottom.equalTo(0)
+            make.left.equalTo(21)
+            make.right.equalTo(-21)
+            make.top.equalTo(10)
+            make.bottom.equalTo(0)
             make.width.equalTo(width)
         }
     }
