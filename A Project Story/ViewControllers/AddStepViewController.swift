@@ -10,7 +10,7 @@ import UIKit
 
 final class AddStepViewController: UIViewController {
     
-    private let mainView = AddStepMainView()
+    fileprivate let mainView = AddStepMainView()
     let viewModel = AddStepViewModel()
     
     private enum State {
@@ -36,6 +36,8 @@ final class AddStepViewController: UIViewController {
         case .viewDidLayoutSubviews:
             setCancelButtonTarget()
             setAddStepButtonTarget()
+            prepareTextViewDelegate()
+            prepareTextFieldDelegates()
         case .didPressAddButton:
             addStep()
         case .addingStep(let step):
@@ -105,9 +107,9 @@ final class AddStepViewController: UIViewController {
     private func addStep() {
         
         let stepName = mainView.stepTitleTextField.text ?? ""
-        let stepDescription = mainView.stepDescriptionTextView.text ?? ""
+        var stepDescription = mainView.stepDescriptionTextView.text ?? ""
         
-        viewModel.addStep(title: stepName, description: stepDescription, completion: { [weak self] (error, data) in
+        viewModel.addStep(title: stepName, description: &stepDescription, completion: { [weak self] (error, data) in
             
             switch error {
             case nil:
@@ -130,4 +132,48 @@ final class AddStepViewController: UIViewController {
         }
     }
     
+}
+
+
+extension AddStepViewController: UITextFieldDelegate {
+    
+    fileprivate func prepareTextFieldDelegates() {
+        mainView.stepTitleTextField.delegate = self
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.placeholder = ""
+        textField.textColor = .black
+        textField.alpha = 1
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+extension AddStepViewController: UITextViewDelegate {
+    
+    fileprivate func prepareTextViewDelegate() {
+        mainView.stepDescriptionTextView.delegate = self
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        // Check if the textView is empty to add placeholder
+        if textView.text.isEmpty {
+            textView.text = "Enter your step description here..."
+            textView.textColor = .lightGray
+        }
+        // Hides the keyboard
+        textView.resignFirstResponder()
+    }
 }

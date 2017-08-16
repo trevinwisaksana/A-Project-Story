@@ -15,6 +15,7 @@ final class StepViewController: UIViewController {
     
     init(step: Step) {
         super.init(nibName: nil, bundle: nil)
+        viewModel.assignData(with: step)
         mainView.assignData(with: step)
     }
     
@@ -41,9 +42,10 @@ final class StepViewController: UIViewController {
         case .loading:
             view = mainView
         case .viewDidLayoutSubviews:
+            addKeyboardFontToolbar(textView: mainView.stepDescriptionTextView)
             setBackButtonTarget()
         case .didPressBackButton:
-            dismiss(animated: true, completion: nil)
+            updateStepData()
         default:
             break
         }
@@ -66,6 +68,14 @@ final class StepViewController: UIViewController {
     @objc
     private func didPressBackButton() {
         state = .didPressBackButton
+    }
+    
+    private func updateStepData() {
+        let title = mainView.stepTitleTextField.text ?? ""
+        let description = mainView.stepDescriptionTextView.text ?? ""
+        viewModel.updateStep(title: title, description: description) { (error) in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // Miscellaneous

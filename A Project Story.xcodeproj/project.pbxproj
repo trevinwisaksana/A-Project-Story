@@ -62,6 +62,7 @@
 		DDAEB3161F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */; };
 		DDAEB3191F41D8510059C672 /* StepsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3181F41D8510059C672 /* StepsSection.swift */; };
 		DDAEB31B1F41D8640059C672 /* StepsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB31A1F41D8640059C672 /* StepsCell.swift */; };
+		DDAEB31D1F4323EF0059C672 /* Keyboard+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		DDAEB3151F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedProjectDescriptionCell.swift; sourceTree = "<group>"; };
 		DDAEB3181F41D8510059C672 /* StepsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsSection.swift; sourceTree = "<group>"; };
 		DDAEB31A1F41D8640059C672 /* StepsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsCell.swift; sourceTree = "<group>"; };
+		DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keyboard+Toolbar.swift"; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +242,7 @@
 				DD8879B11F2DBFAC004466BE /* AppDelegate.swift */,
 				DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */,
 				DDAEB29B1F394B9D0059C672 /* Models */,
+				DDAEB31E1F4323F30059C672 /* Extensions */,
 				DDAEB29E1F394C530059C672 /* ViewControllers */,
 				DD65C6FF1F373E8700333190 /* Supporting Files */,
 			);
@@ -601,6 +604,14 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		DDAEB31E1F4323F30059C672 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */ = {
 			isa = PBXGroup;
 			children = (
@@ -918,6 +929,7 @@
 				DDAEB2B41F394C530059C672 /* CreateProjectViewModel.swift in Sources */,
 				DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
+				DDAEB31D1F4323EF0059C672 /* Keyboard+Toolbar.swift in Sources */,
 				DDAEB2ED1F3B426C0059C672 /* DraftCollectionViewFooter.swift in Sources */,
 				DDAEB2DF1F39F98D0059C672 /* AddStepMainView.swift in Sources */,
 				DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */,
