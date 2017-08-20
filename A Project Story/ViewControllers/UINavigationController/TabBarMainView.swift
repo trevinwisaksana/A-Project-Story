@@ -14,6 +14,7 @@ final class TabBarMainView: UIView {
     let contentView = UIView()
     let tabBarView = UIView()
     let tabBarStackView = UIStackView()
+    let topLineBorder = UIView()
     let projectLibraryButton = UIButton()
     let searchButton = UIButton()
     let updateProjectButton = UIButton()
@@ -28,6 +29,7 @@ final class TabBarMainView: UIView {
         prepareContentView()
         prepareTabBarView()
         prepareTabBarStackView()
+        prepareTopLineBorder()
         prepareProjectLibraryButton()
         prepareSearchButton()
         prepareUpdateProjectButton()
@@ -67,14 +69,14 @@ final class TabBarMainView: UIView {
     
     private func prepareTabBarView() {
         let width = frame.width
-        let height = frame.height * 0.08
+        let height = frame.height * 0.07
         
         let maxY = frame.maxY * 0.9
         
         let tabBarViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
         tabBarView.frame = tabBarViewFrame
         
-        let backgroundColor = UIColor(colorLiteralRed: 83/255, green: 88/255, blue: 95/255, alpha: 1)
+        let backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 0.97)
         tabBarView.backgroundColor = backgroundColor
         
         addSubview(tabBarView)
@@ -84,7 +86,6 @@ final class TabBarMainView: UIView {
             make.height.equalTo(height)
             make.width.equalTo(width)
             make.bottom.left.right.equalTo(0)
-            // make.top.equalTo(contentView.snp.bottom).offset(0)
         }
     }
     
@@ -110,19 +111,33 @@ final class TabBarMainView: UIView {
         tabBarStackView.snp.makeConstraints { (make) in
             make.left.equalTo(width * 0.06)
             make.right.equalTo(-width * 0.06)
-            make.top.equalTo(height * 0.15)
-            make.bottom.equalTo(-height * 0.15)
+            make.top.equalTo(height * 0.18)
+            make.bottom.equalTo(-height * 0.18)
         }
     }
     
+    private func prepareTopLineBorder() {
+    
+        let width = frame.width
+        
+        let topLineBorderFrame = CGRect(x: 0, y: 0, width: width, height: 1)
+        topLineBorder.frame = topLineBorderFrame
+        
+        topLineBorder.backgroundColor = UIColor(colorLiteralRed: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        
+        tabBarView.addSubview(topLineBorder)
+    }
+    
     private func prepareProjectLibraryButton() {
-        let width = frame.width * 0.1
+        let width = frame.width * 0.12
         
         let buttonFrame = CGRect(x: 0, y: 0, width: width, height: width)
         projectLibraryButton.frame = buttonFrame
         
         let buttonImage = UIImage(named: "projectLibraryButtonIcon")
+        let selectedButtonImage = UIImage(named: "projectLibraryButtonIcon_selected")
         projectLibraryButton.setImage(buttonImage, for: .normal)
+        projectLibraryButton.setImage(selectedButtonImage, for: .selected)
         projectLibraryButton.imageView?.contentMode = .scaleAspectFit
         projectLibraryButton.tag = 0
         
@@ -140,7 +155,9 @@ final class TabBarMainView: UIView {
         searchButton.frame = buttonFrame
         
         let buttonImage = UIImage(named: "searchButtonIcon")
+        let selectedButtonImage = UIImage(named: "searchButtonIcon_selected")
         searchButton.setImage(buttonImage, for: .normal)
+        searchButton.setImage(selectedButtonImage, for: .selected)
         searchButton.imageView?.contentMode = .scaleAspectFit
         searchButton.tag = 1
         
@@ -152,13 +169,15 @@ final class TabBarMainView: UIView {
     }
     
     private func prepareUpdateProjectButton() {
-        let width = frame.width * 0.12
+        let width = frame.width * 0.15
         
         let buttonFrame = CGRect(x: 0, y: 0, width: width, height: width)
         updateProjectButton.frame = buttonFrame
         
         let buttonImage = UIImage(named: "updateProjectButtonIcon")
+        let selectedButtonImage = UIImage(named: "updateProjectButtonIcon_selected")
         updateProjectButton.setImage(buttonImage, for: .normal)
+        updateProjectButton.setImage(selectedButtonImage, for: .selected)
         updateProjectButton.imageView?.contentMode = .scaleAspectFit
         updateProjectButton.tag = 2
         
@@ -176,7 +195,9 @@ final class TabBarMainView: UIView {
         bookmarkedProjectsButton.frame = buttonFrame
         
         let buttonImage = UIImage(named: "bookmarkedProjectButtonIcon")
+        let selectedButtonImage = UIImage(named: "bookmarkedProjectButtonIcon_selected")
         bookmarkedProjectsButton.setImage(buttonImage, for: .normal)
+        bookmarkedProjectsButton.setImage(selectedButtonImage, for: .selected)
         bookmarkedProjectsButton.imageView?.contentMode = .scaleAspectFit
         bookmarkedProjectsButton.tag = 3
         
@@ -194,7 +215,9 @@ final class TabBarMainView: UIView {
         profileButton.frame = buttonFrame
         
         let buttonImage = UIImage(named: "profileButtonIcon")
+        let selectedButtonImage = UIImage(named: "profileButtonIcon_selected")
         profileButton.setImage(buttonImage, for: .normal)
+        profileButton.setImage(selectedButtonImage, for: .selected)
         profileButton.imageView?.contentMode = .scaleAspectFit
         profileButton.tag = 4
         
