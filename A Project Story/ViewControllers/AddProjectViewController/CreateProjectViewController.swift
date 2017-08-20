@@ -121,9 +121,10 @@ final class CreateProjectViewController: UIViewController {
     }
     
     private func passDataToPresenterViewController(data: Project) {
-        if let presenter = presentingViewController as? ProjectLibraryViewController {
+        if let presenter = presentingViewController as? TabBarViewController {
             // Insert at 0 because users can see the latest draft
-            presenter.viewModel.insertProjectDraft(at: 0, data: data)
+            let projectLibraryViewController = presenter.childViewControllers[0] as? ProjectLibraryViewController
+            projectLibraryViewController?.viewModel.insertProjectDraft(at: 0, data: data)
         }
         dismiss(animated: true, completion: nil)
     }

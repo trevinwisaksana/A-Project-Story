@@ -81,9 +81,9 @@ final class TabBarViewController: UIViewController {
     @objc
     private func didPressTab(_ button: UIButton) {
         //
-        selectedIndex = button.tag
-        //
         let previousIndex = selectedIndex
+        //
+        selectedIndex = button.tag
         //
         mainView.listOfButtons[previousIndex].isSelected = false
         // 

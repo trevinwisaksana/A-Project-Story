@@ -47,7 +47,7 @@ final class TabBarMainView: UIView {
     
     private func prepareContentView() {
         let width = frame.width
-        let height = frame.height * 0.9
+        let height = frame.height 
         
         let contentViewFrame = CGRect(x: 0, y: 0, width: width, height: height)
         contentView.frame = contentViewFrame
@@ -61,13 +61,13 @@ final class TabBarMainView: UIView {
         contentView.snp.makeConstraints { (make) in
             make.height.equalTo(height)
             make.width.equalTo(width)
-            make.top.left.right.equalTo(0)
+            make.top.bottom.left.right.equalTo(0)
         }
     }
     
     private func prepareTabBarView() {
         let width = frame.width
-        let height = frame.height * 0.1
+        let height = frame.height * 0.08
         
         let maxY = frame.maxY * 0.9
         
@@ -84,7 +84,7 @@ final class TabBarMainView: UIView {
             make.height.equalTo(height)
             make.width.equalTo(width)
             make.bottom.left.right.equalTo(0)
-            make.top.equalTo(contentView.snp.bottom).offset(0)
+            // make.top.equalTo(contentView.snp.bottom).offset(0)
         }
     }
     
@@ -110,8 +110,8 @@ final class TabBarMainView: UIView {
         tabBarStackView.snp.makeConstraints { (make) in
             make.left.equalTo(width * 0.06)
             make.right.equalTo(-width * 0.06)
-            make.top.equalTo(height * 0.1)
-            make.bottom.equalTo(-height * 0.1)
+            make.top.equalTo(height * 0.15)
+            make.bottom.equalTo(-height * 0.15)
         }
     }
     
