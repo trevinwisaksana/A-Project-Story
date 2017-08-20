@@ -10,7 +10,7 @@ import UIKit
 
 final class PublishProjectViewController: UIViewController {
     
-    private let mainView = PublishProjectMainView()
+    fileprivate let mainView = PublishProjectMainView()
     let viewModel = PublishProjectViewModel()
     
     init(project: Project) {
@@ -162,6 +162,7 @@ extension PublishProjectViewController: UICollectionViewDataSource, UICollection
             case 1:
                 let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectDescriptionSection", for: indexPath) as! ProjectDescriptionSection
                 reusableView.configure(with: project)
+                reusableView.projectDescriptionTextView.delegate = self
                 return reusableView
             case 2:
                 let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepsSection", for: indexPath) as! StepSection
@@ -205,5 +206,30 @@ extension PublishProjectViewController: UICollectionViewDataSource, UICollection
         default:
             return 0
         }
+    }
+}
+
+
+extension PublishProjectViewController: UITextViewDelegate {
+    
+    fileprivate func prepareTextViewDelegate() {
+        mainView.descriptionTextView.delegate = self
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        // Check if the textView is empty to add placeholder
+        if textView.text.isEmpty {
+            textView.text = "Please enter your project description here..."
+            textView.textColor = .lightGray
+        }
+        // Hides the keyboard
+        textView.resignFirstResponder()
     }
 }

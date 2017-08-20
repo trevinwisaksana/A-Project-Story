@@ -31,7 +31,7 @@
 		DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */; };
 		DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */; };
 		DDAEB2BC1F394C530059C672 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */; };
-		DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2B11F394C530059C672 /* UINavigationController.swift */; };
+		DDAEB2BD1F394C530059C672 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2B11F394C530059C672 /* TabBarViewController.swift */; };
 		DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2BE1F394CAA0059C672 /* DraftViewController.swift */; };
 		DDAEB2C11F394CE50059C672 /* DraftMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C01F394CE50059C672 /* DraftMainView.swift */; };
 		DDAEB2C31F394D640059C672 /* DraftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB2C21F394D640059C672 /* DraftViewModel.swift */; };
@@ -63,6 +63,7 @@
 		DDAEB3191F41D8510059C672 /* StepsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB3181F41D8510059C672 /* StepsSection.swift */; };
 		DDAEB31B1F41D8640059C672 /* StepsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB31A1F41D8640059C672 /* StepsCell.swift */; };
 		DDAEB31D1F4323EF0059C672 /* Keyboard+Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */; };
+		DDE239B91F48313E0020F7BF /* TabBarMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE239B81F48313E0020F7BF /* TabBarMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +119,7 @@
 		DDAEB2AC1F394C530059C672 /* FeaturedCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedCollectionViewHeader.swift; path = ../FeaturedCollectionViewHeader.swift; sourceTree = "<group>"; };
 		DDAEB2AE1F394C530059C672 /* ProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectMainView.swift; sourceTree = "<group>"; };
 		DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
-		DDAEB2B11F394C530059C672 /* UINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		DDAEB2B11F394C530059C672 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DDAEB2BE1F394CAA0059C672 /* DraftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftViewController.swift; sourceTree = "<group>"; };
 		DDAEB2C01F394CE50059C672 /* DraftMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftMainView.swift; sourceTree = "<group>"; };
 		DDAEB2C21F394D640059C672 /* DraftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraftViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		DDAEB3181F41D8510059C672 /* StepsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsSection.swift; sourceTree = "<group>"; };
 		DDAEB31A1F41D8640059C672 /* StepsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsCell.swift; sourceTree = "<group>"; };
 		DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keyboard+Toolbar.swift"; sourceTree = "<group>"; };
+		DDE239B81F48313E0020F7BF /* TabBarMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarMainView.swift; sourceTree = "<group>"; };
 		DDFDD9F81F35B039006FB0AE /* PDD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PDD.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,7 +288,7 @@
 				DDAEB2F11F3BCFC70059C672 /* StepViewcontroller */,
 				DDAEB2E31F3A06AE0059C672 /* PublishProjectViewController */,
 				DDAEB2AD1F394C530059C672 /* ProjectViewController */,
-				DDAEB2B01F394C530059C672 /* UINavigationController */,
+				DDAEB2B01F394C530059C672 /* TabBarViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -352,11 +354,13 @@
 			path = ProjectViewController;
 			sourceTree = "<group>";
 		};
-		DDAEB2B01F394C530059C672 /* UINavigationController */ = {
+		DDAEB2B01F394C530059C672 /* TabBarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DDAEB2B11F394C530059C672 /* UINavigationController.swift */,
+				DDAEB2B11F394C530059C672 /* TabBarViewController.swift */,
+				DDE239BA1F483C210020F7BF /* Views */,
 			);
+			name = TabBarViewController;
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
@@ -610,6 +614,14 @@
 				DDAEB31C1F4323EF0059C672 /* Keyboard+Toolbar.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DDE239BA1F483C210020F7BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDE239B81F48313E0020F7BF /* TabBarMainView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */ = {
@@ -938,7 +950,7 @@
 				DDAEB2B51F394C530059C672 /* ProjectLibraryViewController.swift in Sources */,
 				DDAEB2C81F3989650059C672 /* DraftCollectionViewHeader.swift in Sources */,
 				DDAEB31B1F41D8640059C672 /* StepsCell.swift in Sources */,
-				DDAEB2BD1F394C530059C672 /* UINavigationController.swift in Sources */,
+				DDAEB2BD1F394C530059C672 /* TabBarViewController.swift in Sources */,
 				DDAEB2B21F394C530059C672 /* CreateProjectMainView.swift in Sources */,
 				DDAEB2F91F3BD17E0059C672 /* StepViewModel.swift in Sources */,
 				DDAEB2E51F3A077F0059C672 /* PublishProjectMainView.swift in Sources */,
@@ -956,6 +968,7 @@
 				DDAEB2D51F39C21C0059C672 /* StepCollectionViewHeader.swift in Sources */,
 				DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */,
 				DDAEB2FD1F3C5B370059C672 /* ArtworkSection.swift in Sources */,
+				DDE239B91F48313E0020F7BF /* TabBarMainView.swift in Sources */,
 				DDAEB3141F3FB1AF0059C672 /* PublishedArtworkCell.swift in Sources */,
 				DDAEB2D91F39F8A70059C672 /* AddStepViewController.swift in Sources */,
 				DDAEB2BB1F394C530059C672 /* ProjectMainView.swift in Sources */,

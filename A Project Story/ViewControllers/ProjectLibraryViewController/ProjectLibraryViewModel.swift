@@ -18,6 +18,7 @@ final class ProjectLibraryViewModel {
     private var listOfProjects = [Project]()
     private var listOfDrafts = [Project]()
     var didEnlargeDraftSection = false
+    var hasBeenInitialized = false
     
     func appendDraft(with data: Project) {
         listOfDrafts.append(data)

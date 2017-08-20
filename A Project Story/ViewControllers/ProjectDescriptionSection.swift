@@ -23,7 +23,21 @@ final class ProjectDescriptionSection: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let placeholderText = "Please enter your project description here..."
+        if projectDescriptionTextView.text == placeholderText {
+            projectDescriptionTextView.textColor = .lightGray
+        }
+    }
+    
     func configure(with data: Project) {
+        // Data description is empty
+        if data.description.isEmpty {
+            data.description = "Please enter your project description here..."
+            projectDescriptionTextView.textColor = .lightGray
+        }
+        
         projectDescriptionTextView.text = data.description
     }
     

@@ -121,11 +121,12 @@ final class ProjectLibraryViewController: UIViewController {
         let collectionView = mainView.projectLibraryCollectionView
         let numberOfDrafts = viewModel.numberOfItemsIn(section: 0)
         
-        if numberOfDrafts > 0 {
-            let sectionFooter = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionFooter)[0] as! DraftCollectionViewFooter
-            let showMoreButton = sectionFooter.showMoreButton
-            showMoreButton.setTitle("Show more", for: .normal)
-            showMoreButton.addTarget(self, action: #selector(didPressShowMoreButton), for: .touchUpInside)
+        if numberOfDrafts > 0 && viewModel.hasBeenInitialized == false {
+            let sectionFooter = collectionView?.visibleSupplementaryViews(ofKind: UICollectionElementKindSectionFooter).first as! DraftCollectionViewFooter?
+            let showMoreButton = sectionFooter?.showMoreButton
+            showMoreButton?.setTitle("Show More", for: .normal)
+            showMoreButton?.addTarget(self, action: #selector(didPressShowMoreButton), for: .touchUpInside)
+            viewModel.hasBeenInitialized = true
         }
     }
     
@@ -137,10 +138,10 @@ final class ProjectLibraryViewController: UIViewController {
     private func minimizeOrExpandDraftSection(with sender: UIButton) {
         if viewModel.didEnlargeDraftSection {
             viewModel.showLessDrafts()
-            sender.setTitle("Show more", for: .normal)
+            sender.setTitle("Show More", for: .normal)
         } else {
             viewModel.showMoreDrafts()
-            sender.setTitle("Show less", for: .normal)
+            sender.setTitle("Show Less", for: .normal)
         }
         mainView.projectLibraryCollectionView.reloadData()
     }
