@@ -8,7 +8,8 @@
 
 import UIKit
 import CoreData
-// import IQKeyboardManager
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,13 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Tab bar controller
+        
+        // Firebase
+        FIRApp.configure()
         
         // Get the window sized
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        // Root view controller
-        window?.rootViewController = TabBarViewController()
+        
+        if FIRAuth.auth()?.currentUser == nil {
+            // Root view controller
+            window?.rootViewController = SignInViewController()
+        } else {
+            // Root view controller
+            window?.rootViewController = TabBarViewController()
+        }
         
         // Keyboard manager
         // IQKeyboardManager.shared().isEnabled = false

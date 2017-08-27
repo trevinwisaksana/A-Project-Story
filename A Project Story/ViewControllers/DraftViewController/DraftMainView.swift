@@ -13,16 +13,12 @@ final class DraftMainView: UIView {
     // Buttons
     var backButton = UIButton()
     var nextButton = UIButton()
-    
     // Text Field
     var projectTitleTextField = UITextField()
-    
     // Text View
     var stepDescriptionTextView = UITextView()
-    
     // Line Separator
     var projectTitleLineSeparator = UIView()
-    
     // Collection View
     var stepCollectionView: UICollectionView!
     
@@ -44,6 +40,7 @@ final class DraftMainView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         // Other setup
+        roundCorners([.topLeft, .topRight], radius: 10)
     }
     
     private func setScreenSize() {

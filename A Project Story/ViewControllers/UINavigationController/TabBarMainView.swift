@@ -29,7 +29,7 @@ final class TabBarMainView: UIView {
         prepareContentView()
         prepareTabBarView()
         prepareTabBarStackView()
-        prepareTopLineBorder()
+        // prepareTopLineBorder()
         prepareProjectLibraryButton()
         prepareSearchButton()
         prepareUpdateProjectButton()
@@ -44,15 +44,17 @@ final class TabBarMainView: UIView {
     
     private func setScreenSize() {
         frame.size = UIScreen.main.bounds.size
-        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        roundCorners([.topLeft, .topRight], radius: 10)
+        backgroundColor = .clear
     }
     
     private func prepareContentView() {
         let width = frame.width
-        let height = frame.height 
+        let height = frame.height * 0.93
         
         let contentViewFrame = CGRect(x: 0, y: 0, width: width, height: height)
         contentView.frame = contentViewFrame
+        contentView.layer.cornerRadius = 10
         
         let backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         contentView.backgroundColor = backgroundColor
@@ -63,7 +65,8 @@ final class TabBarMainView: UIView {
         contentView.snp.makeConstraints { (make) in
             make.height.equalTo(height)
             make.width.equalTo(width)
-            make.top.bottom.left.right.equalTo(0)
+            make.left.right.equalTo(0)
+            make.top.equalTo(0)
         }
     }
     
@@ -76,8 +79,8 @@ final class TabBarMainView: UIView {
         let tabBarViewFrame = CGRect(x: 0, y: maxY, width: width, height: height)
         tabBarView.frame = tabBarViewFrame
         
-        let backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 0.97)
-        tabBarView.backgroundColor = backgroundColor
+        // let backgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 0.97)
+        tabBarView.backgroundColor = .black
         
         addSubview(tabBarView)
         bringSubview(toFront: tabBarView)
@@ -96,11 +99,11 @@ final class TabBarMainView: UIView {
         let stackViewFrame = CGRect(x: 0, y: 0, width: width, height: height)
         tabBarStackView.frame = stackViewFrame
         
-        let backgroundColor = UIColor(colorLiteralRed: 83/255, green: 88/255, blue: 95/255, alpha: 1)
-        tabBarStackView.backgroundColor = backgroundColor
+        // let backgroundColor = UIColor(colorLiteralRed: 83/255, green: 88/255, blue: 95/255, alpha: 1)
+        tabBarStackView.backgroundColor = .black
         
         tabBarStackView.axis = .horizontal
-        tabBarStackView.spacing = width * 0.1
+        tabBarStackView.spacing = width * 0
         tabBarStackView.distribution = .fillEqually
         tabBarStackView.alignment = .center
         tabBarStackView.contentMode = .scaleAspectFit
@@ -109,10 +112,10 @@ final class TabBarMainView: UIView {
         tabBarView.addSubview(tabBarStackView)
         
         tabBarStackView.snp.makeConstraints { (make) in
-            make.left.equalTo(width * 0.06)
-            make.right.equalTo(-width * 0.06)
-            make.top.equalTo(height * 0.18)
-            make.bottom.equalTo(-height * 0.18)
+            make.left.equalTo(width * 0)
+            make.right.equalTo(-width * 0)
+            make.top.equalTo(height * 0.19)
+            make.bottom.equalTo(-height * 0.19)
         }
     }
     
@@ -134,8 +137,8 @@ final class TabBarMainView: UIView {
         let buttonFrame = CGRect(x: 0, y: 0, width: width, height: width)
         projectLibraryButton.frame = buttonFrame
         
-        let buttonImage = UIImage(named: "projectLibraryButtonIcon")
-        let selectedButtonImage = UIImage(named: "projectLibraryButtonIcon_selected")
+        let buttonImage = UIImage(named: "projectLibraryButtonIcon_white")
+        let selectedButtonImage = UIImage(named: "projectLibraryButtonIcon_white_selected")
         projectLibraryButton.setImage(buttonImage, for: .normal)
         projectLibraryButton.setImage(selectedButtonImage, for: .selected)
         projectLibraryButton.imageView?.contentMode = .scaleAspectFit

@@ -14,15 +14,16 @@ final class PublishProjectMainView: UIView {
     var backButton = UIButton()
     var publishButton = UIButton()
     var publishCollectionView: UICollectionView!
-    
     // Image View
     var artworkImageView = UIImageView()
-    
     // Text View
     var descriptionTextView = UITextView()
+    // Loading Indicator
+    var spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var loadingView = UIView()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setScreenSize()
         
         preparePublishCollectionView()
@@ -30,8 +31,18 @@ final class PublishProjectMainView: UIView {
         preparePublishButton()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        roundCorners([.topLeft, .topRight], radius: 10)
+    }
+    
     private func setScreenSize() {
         frame.size = UIScreen.main.bounds.size
+        layer.cornerRadius = 10
         backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     
@@ -119,6 +130,14 @@ final class PublishProjectMainView: UIView {
         publishCollectionView.register(ProjectDescriptionSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ProjectDescriptionSection")
         publishCollectionView.register(ArtworkSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "ArtworkSection")
         publishCollectionView.register(StepSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "StepsSection")
+    }
+    
+    func displayLoadingIndicator() {
+        self.showActivityIndicator(for: loadingView, in: self, with: spinner)
+    }
+    
+    func dismissLoadingIndicator() {
+        self.hideActivityIndicator(for: loadingView, with: spinner)
     }
     
 }

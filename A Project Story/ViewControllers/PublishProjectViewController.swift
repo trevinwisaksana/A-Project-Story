@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PublishProjectDelegate {
+    // func removeProjectDraft(at: Int)
+}
+
 final class PublishProjectViewController: UIViewController {
     
     fileprivate let mainView = PublishProjectMainView()
@@ -50,7 +54,7 @@ final class PublishProjectViewController: UIViewController {
         case .didPressBackButton:
             dismiss(animated: true, completion: nil)
         case .didPressPublishButton:
-            dismissModalStack()
+            publishProject()
         default:
             break
         }
@@ -91,12 +95,29 @@ final class PublishProjectViewController: UIViewController {
         mainView.publishCollectionView.reloadData()
     }
     
+    private func publishProject() {
+        mainView.displayLoadingIndicator()
+        viewModel.publish { (error) in
+            if let error = error {
+                self.mainView.dismissLoadingIndicator()
+            } else {
+                self.mainView.dismissLoadingIndicator()
+                self.dismissModalStack()
+            }
+        }
+    }
+    
     private func dismissModalStack() {
         var viewController = presentingViewController
-        while viewController?.presentingViewController != nil {
+        repeat {
             viewController = viewController?.presentingViewController
-        }
+        } while viewController?.presentingViewController != nil
+        
         viewController?.dismiss(animated: true, completion: nil)
+        
+        guard let projectLibraryViewController = viewController?.childViewControllers.first as? ProjectLibraryViewController else { return
+        }
+        viewModel.removeProjectDraft(from: projectLibraryViewController)
     }
     
     // Miscellaneous

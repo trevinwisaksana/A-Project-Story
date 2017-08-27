@@ -26,8 +26,8 @@ final class CreateProjectMainView: UIView {
     var projectTitleLineSeparator = UIView()
     var emailAddressTitleLineSeparator = UIView()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setScreenSize()
         
         prepareCancelButton()
@@ -38,6 +38,16 @@ final class CreateProjectMainView: UIView {
         prepareEmailAddressTitleLabel()
         prepareEmailAddressTitleLineSeparator()
         prepareEmailAddressTextField()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Other setup
+        roundCorners([.topLeft, .topRight], radius: 10)
     }
     
     private func setScreenSize() {

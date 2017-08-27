@@ -16,15 +16,13 @@ final class AddStepMainView: UIView {
     
     // Text Fields
     var stepTitleTextField = UITextField()
-    
     // Text View
     var stepDescriptionTextView = UITextView()
-    
     // Line Separator
     var stepTitleLineSeparator = UIView()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setScreenSize()
         
         prepareCancelButton()
@@ -34,8 +32,19 @@ final class AddStepMainView: UIView {
         prepareStepDescriptionTextView()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Other setup
+        roundCorners([.topLeft, .topRight], radius: 10)
+    }
+    
     private func setScreenSize() {
         frame.size = UIScreen.main.bounds.size
+        layer.cornerRadius = 10
         backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     
@@ -156,6 +165,7 @@ final class AddStepMainView: UIView {
         let textFieldFrame = CGRect(x: maxX, y: maxY, width: width, height: height)
         stepDescriptionTextView.frame = textFieldFrame
         
+        stepDescriptionTextView.alwaysBounceVertical = true
         stepDescriptionTextView.returnKeyType = .default
         
         stepDescriptionTextView.text = "Describe this step of your project..."

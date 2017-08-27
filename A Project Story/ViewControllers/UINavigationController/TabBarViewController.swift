@@ -54,13 +54,8 @@ final class TabBarViewController: UIViewController {
         state = .didLayoutSubviews
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
     private func prepareListOfViewControllers() {
-        let list: [UIViewController] = [ProjectLibraryViewController(), ProjectLibraryViewController(), ProjectLibraryViewController(), ProjectLibraryViewController(), ProjectLibraryViewController()]
+        let list: [UIViewController] = [ProjectLibraryViewController(), SearchViewController(), UpdateProjectViewController(), BookmarkedProjectsViewController(), ProfileViewController()]
         listOfViewControllers.append(contentsOf: list)
     }
     
@@ -82,25 +77,27 @@ final class TabBarViewController: UIViewController {
     private func didPressTab(_ button: UIButton) {
         //
         let previousIndex = selectedIndex
-        //
         selectedIndex = button.tag
         //
         mainView.listOfButtons[previousIndex].isSelected = false
-        // 
+        removePreviousViewController(at: previousIndex)
+        button.isSelected = true
+        addCurrentViewController(at: selectedIndex)
+    }
+    
+    private func addCurrentViewController(at selectedIndex: Int) {
+        let currentViewController = listOfViewControllers[selectedIndex]
+        addChildViewController(currentViewController)
+        currentViewController.view.frame = mainView.contentView.bounds
+        mainView.contentView.addSubview(currentViewController.view)
+        currentViewController.didMove(toParentViewController: self)
+    }
+    
+    private func removePreviousViewController(at previousIndex: Int) {
         let previousViewController = listOfViewControllers[previousIndex]
         previousViewController.willMove(toParentViewController: nil)
         previousViewController.view.removeFromSuperview()
         previousViewController.removeFromParentViewController()
-        //
-        button.isSelected = true
-        //
-        let currentViewController = listOfViewControllers[selectedIndex]
-        addChildViewController(currentViewController)
-        //
-        currentViewController.view.frame = mainView.contentView.bounds
-        mainView.contentView.addSubview(currentViewController.view)
-        //
-        currentViewController.didMove(toParentViewController: self)
     }
 
     // Miscellaneous

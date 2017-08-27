@@ -14,20 +14,27 @@ final class ProjectMainView: UIView {
     var backButton = UIButton()
     var publishButton = UIButton()
     var publishCollectionView: UICollectionView!
-    
     // Image View
     var artworkImageView = UIImageView()
-    
     // Text View
     var descriptionTextView = UITextView()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setScreenSize()
         
         preparePublishCollectionView()
         prepareBackButton()
         // preparePublishButton()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        roundCorners([.topLeft, .topRight], radius: 10)
     }
     
     private func setScreenSize() {

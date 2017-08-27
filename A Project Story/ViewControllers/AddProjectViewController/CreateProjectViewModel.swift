@@ -11,6 +11,7 @@ import Foundation
 final class CreateProjectViewModel {
     
     private var project: Project?
+    let apiCommunicator = APICommunicator()
     
     func createProject(title: String, email: String, description: inout String, completion: ((NSError?, Project?) -> Void)?) {
         
@@ -22,9 +23,16 @@ final class CreateProjectViewModel {
         }
         
         if result.isEmpty {
+            
             project = Project(title: title, ownerEmail: email, description: description)
             guard let data = project else { return }
+            
+            apiCommunicator.createProject(draft: data, completion: { (error) in
+                // TODO: Error handling
+            })
+            
             completion?(nil, data)
+            
         } else {
             let errorMessage = NSError(domain: result, code: 0, userInfo: nil)
             completion?(errorMessage, nil)

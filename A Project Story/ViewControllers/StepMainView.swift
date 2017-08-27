@@ -23,9 +23,17 @@ final class StepMainView: UIView {
     // Line Separator
     var stepTitleLineSeparator = UIView()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setScreenSize()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        setScreenSize()
         
         prepareBackButton()
         // prepareEditStepButton()
@@ -36,6 +44,7 @@ final class StepMainView: UIView {
     
     private func setScreenSize() {
         frame.size = UIScreen.main.bounds.size
+        layer.cornerRadius = 10
         backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     

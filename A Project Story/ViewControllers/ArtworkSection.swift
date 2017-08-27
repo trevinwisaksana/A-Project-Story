@@ -22,6 +22,11 @@ final class ArtworkSection: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Other setup
+    }
+    
     func configure(with data: Project) {
         
     }

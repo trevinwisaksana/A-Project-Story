@@ -39,6 +39,7 @@ final class ProjectLibraryMainView: UIView {
     private func setScreenSize() {
         let screenSize = UIScreen.main.bounds.size
         frame.size = screenSize
+        layer.cornerRadius = 10
         backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     

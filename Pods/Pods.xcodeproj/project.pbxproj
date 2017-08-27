@@ -7,147 +7,269 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A01FCC379D94F6AD0EE6B292B58F540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0CC849FC0C2CC723AE0C62632A601412 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2E01187F1C611F313E97AF0FA73C9 /* SnapKit-dummy.m */; };
-		0E30C7C993501BA19B68EF53B874CB18 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8146EFFBA522D816BA04C83EB0DF7B /* LayoutConstraint.swift */; };
-		109D2B594D716BA481D65FEF00444FD2 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2911388ED349020316062C27A0552 /* ConstraintPriorityTarget.swift */; };
-		14314FC490ADB1207982C40F02B8F044 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB07029E1AB6B48844606B94F63C7D3 /* ConstraintView.swift */; };
+		07340F15BACBA601736DBB2ABF1ABC35 /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = C88C1326B5039786A735B1A8879CD8E4 /* GTMSessionFetcherLogging.m */; };
+		0749EC40D3519957D43A1040F9662F71 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5247571F61C45FE434EEB043BDDF1B17 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07C21F6083143D8F5912FAD6720C9976 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A967FAB280ED6A5DD911D49601E09E8 /* ConstraintMakerEditable.swift */; };
+		0A01FCC379D94F6AD0EE6B292B58F540 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		10B23A2AAD015ED1FABD1D6934095F9F /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D59BCCD6316556BB54B03A0175251 /* LayoutConstraint.swift */; };
+		11F0D0CB930604B4DAAE93FEA3904826 /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 1812CF37E144081627B7DA01C0DF14FD /* GTMNSDictionary+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		150B86C526692799BBF39D678EDC99DC /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA63357C1CF8B26C22478976C404A1 /* ConstraintInsetTarget.swift */; };
+		18F3A9C244B14A5C6B9C353A4066268A /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A49A31C9CDF2F2485DDD674E726241 /* ConstraintMakerPriortizable.swift */; };
+		1ED67707C258751E7888DAC2AB3D8501 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B270CE5DC89EA0DF692EA503DED6CFC /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FF12A6242D0E5995B27ADD32402A4C1 /* Pods-A Project StoryUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B78A036DBC04E2461A90A5F49F5467DC /* Pods-A Project StoryUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22120366709FEC30B20BDB1222B7EB3A /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A604DEAFF03D03BC699E72E10C67B71 /* ConstraintConfig.swift */; };
-		2CE691FCB79F5E426638C1E1E932F4CB /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8312E198200C0AEA234E70043168A5 /* Debugging.swift */; };
+		23227407F353E2B5FF1C8538E37B9658 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AAFAF96667E7FA0BD3B552CD5B186E /* ConstraintMaker.swift */; };
+		281405A5DF50B54E3CA48035CBC1E003 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEDD5D26F297FA21B9193AA15E1F4A4F /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A41EBC637D7A93172327BDC7B273C54 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB0032937D4E3EB664A711A6E1A03C8 /* ConstraintMakerRelatable.swift */; };
+		2B1BD5F48980CCEA9CA5C3EBC51B1E68 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EEB53AB5A7EBA13DF09D52002B8F9C /* ConstraintConfig.swift */; };
+		2DC89E71FBB6A3F6FEC90307C0A84FA2 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0D32E0A9F4CE49FBD4D3124E6B43F /* ConstraintDescription.swift */; };
 		2EEE073ACA00DDEF00CDDF41A09F0E54 /* Pods-A Project StoryTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8E3D7AAF62F6227C4A5068804FDF31 /* Pods-A Project StoryTests-dummy.m */; };
-		3729D61DD2B71E04C03AF386CD158AE1 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869EE947ABEB849C41E6E2759CB73461 /* ConstraintMakerPriortizable.swift */; };
-		383D6E470E984D37FC5F1F3A9BA5A9C2 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F49073113894FE292B3687B4ECB69 /* ConstraintLayoutSupportDSL.swift */; };
-		4528ED76BAAD632BFA498F5FED414B3E /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC30665F5851A91F53B06C1C5DB086F /* ConstraintMaker.swift */; };
-		45D945A117213D86A562A7D298291F8D /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80D101E67AAC55EB7A7DA474138F29 /* ConstraintDescription.swift */; };
-		4A78E2F87E4A61D3526D7766191E4F97 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13073B460DCA5A885901AEF7AB347371 /* ConstraintLayoutGuide.swift */; };
-		4EF56C8D7B40313BBFE59D2ABF1E360D /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E88B541786D560F47EDA8B1F69331F /* ConstraintRelation.swift */; };
-		4F6B0175D84A8340CE1F1C7ED1E520B6 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7D51E12631CD67464E874DF8B217B /* ConstraintMakerEditable.swift */; };
+		2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD084E144D85D6DBD3E45E4605C4429 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		32CF9BB4493C89CB01FFADD6DB754927 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB5D71E120749BF66DB5E773BA6BA39 /* GoogleToolboxForMac-dummy.m */; };
+		347898714013E95BF500010E33537950 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0953EF4CA264B6B67942B10C54CC8A /* SnapKit-dummy.m */; };
+		3791D4B897007C5669AB298BA9CEA709 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817528DC3558DC4DA940E445E7B7983 /* ConstraintDSL.swift */; };
+		3BF1E8E352A5AF874BCDA15D06818108 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A7CB6815072E0C24335976C5367B3 /* SwiftyJSON.swift */; };
+		3CD813DA9C4768200EDC094F8123E20D /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8407B8B4D252E666F4793D1E72C5F63 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F2AB5BFF7D9DE66B8B242ACE69AE0D9 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 55ED142C238F708A2BB98FF3310CCA1F /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51B2A6D98A48F3B3B7DACCD343FF9831 /* Pods-A Project StoryUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A015D9F921628932A040C1E9F9E43D5 /* Pods-A Project StoryUITests-dummy.m */; };
-		6436ECF4DBF747B3FBAAF100BB56BDF3 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462519E1C4775536E35556F3795C991 /* ConstraintLayoutSupport.swift */; };
-		644930DF522F6ECAA608C0C0CB2D5463 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC83115BE318FE6323B0F9EFF8AD4E /* ConstraintInsetTarget.swift */; };
-		64733E414AB5A4118260A3F3B6BF891B /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1CD2DEFFFFBE20323DBA9A34D77244 /* ConstraintLayoutGuideDSL.swift */; };
-		6603A6E492FEC3E3391D9AB710F80FC9 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE22B2BDC310B15F7DDC06B930A34C08 /* ConstraintViewDSL.swift */; };
-		6BB539C174924AF1428AE5C63E2B5A3C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0843C3DF394CE5E92C0ADD53F355D0CC /* ConstraintMakerFinalizable.swift */; };
-		78F02BA8A874C14515396B41A3BBBEA7 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593ADC9CCA6A730223A7A1761308569E /* ConstraintMakerExtendable.swift */; };
-		81463F62E19BA5373995CAA222724F97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8243CBC090435930D76ABE30E7191D8A /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542616B9ACD95DF820563AF6812054DB /* ConstraintView+Extensions.swift */; };
-		8483595235FD3F271F017C44A692938C /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC92430472C5AD046E7F861C0EA03C /* Constraint.swift */; };
-		84E914A9670F20578CFE56D91CBC95C9 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DECDB5C71A137EEEA16CEB2DD800330 /* ConstraintItem.swift */; };
-		89DDA68A396DA91B5AFE6A0627525B9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8BC57E51D7C65BF4ECA33F5E68DBA6A6 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF82A6ACAA600E4D7DB0ED2CD8810552 /* UILayoutSupport+Extensions.swift */; };
-		9D0829087D7F88CD3A422B52CF4BB16E /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367805C3148DFB7993AC74CFD215DC2 /* ConstraintLayoutGuide+Extensions.swift */; };
-		9DB5AA2B524073BDB0B82B942EA65D95 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6580BC912561D405845ED2A61C49CDBF /* ConstraintRelatableTarget.swift */; };
-		9E007C59EC0FAFC00CE13911E3F495E3 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D41E08E365B8155DF32EB5D064DEBD /* ConstraintMultiplierTarget.swift */; };
-		B00D3ABD5D98F1732F3ABD5BA03FE57F /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D51CAB784598D20B25F8D8697936547 /* ConstraintPriority.swift */; };
-		B06D15421F3C3EF148A09CE99D18C3F5 /* Pods-A Project Story-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC492DF5EEB01EA741B9B3379E868544 /* Pods-A Project Story-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B37D17F242065D54D6B3BF2EB27ADCDE /* Pods-A Project Story-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD32E3609B2639CA61F83EE2F62FD2B /* Pods-A Project Story-dummy.m */; };
-		B8A40F4E76841BB2A7CA2102006B79DE /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE9A2B12FAD5179289BD79BAC77D995 /* ConstraintConstantTarget.swift */; };
-		C7AA4D219E83316EC4911D66FF143DDB /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DA246624787CFC6FA77FF2F1B30237 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D69CF7F76CE2DB921BCF5CA210BE5CD3 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646B1C84CB8B9ED6A88495862C479990 /* ConstraintAttributes.swift */; };
+		5266060B389A51AE99B0F1191D3A79B3 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC32C93ED448BC304873A52680297C40 /* ConstraintPriority.swift */; };
+		57E5805C305764C4DC2FFA89BBE0E517 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A8FB1F5A9AD96E3F1BF6DE4AF5B1F0 /* ConstraintConstantTarget.swift */; };
+		5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = F909EBF11B3D63CB0B6E29FA6C8BA51E /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5C33D1295C931DB6045F184603150F44 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44180FE460D2CE0C4B2DC574F539E90 /* ConstraintRelation.swift */; };
+		6028199137A6717AE5BCD1302F266327 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DEAA87D34731772C9B5F1A39D7B8DA /* SwiftyJSON-dummy.m */; };
+		60D4EC2EFF2E3E2F09B040FAF06C7153 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DF2562E9DD659380453DE9DC386F80 /* ConstraintPriorityTarget.swift */; };
+		64F31B70A6E5E6963518A01C285B435F /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E6337B2F880E172910D8E51ADDF3AD /* GTMSessionFetcher.m */; };
+		6508FD064619782209347CB5E1529770 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8DC172A937CA3407D66BE58C1D26D5 /* ConstraintViewDSL.swift */; };
+		65D91C8E8861B717DB50FCD031042FE7 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D814F038D3A982799A709D7F993C8 /* LayoutConstraintItem.swift */; };
+		6D1D8E5161F826659B60C6E9CCBE600C /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E4B96B05F98401A67DD813572C0E6 /* ConstraintView+Extensions.swift */; };
+		6D2D45668EEE7A417F02FB92E7D5950F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		6EA6DFC4473A9B2DB6B8A42EA986BA5B /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D28E19F8A5D55D6B3FFFC4F841C606D /* GTMSessionFetcher-dummy.m */; };
+		7440BCEE24618792BC9AA5730B121A36 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD60E8CA23DE05ED51525B3FA1B7EE1 /* ConstraintOffsetTarget.swift */; };
+		77ACBDA5F48499068288E164585C89B4 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB13CED7DE6E8D0FEBE02951EE8290 /* ConstraintLayoutGuide.swift */; };
+		78C0A79FCE491A4F50C37F4304428F70 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDBCB3C1E97BD839C8105CA0667E3D /* ConstraintMakerFinalizable.swift */; };
+		78DA22259487B4EA51B296685F65D22C /* Pods-A Project Story-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD32E3609B2639CA61F83EE2F62FD2B /* Pods-A Project Story-dummy.m */; };
+		7FC1D744A25E16C98A03F4D05B96DFC4 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A481C196CCE8ED70F23B44B1518AA /* ConstraintMultiplierTarget.swift */; };
+		82EC06AA7F117F162555346CDE2B6B7E /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20636E34970C48BAD2DC70664EFD5953 /* ConstraintRelatableTarget.swift */; };
+		8852FD9AFC242520924D98BE9C4E2477 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CE1D0538C8979C855CEC4393FC14B0C /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A4B4A0740C86F227BDBE85CB8C5C77 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDAB6C96DC70335AA8902F6002E7292 /* Debugging.swift */; };
+		9024F4774BD8DDE03700B223CF7F8164 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		90DA208B7F4E50AC2D72A96F648E7232 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E20A478AF795FB305B1D9DDBF72DA /* ConstraintLayoutGuide+Extensions.swift */; };
+		95C69447F517DB81437EDE0003486963 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = B957B5020CFE8732B82A9E6F344A1712 /* GTMSessionFetcherService.m */; };
+		9DA28C3544749A7DB9AB129BEC773550 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */; };
+		9F5F21856F062094F48AB0580BFA1F8F /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D55A59482071BCC65E837D505A895C /* ConstraintAttributes.swift */; };
+		9FEEFA6717FF862EBA62BEE3CA1B54E8 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BED69DA86CC63DA1F9DD61716CC379 /* Constraint.swift */; };
+		A37F24D1CE3A4D993783B61B2D8D8F28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		B05C496A6F67CE9F60DC711F402AB20A /* GTMDebugSelectorValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66321F7B4118FE06F74299E9EAEA561B /* GTMDebugSelectorValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3C319268C8CBD45D43E06EF4245B4E5 /* Pods-A Project Story-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC492DF5EEB01EA741B9B3379E868544 /* Pods-A Project Story-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9A04CBBF007CB8AAF75D61C5EF4D81F /* GTMMethodCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 077408214131F9B9371684CCF6C1BF74 /* GTMMethodCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAE4024A2B88EB022D05B4624E985FBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		BB4902F16358B96D9979212E89A55F77 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10BFB4BF3C02C2BA115A0F9F09B53E /* ConstraintItem.swift */; };
+		C34E24520624B382515A0F58185E6926 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 815F30CFA890AAED38E10597998B3485 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4A1A63A4C67D9828DF94807BC2C3002 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		D28734EDC84B2A7FBC4D5DCF95177BF8 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = CD2D9F6D564E738BEF6EE9F95D7EDCE7 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3F381B45ADFDDE51CA31F1E141236CA /* GTMSessionFetcher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC505B9C21A3A6CDD55507161D97FF7B /* GTMSessionFetcher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5F6D93DA80D8E99EE2A4D4D247C35DD /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B25AF046A019CCFBE4FF366A78CB9D /* ConstraintLayoutSupport.swift */; };
 		D78A645E9710D96352D0E8CC3EA765FC /* Pods-A Project StoryTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B55C4EB6866F3D482C2A31DF42E08E97 /* Pods-A Project StoryTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE002809C2E8BAA1008E6AB732F64F6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DF3F4FCC4FACE656E1F6A143F12FB4CF /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEFE805792598886FC384C0B0A3EF38 /* ConstraintDSL.swift */; };
-		E8BB379314EC4F205A53F6F26F1BC725 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6B3F31044A960BEE2B4EA495062C50 /* LayoutConstraintItem.swift */; };
-		EA5BA2954BC582E086C25EE62EDA255C /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C2B9292B588439EC410BDD60AC4ED /* ConstraintMakerRelatable.swift */; };
-		F7C3F505C00A50330123DCA61FB5AA82 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EF9279D230438E1DF533F8BCBEC262 /* ConstraintOffsetTarget.swift */; };
-		FE515AF78480B1DF30ED6030F9201FCF /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B293100C0290E65E0BC870B684749EE /* ConstraintInsets.swift */; };
+		D95A219A7635B0EC391AE71EE727958E /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B58FE3756E6A5AD7AC8A482349C436 /* UILayoutSupport+Extensions.swift */; };
+		DA2F5A299DC9A8ECC5F73A66172E64BC /* GTMNSString+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB65A997DC5F973AE9F60D62F85DD0B /* GTMNSString+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBDE2B1EAF87401FBF15F08968C2A027 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E021B97D4A1E207482C042E124E2CBD3 /* ConstraintLayoutGuideDSL.swift */; };
+		DE002809C2E8BAA1008E6AB732F64F6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CFAA9E75D3CD39EB23F42E8CD426F7D /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E398736B8E6A101C27EE805547030807 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406A885ED948ED15A849588827CF5A81 /* ConstraintInsets.swift */; };
+		E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 142FCD10E005F34E885182F22535B9E7 /* GTMNSDictionary+URLArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E901C733303CE1EB7C3240EBB6B4C7A5 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC63F20AA34D9810791BBF3D261568D7 /* ConstraintView.swift */; };
+		F09EDD53B94234F5F8DAC4DCD5CD969E /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 14D2C22C492357C80B40BC8D1A372425 /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4E294C07EE32FFCDCF7FF4D71D850BD /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DFCDAE01E4A35CC0BA21B972A898D1 /* GTMSessionUploadFetcher.m */; };
+		F60D99DF6A100EA0795975BEE99F55FD /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B71B723CC563741F3EE001989E0717 /* ConstraintLayoutSupportDSL.swift */; };
+		FCD6DFAF6E38F1A25F166A3FA7FD89EA /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F3C65D7A62A3B4805C474C9CBE85 /* ConstraintMakerExtendable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8A9603DFDF52217FA93CA3DB098DF044 /* PBXContainerItemProxy */ = {
+		AD108552C2D993CC8B261CAF2D14252F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 34ACE530A841D0217F29A2A3865FE82F;
+			remoteGlobalIDString = 5179FC157A8F7AA4889F5EC5A043B9FF;
+			remoteInfo = SwiftyJSON;
+		};
+		BC0C251ADE3743B4FB1AA60615A76068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C052BEBFBD0AB5218CC64BA3450F6547;
+			remoteInfo = GTMSessionFetcher;
+		};
+		C5C2DEC974F7BF020E545850A1CE187A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107A9565F9DF88517DFD3E28C05B2B96;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		F72E5577E0A2C4F4CC83A0A8A7E1863B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9279457409BF9E8D28274AEFDA4A0696;
 			remoteInfo = SnapKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06C2911388ED349020316062C27A0552 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		0843C3DF394CE5E92C0ADD53F355D0CC /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		0A604DEAFF03D03BC699E72E10C67B71 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		0B0A453636C1F962DEEDAD9FD8D1FA51 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		12E88B541786D560F47EDA8B1F69331F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		13073B460DCA5A885901AEF7AB347371 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		1387F80962E27207A50E3779CF5C275D /* Pods_A_Project_Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_Story.framework; path = "Pods-A Project Story.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		077408214131F9B9371684CCF6C1BF74 /* GTMMethodCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMethodCheck.h; path = DebugUtils/GTMMethodCheck.h; sourceTree = "<group>"; };
+		0ADA63357C1CF8B26C22478976C404A1 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		10C885AE31BBF8F7B8C9C6767B30C69C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		142FCD10E005F34E885182F22535B9E7 /* GTMNSDictionary+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+URLArguments.m"; path = "Foundation/GTMNSDictionary+URLArguments.m"; sourceTree = "<group>"; };
+		14D2C22C492357C80B40BC8D1A372425 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
+		17F0D32E0A9F4CE49FBD4D3124E6B43F /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		1812CF37E144081627B7DA01C0DF14FD /* GTMNSDictionary+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+URLArguments.h"; path = "Foundation/GTMNSDictionary+URLArguments.h"; sourceTree = "<group>"; };
+		18E5CF698FA4822152A46C78B1DD0BDC /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		1A651EDAE6067CE30A00933D5C3B90E3 /* Pods-A Project StoryUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project StoryUITests-frameworks.sh"; sourceTree = "<group>"; };
-		1A6BDB5F0FBCAC3506F22584473F6020 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A967FAB280ED6A5DD911D49601E09E8 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		1C5C6231BA07EB7A64C693F47516FE5C /* Pods-A Project StoryUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project StoryUITests-resources.sh"; sourceTree = "<group>"; };
-		29DA246624787CFC6FA77FF2F1B30237 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		2C0F49073113894FE292B3687B4ECB69 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		3265640C8F921684AC67012A4B913BA5 /* Pods_A_Project_StoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_StoryTests.framework; path = "Pods-A Project StoryTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		359C2B9292B588439EC410BDD60AC4ED /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		1CD60E8CA23DE05ED51525B3FA1B7EE1 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		1CFAA9E75D3CD39EB23F42E8CD426F7D /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
+		20636E34970C48BAD2DC70664EFD5953 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		225CFABD48C90B782B98A787872532F3 /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
+		24B25AF046A019CCFBE4FF366A78CB9D /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		2613A8AD52077C5313C4E1379B311096 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
+		29E6337B2F880E172910D8E51ADDF3AD /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
+		2BAEC9B30B17579B54018416E5B4B7FA /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		357A7CB6815072E0C24335976C5367B3 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		36D0165A692E70F9A014681631C12DDA /* Pods-A Project StoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project StoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		37D41E08E365B8155DF32EB5D064DEBD /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		3F3BEA5D980BC0A09F32DA673A1DDF58 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B270CE5DC89EA0DF692EA503DED6CFC /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
+		3D28E19F8A5D55D6B3FFFC4F841C606D /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
+		3D8334FAB7FE41A0529EDC325641F69C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3A481C196CCE8ED70F23B44B1518AA /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
+		406A885ED948ED15A849588827CF5A81 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
+		44DF2562E9DD659380453DE9DC386F80 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		4612F85F7EE1B3FA46803587218913EC /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
 		4936D89E03C162DFF878BC52FC299386 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4967868CC9696B4A169665DBDC1C5178 /* Pods-A Project StoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project StoryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A015D9F921628932A040C1E9F9E43D5 /* Pods-A Project StoryUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-A Project StoryUITests-dummy.m"; sourceTree = "<group>"; };
-		542616B9ACD95DF820563AF6812054DB /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		54B04DD12F6342C19E0EF6B3167130D3 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
+		4C8947EC79BFBD1D342B360EEDB0F6CB /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		4F428334822EA914A0522B218FB7CA94 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		5058C746A0395E3414E2BF865C109733 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51200DEE7B7AD807A6E81E349AC628D4 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		52191105D4B2D454C13FB309B7141E89 /* Pods_A_Project_StoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_StoryUITests.framework; path = "Pods-A Project StoryUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5247571F61C45FE434EEB043BDDF1B17 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		55ED142C238F708A2BB98FF3310CCA1F /* GTMDebugThreadValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugThreadValidation.h; path = DebugUtils/GTMDebugThreadValidation.h; sourceTree = "<group>"; };
 		575BA948A524E2195F3A721398353CBD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		593ADC9CCA6A730223A7A1761308569E /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		5CE1D0538C8979C855CEC4393FC14B0C /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
 		6133B839120A3951B4B1E268514828CA /* Pods-A Project StoryTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-A Project StoryTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6196AA8B0575484FD4C2727CDC378A7F /* Pods-A Project StoryTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-A Project StoryTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		62EF9279D230438E1DF533F8BCBEC262 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		646B1C84CB8B9ED6A88495862C479990 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		6580BC912561D405845ED2A61C49CDBF /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		64BED69DA86CC63DA1F9DD61716CC379 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		66321F7B4118FE06F74299E9EAEA561B /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugSelectorValidation.h; path = DebugUtils/GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
+		675F74096535F34ECB876F390A34107E /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		689D59BCCD6316556BB54B03A0175251 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		68B58FE3756E6A5AD7AC8A482349C436 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		68FB13CED7DE6E8D0FEBE02951EE8290 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		697C9EF90F21BFBF5BD2BF3BC8FCBAC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A6914DF08E250AB03FB3F10223B8E6A /* Pods-A Project Story-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project Story-resources.sh"; sourceTree = "<group>"; };
-		6A6B3F31044A960BEE2B4EA495062C50 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		6AD32E3609B2639CA61F83EE2F62FD2B /* Pods-A Project Story-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-A Project Story-dummy.m"; sourceTree = "<group>"; };
-		6B293100C0290E65E0BC870B684749EE /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		6C1CD2DEFFFFBE20323DBA9A34D77244 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		6D51CAB784598D20B25F8D8697936547 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		6DECDB5C71A137EEEA16CEB2DD800330 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		7D8146EFFBA522D816BA04C83EB0DF7B /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		71B71B723CC563741F3EE001989E0717 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
+		7764D73B26FBB6349DAF6CA49EC865CC /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		7DE0067CDAAE28B144742523F28AF7A1 /* Pods-A Project StoryTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project StoryTests-resources.sh"; sourceTree = "<group>"; };
 		7F43433B17721D7441F9AF02F456A84C /* Pods-A Project Story-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project Story-frameworks.sh"; sourceTree = "<group>"; };
-		869EE947ABEB849C41E6E2759CB73461 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		8DEC92430472C5AD046E7F861C0EA03C /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		8DEFE805792598886FC384C0B0A3EF38 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		9367805C3148DFB7993AC74CFD215DC2 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		815F30CFA890AAED38E10597998B3485 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		826940DCBFEECF061E7119EDE7D46E6B /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		87A49A31C9CDF2F2485DDD674E726241 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
+		87AAFAF96667E7FA0BD3B552CD5B186E /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		8817528DC3558DC4DA940E445E7B7983 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		88D55A59482071BCC65E837D505A895C /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		8DD084E144D85D6DBD3E45E4605C4429 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CB07029E1AB6B48844606B94F63C7D3 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		99EEB53AB5A7EBA13DF09D52002B8F9C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		9AB0032937D4E3EB664A711A6E1A03C8 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		9ABDBCB3C1E97BD839C8105CA0667E3D /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		9C064573BE3980EDB142061FE822A10E /* Pods_A_Project_Story.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_Story.framework; path = "Pods-A Project Story.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D829C23A2CF22382C31854D2283F9C1 /* Pods-A Project Story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project Story.release.xcconfig"; sourceTree = "<group>"; };
+		9DF7D2B35DC6E9A8D0FD0B693E0A0DED /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
 		A03D198549664F4B9955C7177DC5BFC7 /* Pods-A Project StoryTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-A Project StoryTests-frameworks.sh"; sourceTree = "<group>"; };
 		A15D2DB5844A9E57A84BDB0D8FF59087 /* Pods-A Project StoryTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-A Project StoryTests.modulemap"; sourceTree = "<group>"; };
-		A462519E1C4775536E35556F3795C991 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		A52D814F038D3A982799A709D7F993C8 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		A7A8FB1F5A9AD96E3F1BF6DE4AF5B1F0 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		A8407B8B4D252E666F4793D1E72C5F63 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		AA3F006294116363955C7A35D53FFC1E /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8E3D7AAF62F6227C4A5068804FDF31 /* Pods-A Project StoryTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-A Project StoryTests-dummy.m"; sourceTree = "<group>"; };
-		ABC30665F5851A91F53B06C1C5DB086F /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		AC492DF5EEB01EA741B9B3379E868544 /* Pods-A Project Story-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-A Project Story-umbrella.h"; sourceTree = "<group>"; };
-		AE22B2BDC310B15F7DDC06B930A34C08 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		AF81826B95E32188D8D98DC7EAEF9FE3 /* Pods_A_Project_StoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_StoryUITests.framework; path = "Pods-A Project StoryUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55C4EB6866F3D482C2A31DF42E08E97 /* Pods-A Project StoryTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-A Project StoryTests-umbrella.h"; sourceTree = "<group>"; };
+		B6D724ADB046CF40D85C1734E442FEBC /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
 		B78A036DBC04E2461A90A5F49F5467DC /* Pods-A Project StoryUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-A Project StoryUITests-umbrella.h"; sourceTree = "<group>"; };
+		B957B5020CFE8732B82A9E6F344A1712 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		BB10BFB4BF3C02C2BA115A0F9F09B53E /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		BBFDDDCBE924DBABF40C31BF98805C85 /* Pods-A Project StoryUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-A Project StoryUITests.modulemap"; sourceTree = "<group>"; };
+		BDA3F3C65D7A62A3B4805C474C9CBE85 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		BDB5D71E120749BF66DB5E773BA6BA39 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
 		BFA2E049E8B90C2A87E17FDBBB7FC588 /* Pods-A Project StoryUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-A Project StoryUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C78D9100A663E6501F912089BC90230C /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		CFD7D51E12631CD67464E874DF8B217B /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C5BBE4F2701142CE513AB3AB792B9F19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C88C1326B5039786A735B1A8879CD8E4 /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
+		C94874C844A14FE7A684756A5D347C7E /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		CC505B9C21A3A6CDD55507161D97FF7B /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
+		CD1175714C80164A606E0AAE8714828F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		CD2D9F6D564E738BEF6EE9F95D7EDCE7 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		CD6E20A478AF795FB305B1D9DDBF72DA /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		D3816E01DCA57A87D076FD571C683B17 /* Pods-A Project StoryUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-A Project StoryUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6704D0F5B995E7EB8A8D4923577B557 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7CF38AB073A506A6C481831FF4A9C3A /* Pods-A Project StoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project StoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		D86A18180EFE544CDC571218F5934C62 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		DA1CF02941196852D32ACC0ECC7895FF /* Pods-A Project Story-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-A Project Story-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DC8312E198200C0AEA234E70043168A5 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		DC63F20AA34D9810791BBF3D261568D7 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		DC739E1E1AEF9CEDDFA718F529D44757 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEDD5D26F297FA21B9193AA15E1F4A4F /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		E021B97D4A1E207482C042E124E2CBD3 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		E2D415990D05811435E7DE66511C99AB /* Pods-A Project StoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project StoryTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E5FC83115BE318FE6323B0F9EFF8AD4E /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		ECE9A2B12FAD5179289BD79BAC77D995 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		EF82A6ACAA600E4D7DB0ED2CD8810552 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		E77E4B96B05F98401A67DD813572C0E6 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		EBB65A997DC5F973AE9F60D62F85DD0B /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
+		EBDAB6C96DC70335AA8902F6002E7292 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
+		F16D966203AEB2798ADCDD4981A9B86A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F44180FE460D2CE0C4B2DC574F539E90 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		F62010BF36A84C75BF2766C094467F7B /* Pods-A Project Story-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-A Project Story-acknowledgements.plist"; sourceTree = "<group>"; };
+		F6DEAA87D34731772C9B5F1A39D7B8DA /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		F73B4CBFEA7B2E2F36218E8454CCD025 /* Pods_A_Project_StoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_A_Project_StoryTests.framework; path = "Pods-A Project StoryTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F768633A3D735C311AE683EFAAFC0418 /* Pods-A Project Story.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-A Project Story.modulemap"; sourceTree = "<group>"; };
-		FC80D101E67AAC55EB7A7DA474138F29 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		FDB2E01187F1C611F313E97AF0FA73C9 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		F7DFCDAE01E4A35CC0BA21B972A898D1 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
+		F909EBF11B3D63CB0B6E29FA6C8BA51E /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+URLArguments.m"; path = "Foundation/GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
+		FA8DC172A937CA3407D66BE58C1D26D5 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		FC32C93ED448BC304873A52680297C40 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		FC9BA87145E25C0B231B4A7B39D1FF41 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		FD52EFD572E30616370E7D16BC931180 /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
+		FF0953EF4CA264B6B67942B10C54CC8A /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		FF28C762C0F5508AD4C6634780FE09DB /* Pods-A Project Story.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-A Project Story.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		873DF05D810B917FF46191AFFFA0F755 /* Frameworks */ = {
+		6AE88E96161DE195EAAF0A3B6375EA50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81463F62E19BA5373995CAA222724F97 /* Foundation.framework in Frameworks */,
+				9024F4774BD8DDE03700B223CF7F8164 /* Foundation.framework in Frameworks */,
+				9DA28C3544749A7DB9AB129BEC773550 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DB2FD04E98E8D08B812CFAD3603A106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A1A63A4C67D9828DF94807BC2C3002 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B04F64DE0B1D1A23E37F37CFB674DEDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2D45668EEE7A417F02FB92E7D5950F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D354757298885ADC1B0626F9ACF6D2B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE4024A2B88EB022D05B4624E985FBF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,11 +281,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E17311E2CBD1A6E4B7CB8104B2C12B02 /* Frameworks */ = {
+		D6F39406C1EB523E0B965C50762890BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89DDA68A396DA91B5AFE6A0627525B9D /* Foundation.framework in Frameworks */,
+				A37F24D1CE3A4D993783B61B2D8D8F28 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +300,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00B8B774D46824990BA1C998CC2E601E /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				CD2D9F6D564E738BEF6EE9F95D7EDCE7 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		036ACA0AF759AAC206DAFECFBE888A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18E5CF698FA4822152A46C78B1DD0BDC /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		042C97F1B4CB86524EA103ACE51C2695 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C739F4E762AB1B8CFA579626D8FB41E6 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		04D6C7610E84373E89644C28A7EECF70 /* NSDictionary+URLArguments */ = {
+			isa = PBXGroup;
+			children = (
+				1812CF37E144081627B7DA01C0DF14FD /* GTMNSDictionary+URLArguments.h */,
+				142FCD10E005F34E885182F22535B9E7 /* GTMNSDictionary+URLArguments.m */,
+			);
+			name = "NSDictionary+URLArguments";
+			sourceTree = "<group>";
+		};
+		0886C438D98AA295BC3EFA80DCCC974E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D86A18180EFE544CDC571218F5934C62 /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		108D8744209908A32C1FDF21DDBDF2C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA3F006294116363955C7A35D53FFC1E /* GoogleToolboxForMac.framework */,
+				2BAEC9B30B17579B54018416E5B4B7FA /* GTMSessionFetcher.framework */,
+				9C064573BE3980EDB142061FE822A10E /* Pods_A_Project_Story.framework */,
+				F73B4CBFEA7B2E2F36218E8454CCD025 /* Pods_A_Project_StoryTests.framework */,
+				52191105D4B2D454C13FB309B7141E89 /* Pods_A_Project_StoryUITests.framework */,
+				DC739E1E1AEF9CEDDFA718F529D44757 /* SnapKit.framework */,
+				10C885AE31BBF8F7B8C9C6767B30C69C /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0897F32B6B5D9EA7713FEDE8A1D52C /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				357A7CB6815072E0C24335976C5367B3 /* SwiftyJSON.swift */,
+				348AD7354F8F9496AB9DAA55FA32EB91 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		1A817F6B4339866FC2EE262CA77DB4BB /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				815F30CFA890AAED38E10597998B3485 /* GTMNSData+zlib.h */,
+				8DD084E144D85D6DBD3E45E4605C4429 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		1E53D389E33A9841DAA059D337104894 /* DebugUtils */ = {
+			isa = PBXGroup;
+			children = (
+				66321F7B4118FE06F74299E9EAEA561B /* GTMDebugSelectorValidation.h */,
+				55ED142C238F708A2BB98FF3310CCA1F /* GTMDebugThreadValidation.h */,
+				077408214131F9B9371684CCF6C1BF74 /* GTMMethodCheck.h */,
+			);
+			name = DebugUtils;
+			sourceTree = "<group>";
+		};
+		25534F32530F990760187948E4699799 /* GTMSessionFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				D9F73019CE791FC66D69234BEDD55488 /* Core */,
+				7D53634488CCDA6A0F207F8C8F80666C /* Support Files */,
+			);
+			name = GTMSessionFetcher;
+			path = GTMSessionFetcher;
+			sourceTree = "<group>";
+		};
 		2CB0D085476BCE3066247A4E471DE05E /* Pods-A Project StoryUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,68 +413,185 @@
 			path = "Target Support Files/Pods-A Project StoryUITests";
 			sourceTree = "<group>";
 		};
-		60B891A24D0146B9DAF03EE9A100B66D /* Products */ = {
+		32B2D201D1CA9051E71F5AE1DEE8A818 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				1387F80962E27207A50E3779CF5C275D /* Pods_A_Project_Story.framework */,
-				3265640C8F921684AC67012A4B913BA5 /* Pods_A_Project_StoryTests.framework */,
-				AF81826B95E32188D8D98DC7EAEF9FE3 /* Pods_A_Project_StoryUITests.framework */,
-				3F3BEA5D980BC0A09F32DA673A1DDF58 /* SnapKit.framework */,
+				036ACA0AF759AAC206DAFECFBE888A2D /* Frameworks */,
 			);
-			name = Products;
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		348AD7354F8F9496AB9DAA55FA32EB91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5058C746A0395E3414E2BF865C109733 /* Info.plist */,
+				CD1175714C80164A606E0AAE8714828F /* SwiftyJSON.modulemap */,
+				51200DEE7B7AD807A6E81E349AC628D4 /* SwiftyJSON.xcconfig */,
+				F6DEAA87D34731772C9B5F1A39D7B8DA /* SwiftyJSON-dummy.m */,
+				FC9BA87145E25C0B231B4A7B39D1FF41 /* SwiftyJSON-prefix.pch */,
+				DEDD5D26F297FA21B9193AA15E1F4A4F /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F990579C2E52276FD3C28227B49D60B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4416E6FD1167B7231524C132B9785167 /* NSString+URLArguments */ = {
+			isa = PBXGroup;
+			children = (
+				EBB65A997DC5F973AE9F60D62F85DD0B /* GTMNSString+URLArguments.h */,
+				F909EBF11B3D63CB0B6E29FA6C8BA51E /* GTMNSString+URLArguments.m */,
+			);
+			name = "NSString+URLArguments";
+			sourceTree = "<group>";
+		};
+		4F990579C2E52276FD3C28227B49D60B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */,
+				C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		52A2DA83E44FF0F00B4339FE946D3A42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F16D966203AEB2798ADCDD4981A9B86A /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C1F06B69452EEB988892F3AFF30474A /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				0886C438D98AA295BC3EFA80DCCC974E /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		60BB2E2BF4B4D456E0D15A404F3A29D1 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				52A2DA83E44FF0F00B4339FE946D3A42 /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		7A296409410E545132A28CFE62E0225D /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				95CEA3B47A58CFE36ED75FD7D9FFE3D9 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		7D53634488CCDA6A0F207F8C8F80666C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD52EFD572E30616370E7D16BC931180 /* GTMSessionFetcher.modulemap */,
+				4612F85F7EE1B3FA46803587218913EC /* GTMSessionFetcher.xcconfig */,
+				3D28E19F8A5D55D6B3FFFC4F841C606D /* GTMSessionFetcher-dummy.m */,
+				225CFABD48C90B782B98A787872532F3 /* GTMSessionFetcher-prefix.pch */,
+				CC505B9C21A3A6CDD55507161D97FF7B /* GTMSessionFetcher-umbrella.h */,
+				D6704D0F5B995E7EB8A8D4923577B557 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTMSessionFetcher";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A24957659B562070C6FD54002E0330AF /* Pods */,
-				60B891A24D0146B9DAF03EE9A100B66D /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				DE13346F61D468F8323F9A12ADAE3DF2 /* Pods */,
+				108D8744209908A32C1FDF21DDBDF2C8 /* Products */,
 				97ED662C06E11C01DACDDE52589CF9F0 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7E40BDD214753E1F70F3A4ABE61A6C7A /* SnapKit */ = {
+		7F077B34CCAD899C02F6E926AF2FB910 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DEC92430472C5AD046E7F861C0EA03C /* Constraint.swift */,
-				646B1C84CB8B9ED6A88495862C479990 /* ConstraintAttributes.swift */,
-				0A604DEAFF03D03BC699E72E10C67B71 /* ConstraintConfig.swift */,
-				ECE9A2B12FAD5179289BD79BAC77D995 /* ConstraintConstantTarget.swift */,
-				FC80D101E67AAC55EB7A7DA474138F29 /* ConstraintDescription.swift */,
-				8DEFE805792598886FC384C0B0A3EF38 /* ConstraintDSL.swift */,
-				6B293100C0290E65E0BC870B684749EE /* ConstraintInsets.swift */,
-				E5FC83115BE318FE6323B0F9EFF8AD4E /* ConstraintInsetTarget.swift */,
-				6DECDB5C71A137EEEA16CEB2DD800330 /* ConstraintItem.swift */,
-				13073B460DCA5A885901AEF7AB347371 /* ConstraintLayoutGuide.swift */,
-				9367805C3148DFB7993AC74CFD215DC2 /* ConstraintLayoutGuide+Extensions.swift */,
-				6C1CD2DEFFFFBE20323DBA9A34D77244 /* ConstraintLayoutGuideDSL.swift */,
-				A462519E1C4775536E35556F3795C991 /* ConstraintLayoutSupport.swift */,
-				2C0F49073113894FE292B3687B4ECB69 /* ConstraintLayoutSupportDSL.swift */,
-				ABC30665F5851A91F53B06C1C5DB086F /* ConstraintMaker.swift */,
-				CFD7D51E12631CD67464E874DF8B217B /* ConstraintMakerEditable.swift */,
-				593ADC9CCA6A730223A7A1761308569E /* ConstraintMakerExtendable.swift */,
-				0843C3DF394CE5E92C0ADD53F355D0CC /* ConstraintMakerFinalizable.swift */,
-				869EE947ABEB849C41E6E2759CB73461 /* ConstraintMakerPriortizable.swift */,
-				359C2B9292B588439EC410BDD60AC4ED /* ConstraintMakerRelatable.swift */,
-				37D41E08E365B8155DF32EB5D064DEBD /* ConstraintMultiplierTarget.swift */,
-				62EF9279D230438E1DF533F8BCBEC262 /* ConstraintOffsetTarget.swift */,
-				6D51CAB784598D20B25F8D8697936547 /* ConstraintPriority.swift */,
-				06C2911388ED349020316062C27A0552 /* ConstraintPriorityTarget.swift */,
-				6580BC912561D405845ED2A61C49CDBF /* ConstraintRelatableTarget.swift */,
-				12E88B541786D560F47EDA8B1F69331F /* ConstraintRelation.swift */,
-				9CB07029E1AB6B48844606B94F63C7D3 /* ConstraintView.swift */,
-				542616B9ACD95DF820563AF6812054DB /* ConstraintView+Extensions.swift */,
-				AE22B2BDC310B15F7DDC06B930A34C08 /* ConstraintViewDSL.swift */,
-				DC8312E198200C0AEA234E70043168A5 /* Debugging.swift */,
-				7D8146EFFBA522D816BA04C83EB0DF7B /* LayoutConstraint.swift */,
-				6A6B3F31044A960BEE2B4EA495062C50 /* LayoutConstraintItem.swift */,
-				EF82A6ACAA600E4D7DB0ED2CD8810552 /* UILayoutSupport+Extensions.swift */,
-				CC7756E5073E7584BFE69508FFBBCB90 /* Support Files */,
+				826940DCBFEECF061E7119EDE7D46E6B /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80E2A058B44A96059CD773CBAF5AB66A /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				64BED69DA86CC63DA1F9DD61716CC379 /* Constraint.swift */,
+				88D55A59482071BCC65E837D505A895C /* ConstraintAttributes.swift */,
+				99EEB53AB5A7EBA13DF09D52002B8F9C /* ConstraintConfig.swift */,
+				A7A8FB1F5A9AD96E3F1BF6DE4AF5B1F0 /* ConstraintConstantTarget.swift */,
+				17F0D32E0A9F4CE49FBD4D3124E6B43F /* ConstraintDescription.swift */,
+				8817528DC3558DC4DA940E445E7B7983 /* ConstraintDSL.swift */,
+				406A885ED948ED15A849588827CF5A81 /* ConstraintInsets.swift */,
+				0ADA63357C1CF8B26C22478976C404A1 /* ConstraintInsetTarget.swift */,
+				BB10BFB4BF3C02C2BA115A0F9F09B53E /* ConstraintItem.swift */,
+				68FB13CED7DE6E8D0FEBE02951EE8290 /* ConstraintLayoutGuide.swift */,
+				CD6E20A478AF795FB305B1D9DDBF72DA /* ConstraintLayoutGuide+Extensions.swift */,
+				E021B97D4A1E207482C042E124E2CBD3 /* ConstraintLayoutGuideDSL.swift */,
+				24B25AF046A019CCFBE4FF366A78CB9D /* ConstraintLayoutSupport.swift */,
+				71B71B723CC563741F3EE001989E0717 /* ConstraintLayoutSupportDSL.swift */,
+				87AAFAF96667E7FA0BD3B552CD5B186E /* ConstraintMaker.swift */,
+				1A967FAB280ED6A5DD911D49601E09E8 /* ConstraintMakerEditable.swift */,
+				BDA3F3C65D7A62A3B4805C474C9CBE85 /* ConstraintMakerExtendable.swift */,
+				9ABDBCB3C1E97BD839C8105CA0667E3D /* ConstraintMakerFinalizable.swift */,
+				87A49A31C9CDF2F2485DDD674E726241 /* ConstraintMakerPriortizable.swift */,
+				9AB0032937D4E3EB664A711A6E1A03C8 /* ConstraintMakerRelatable.swift */,
+				3F3A481C196CCE8ED70F23B44B1518AA /* ConstraintMultiplierTarget.swift */,
+				1CD60E8CA23DE05ED51525B3FA1B7EE1 /* ConstraintOffsetTarget.swift */,
+				FC32C93ED448BC304873A52680297C40 /* ConstraintPriority.swift */,
+				44DF2562E9DD659380453DE9DC386F80 /* ConstraintPriorityTarget.swift */,
+				20636E34970C48BAD2DC70664EFD5953 /* ConstraintRelatableTarget.swift */,
+				F44180FE460D2CE0C4B2DC574F539E90 /* ConstraintRelation.swift */,
+				DC63F20AA34D9810791BBF3D261568D7 /* ConstraintView.swift */,
+				E77E4B96B05F98401A67DD813572C0E6 /* ConstraintView+Extensions.swift */,
+				FA8DC172A937CA3407D66BE58C1D26D5 /* ConstraintViewDSL.swift */,
+				EBDAB6C96DC70335AA8902F6002E7292 /* Debugging.swift */,
+				689D59BCCD6316556BB54B03A0175251 /* LayoutConstraint.swift */,
+				A52D814F038D3A982799A709D7F993C8 /* LayoutConstraintItem.swift */,
+				68B58FE3756E6A5AD7AC8A482349C436 /* UILayoutSupport+Extensions.swift */,
+				B131584C2046A78209C7B0DDE76C85C3 /* Support Files */,
 			);
 			name = SnapKit;
 			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		8BBC80C39B69564BFEFB2CF487CA8844 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				1E53D389E33A9841DAA059D337104894 /* DebugUtils */,
+				00B8B774D46824990BA1C998CC2E601E /* Defines */,
+				1A817F6B4339866FC2EE262CA77DB4BB /* NSData+zlib */,
+				04D6C7610E84373E89644C28A7EECF70 /* NSDictionary+URLArguments */,
+				4416E6FD1167B7231524C132B9785167 /* NSString+URLArguments */,
+				9F6CAFBC23752E220442F4A183183238 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		95CEA3B47A58CFE36ED75FD7D9FFE3D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C8947EC79BFBD1D342B360EEDB0F6CB /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		97ED662C06E11C01DACDDE52589CF9F0 /* Targets Support Files */ = {
@@ -270,12 +604,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A24957659B562070C6FD54002E0330AF /* Pods */ = {
+		9F6CAFBC23752E220442F4A183183238 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7E40BDD214753E1F70F3A4ABE61A6C7A /* SnapKit */,
+				C94874C844A14FE7A684756A5D347C7E /* GoogleToolboxForMac.modulemap */,
+				B6D724ADB046CF40D85C1734E442FEBC /* GoogleToolboxForMac.xcconfig */,
+				BDB5D71E120749BF66DB5E773BA6BA39 /* GoogleToolboxForMac-dummy.m */,
+				9DF7D2B35DC6E9A8D0FD0B693E0A0DED /* GoogleToolboxForMac-prefix.pch */,
+				5247571F61C45FE434EEB043BDDF1B17 /* GoogleToolboxForMac-umbrella.h */,
+				3D8334FAB7FE41A0529EDC325641F69C /* Info.plist */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
 			sourceTree = "<group>";
 		};
 		ABC9FBCA96DC73D2DB44412149EB0774 /* Pods-A Project StoryTests */ = {
@@ -296,34 +636,35 @@
 			path = "Target Support Files/Pods-A Project StoryTests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		B131584C2046A78209C7B0DDE76C85C3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CC7756E5073E7584BFE69508FFBBCB90 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A6BDB5F0FBCAC3506F22584473F6020 /* Info.plist */,
-				0B0A453636C1F962DEEDAD9FD8D1FA51 /* SnapKit.modulemap */,
-				54B04DD12F6342C19E0EF6B3167130D3 /* SnapKit.xcconfig */,
-				FDB2E01187F1C611F313E97AF0FA73C9 /* SnapKit-dummy.m */,
-				C78D9100A663E6501F912089BC90230C /* SnapKit-prefix.pch */,
-				29DA246624787CFC6FA77FF2F1B30237 /* SnapKit-umbrella.h */,
+				C5BBE4F2701142CE513AB3AB792B9F19 /* Info.plist */,
+				675F74096535F34ECB876F390A34107E /* SnapKit.modulemap */,
+				2613A8AD52077C5313C4E1379B311096 /* SnapKit.xcconfig */,
+				FF0953EF4CA264B6B67942B10C54CC8A /* SnapKit-dummy.m */,
+				4F428334822EA914A0522B218FB7CA94 /* SnapKit-prefix.pch */,
+				A8407B8B4D252E666F4793D1E72C5F63 /* SnapKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SnapKit";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		C739F4E762AB1B8CFA579626D8FB41E6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				7764D73B26FBB6349DAF6CA49EC865CC /* Firebase.h */,
 			);
-			name = iOS;
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D523D63100DB9A084E2AFB4263FA166C /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				7F077B34CCAD899C02F6E926AF2FB910 /* Frameworks */,
+			);
+			name = FirebaseAuth;
+			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
 		D9EE20CDE0D17E3FD405A8ECA07EA052 /* Pods-A Project Story */ = {
@@ -344,14 +685,46 @@
 			path = "Target Support Files/Pods-A Project Story";
 			sourceTree = "<group>";
 		};
+		D9F73019CE791FC66D69234BEDD55488 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5CE1D0538C8979C855CEC4393FC14B0C /* GTMSessionFetcher.h */,
+				29E6337B2F880E172910D8E51ADDF3AD /* GTMSessionFetcher.m */,
+				3B270CE5DC89EA0DF692EA503DED6CFC /* GTMSessionFetcherLogging.h */,
+				C88C1326B5039786A735B1A8879CD8E4 /* GTMSessionFetcherLogging.m */,
+				1CFAA9E75D3CD39EB23F42E8CD426F7D /* GTMSessionFetcherService.h */,
+				B957B5020CFE8732B82A9E6F344A1712 /* GTMSessionFetcherService.m */,
+				14D2C22C492357C80B40BC8D1A372425 /* GTMSessionUploadFetcher.h */,
+				F7DFCDAE01E4A35CC0BA21B972A898D1 /* GTMSessionUploadFetcher.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		DE13346F61D468F8323F9A12ADAE3DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				042C97F1B4CB86524EA103ACE51C2695 /* Firebase */,
+				7A296409410E545132A28CFE62E0225D /* FirebaseAnalytics */,
+				D523D63100DB9A084E2AFB4263FA166C /* FirebaseAuth */,
+				5C1F06B69452EEB988892F3AFF30474A /* FirebaseCore */,
+				32B2D201D1CA9051E71F5AE1DEE8A818 /* FirebaseDatabase */,
+				60BB2E2BF4B4D456E0D15A404F3A29D1 /* FirebaseInstanceID */,
+				8BBC80C39B69564BFEFB2CF487CA8844 /* GoogleToolboxForMac */,
+				25534F32530F990760187948E4699799 /* GTMSessionFetcher */,
+				80E2A058B44A96059CD773CBAF5AB66A /* SnapKit */,
+				1A0897F32B6B5D9EA7713FEDE8A1D52C /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		35C1443CC51BEDA04AAE9D36CDBE232F /* Headers */ = {
+		13E1FFA50D621DCE7E5599120C1B8B46 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7AA4D219E83316EC4911D66FF143DDB /* SnapKit-umbrella.h in Headers */,
+				281405A5DF50B54E3CA48035CBC1E003 /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,11 +744,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0218EE3FF5145433E99B48C68B188AC /* Headers */ = {
+		82D993B88C10479096F17ADDEAB85D94 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B06D15421F3C3EF148A09CE99D18C3F5 /* Pods-A Project Story-umbrella.h in Headers */,
+				D3F381B45ADFDDE51CA31F1E141236CA /* GTMSessionFetcher-umbrella.h in Headers */,
+				8852FD9AFC242520924D98BE9C4E2477 /* GTMSessionFetcher.h in Headers */,
+				1ED67707C258751E7888DAC2AB3D8501 /* GTMSessionFetcherLogging.h in Headers */,
+				DF9559C3822E3C6119BE43E4EDFD7EEE /* GTMSessionFetcherService.h in Headers */,
+				F09EDD53B94234F5F8DAC4DCD5CD969E /* GTMSessionUploadFetcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9212A23EC9C33995BE5D20F794F6C234 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C319268C8CBD45D43E06EF4245B4E5 /* Pods-A Project Story-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC4BF2A49562C6A7570FE542529F2CF0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD813DA9C4768200EDC094F8123E20D /* SnapKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB0A1DF130E97C4755B09863D7F1AD5F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0749EC40D3519957D43A1040F9662F71 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				B05C496A6F67CE9F60DC711F402AB20A /* GTMDebugSelectorValidation.h in Headers */,
+				4F2AB5BFF7D9DE66B8B242ACE69AE0D9 /* GTMDebugThreadValidation.h in Headers */,
+				D28734EDC84B2A7FBC4D5DCF95177BF8 /* GTMDefines.h in Headers */,
+				B9A04CBBF007CB8AAF75D61C5EF4D81F /* GTMMethodCheck.h in Headers */,
+				C34E24520624B382515A0F58185E6926 /* GTMNSData+zlib.h in Headers */,
+				11F0D0CB930604B4DAAE93FEA3904826 /* GTMNSDictionary+URLArguments.h in Headers */,
+				DA2F5A299DC9A8ECC5F73A66172E64BC /* GTMNSString+URLArguments.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,24 +804,24 @@
 			);
 			name = "Pods-A Project StoryTests";
 			productName = "Pods-A Project StoryTests";
-			productReference = 3265640C8F921684AC67012A4B913BA5 /* Pods_A_Project_StoryTests.framework */;
+			productReference = F73B4CBFEA7B2E2F36218E8454CCD025 /* Pods_A_Project_StoryTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		34ACE530A841D0217F29A2A3865FE82F /* SnapKit */ = {
+		107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE06093750145CDDE23A1A4FC57E371B /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildConfigurationList = 3166596B665E06C4B76C8ABB6AB06824 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
 			buildPhases = (
-				74124D516A116CC91E25ECC54875684A /* Sources */,
-				873DF05D810B917FF46191AFFFA0F755 /* Frameworks */,
-				35C1443CC51BEDA04AAE9D36CDBE232F /* Headers */,
+				222F0DC2D2D238CAB82346DE258E5472 /* Sources */,
+				9DB2FD04E98E8D08B812CFAD3603A106 /* Frameworks */,
+				BB0A1DF130E97C4755B09863D7F1AD5F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SnapKit;
-			productName = SnapKit;
-			productReference = 3F3BEA5D980BC0A09F32DA673A1DDF58 /* SnapKit.framework */;
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = AA3F006294116363955C7A35D53FFC1E /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3A61625B2C24D29AE80F723803C56764 /* Pods-A Project StoryUITests */ = {
@@ -430,25 +838,79 @@
 			);
 			name = "Pods-A Project StoryUITests";
 			productName = "Pods-A Project StoryUITests";
-			productReference = AF81826B95E32188D8D98DC7EAEF9FE3 /* Pods_A_Project_StoryUITests.framework */;
+			productReference = 52191105D4B2D454C13FB309B7141E89 /* Pods_A_Project_StoryUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		723821B00737E05CDB560AD504212C10 /* Pods-A Project Story */ = {
+		5179FC157A8F7AA4889F5EC5A043B9FF /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB9F180B87322C3F75D1947AD502DB4B /* Build configuration list for PBXNativeTarget "Pods-A Project Story" */;
+			buildConfigurationList = 2F064B02CF14F428D1FA7E2DD2CBDB6C /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				CB784005BA0C8C980A400D1AC63C1469 /* Sources */,
-				E17311E2CBD1A6E4B7CB8104B2C12B02 /* Frameworks */,
-				E0218EE3FF5145433E99B48C68B188AC /* Headers */,
+				CB921FD54818CB86DBDCD17E5046FBDA /* Sources */,
+				D354757298885ADC1B0626F9ACF6D2B8 /* Frameworks */,
+				13E1FFA50D621DCE7E5599120C1B8B46 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D370663F5F26ED50016C29AFA262D733 /* PBXTargetDependency */,
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 10C885AE31BBF8F7B8C9C6767B30C69C /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9279457409BF9E8D28274AEFDA4A0696 /* SnapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C839F4CD54D61B2AD8A7E18A000E85DE /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildPhases = (
+				E3D4BA6B2C97E6890AF19DF04514C3D9 /* Sources */,
+				B04F64DE0B1D1A23E37F37CFB674DEDF /* Frameworks */,
+				AC4BF2A49562C6A7570FE542529F2CF0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapKit;
+			productName = SnapKit;
+			productReference = DC739E1E1AEF9CEDDFA718F529D44757 /* SnapKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF084A127080465354E34189A940CAC9 /* Pods-A Project Story */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E98CE767B7382103AF1486A6F84C07 /* Build configuration list for PBXNativeTarget "Pods-A Project Story" */;
+			buildPhases = (
+				E5ECDEAA7FF9F4CB3CFBE89C087B048D /* Sources */,
+				D6F39406C1EB523E0B965C50762890BD /* Frameworks */,
+				9212A23EC9C33995BE5D20F794F6C234 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8344D3F923D4532737F903513C1CC497 /* PBXTargetDependency */,
+				820C4967B12008103955A6E71CDC5523 /* PBXTargetDependency */,
+				A04E6FB54819BA158C72F8BB246AF635 /* PBXTargetDependency */,
+				5FDA6E22F6243E4D932004CC0F1EFA12 /* PBXTargetDependency */,
 			);
 			name = "Pods-A Project Story";
 			productName = "Pods-A Project Story";
-			productReference = 1387F80962E27207A50E3779CF5C275D /* Pods_A_Project_Story.framework */;
+			productReference = 9C064573BE3980EDB142061FE822A10E /* Pods_A_Project_Story.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7CC8559AB6F51830204F1A9CE54BF3E /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
+			buildPhases = (
+				C5A309EC5A80A27DBD420C5176E2122A /* Sources */,
+				6AE88E96161DE195EAAF0A3B6375EA50 /* Frameworks */,
+				82D993B88C10479096F17ADDEAB85D94 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTMSessionFetcher;
+			productName = GTMSessionFetcher;
+			productReference = 2BAEC9B30B17579B54018416E5B4B7FA /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -468,19 +930,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 60B891A24D0146B9DAF03EE9A100B66D /* Products */;
+			productRefGroup = 108D8744209908A32C1FDF21DDBDF2C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				723821B00737E05CDB560AD504212C10 /* Pods-A Project Story */,
+				107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */,
+				C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */,
+				AF084A127080465354E34189A940CAC9 /* Pods-A Project Story */,
 				0492F101C4BA00BCD3513C669815A70B /* Pods-A Project StoryTests */,
 				3A61625B2C24D29AE80F723803C56764 /* Pods-A Project StoryUITests */,
-				34ACE530A841D0217F29A2A3865FE82F /* SnapKit */,
+				9279457409BF9E8D28274AEFDA4A0696 /* SnapKit */,
+				5179FC157A8F7AA4889F5EC5A043B9FF /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		222F0DC2D2D238CAB82346DE258E5472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CF9BB4493C89CB01FFADD6DB754927 /* GoogleToolboxForMac-dummy.m in Sources */,
+				2EFC826FB30ECD27C98CE7F3707E9012 /* GTMNSData+zlib.m in Sources */,
+				E7D23D2F163A34BEC60FD54BCCC22C76 /* GTMNSDictionary+URLArguments.m in Sources */,
+				5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		47B95243DCB43D64532C54E3E57E3A7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,63 +973,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74124D516A116CC91E25ECC54875684A /* Sources */ = {
+		C5A309EC5A80A27DBD420C5176E2122A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8483595235FD3F271F017C44A692938C /* Constraint.swift in Sources */,
-				D69CF7F76CE2DB921BCF5CA210BE5CD3 /* ConstraintAttributes.swift in Sources */,
-				22120366709FEC30B20BDB1222B7EB3A /* ConstraintConfig.swift in Sources */,
-				B8A40F4E76841BB2A7CA2102006B79DE /* ConstraintConstantTarget.swift in Sources */,
-				45D945A117213D86A562A7D298291F8D /* ConstraintDescription.swift in Sources */,
-				DF3F4FCC4FACE656E1F6A143F12FB4CF /* ConstraintDSL.swift in Sources */,
-				FE515AF78480B1DF30ED6030F9201FCF /* ConstraintInsets.swift in Sources */,
-				644930DF522F6ECAA608C0C0CB2D5463 /* ConstraintInsetTarget.swift in Sources */,
-				84E914A9670F20578CFE56D91CBC95C9 /* ConstraintItem.swift in Sources */,
-				9D0829087D7F88CD3A422B52CF4BB16E /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				4A78E2F87E4A61D3526D7766191E4F97 /* ConstraintLayoutGuide.swift in Sources */,
-				64733E414AB5A4118260A3F3B6BF891B /* ConstraintLayoutGuideDSL.swift in Sources */,
-				6436ECF4DBF747B3FBAAF100BB56BDF3 /* ConstraintLayoutSupport.swift in Sources */,
-				383D6E470E984D37FC5F1F3A9BA5A9C2 /* ConstraintLayoutSupportDSL.swift in Sources */,
-				4528ED76BAAD632BFA498F5FED414B3E /* ConstraintMaker.swift in Sources */,
-				4F6B0175D84A8340CE1F1C7ED1E520B6 /* ConstraintMakerEditable.swift in Sources */,
-				78F02BA8A874C14515396B41A3BBBEA7 /* ConstraintMakerExtendable.swift in Sources */,
-				6BB539C174924AF1428AE5C63E2B5A3C /* ConstraintMakerFinalizable.swift in Sources */,
-				3729D61DD2B71E04C03AF386CD158AE1 /* ConstraintMakerPriortizable.swift in Sources */,
-				EA5BA2954BC582E086C25EE62EDA255C /* ConstraintMakerRelatable.swift in Sources */,
-				9E007C59EC0FAFC00CE13911E3F495E3 /* ConstraintMultiplierTarget.swift in Sources */,
-				F7C3F505C00A50330123DCA61FB5AA82 /* ConstraintOffsetTarget.swift in Sources */,
-				B00D3ABD5D98F1732F3ABD5BA03FE57F /* ConstraintPriority.swift in Sources */,
-				109D2B594D716BA481D65FEF00444FD2 /* ConstraintPriorityTarget.swift in Sources */,
-				9DB5AA2B524073BDB0B82B942EA65D95 /* ConstraintRelatableTarget.swift in Sources */,
-				4EF56C8D7B40313BBFE59D2ABF1E360D /* ConstraintRelation.swift in Sources */,
-				8243CBC090435930D76ABE30E7191D8A /* ConstraintView+Extensions.swift in Sources */,
-				14314FC490ADB1207982C40F02B8F044 /* ConstraintView.swift in Sources */,
-				6603A6E492FEC3E3391D9AB710F80FC9 /* ConstraintViewDSL.swift in Sources */,
-				2CE691FCB79F5E426638C1E1E932F4CB /* Debugging.swift in Sources */,
-				0E30C7C993501BA19B68EF53B874CB18 /* LayoutConstraint.swift in Sources */,
-				E8BB379314EC4F205A53F6F26F1BC725 /* LayoutConstraintItem.swift in Sources */,
-				0CC849FC0C2CC723AE0C62632A601412 /* SnapKit-dummy.m in Sources */,
-				8BC57E51D7C65BF4ECA33F5E68DBA6A6 /* UILayoutSupport+Extensions.swift in Sources */,
+				6EA6DFC4473A9B2DB6B8A42EA986BA5B /* GTMSessionFetcher-dummy.m in Sources */,
+				64F31B70A6E5E6963518A01C285B435F /* GTMSessionFetcher.m in Sources */,
+				07340F15BACBA601736DBB2ABF1ABC35 /* GTMSessionFetcherLogging.m in Sources */,
+				95C69447F517DB81437EDE0003486963 /* GTMSessionFetcherService.m in Sources */,
+				F4E294C07EE32FFCDCF7FF4D71D850BD /* GTMSessionUploadFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB784005BA0C8C980A400D1AC63C1469 /* Sources */ = {
+		CB921FD54818CB86DBDCD17E5046FBDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37D17F242065D54D6B3BF2EB27ADCDE /* Pods-A Project Story-dummy.m in Sources */,
+				6028199137A6717AE5BCD1302F266327 /* SwiftyJSON-dummy.m in Sources */,
+				3BF1E8E352A5AF874BCDA15D06818108 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D4BA6B2C97E6890AF19DF04514C3D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEEFA6717FF862EBA62BEE3CA1B54E8 /* Constraint.swift in Sources */,
+				9F5F21856F062094F48AB0580BFA1F8F /* ConstraintAttributes.swift in Sources */,
+				2B1BD5F48980CCEA9CA5C3EBC51B1E68 /* ConstraintConfig.swift in Sources */,
+				57E5805C305764C4DC2FFA89BBE0E517 /* ConstraintConstantTarget.swift in Sources */,
+				2DC89E71FBB6A3F6FEC90307C0A84FA2 /* ConstraintDescription.swift in Sources */,
+				3791D4B897007C5669AB298BA9CEA709 /* ConstraintDSL.swift in Sources */,
+				E398736B8E6A101C27EE805547030807 /* ConstraintInsets.swift in Sources */,
+				150B86C526692799BBF39D678EDC99DC /* ConstraintInsetTarget.swift in Sources */,
+				BB4902F16358B96D9979212E89A55F77 /* ConstraintItem.swift in Sources */,
+				90DA208B7F4E50AC2D72A96F648E7232 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				77ACBDA5F48499068288E164585C89B4 /* ConstraintLayoutGuide.swift in Sources */,
+				DBDE2B1EAF87401FBF15F08968C2A027 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				D5F6D93DA80D8E99EE2A4D4D247C35DD /* ConstraintLayoutSupport.swift in Sources */,
+				F60D99DF6A100EA0795975BEE99F55FD /* ConstraintLayoutSupportDSL.swift in Sources */,
+				23227407F353E2B5FF1C8538E37B9658 /* ConstraintMaker.swift in Sources */,
+				07C21F6083143D8F5912FAD6720C9976 /* ConstraintMakerEditable.swift in Sources */,
+				FCD6DFAF6E38F1A25F166A3FA7FD89EA /* ConstraintMakerExtendable.swift in Sources */,
+				78C0A79FCE491A4F50C37F4304428F70 /* ConstraintMakerFinalizable.swift in Sources */,
+				18F3A9C244B14A5C6B9C353A4066268A /* ConstraintMakerPriortizable.swift in Sources */,
+				2A41EBC637D7A93172327BDC7B273C54 /* ConstraintMakerRelatable.swift in Sources */,
+				7FC1D744A25E16C98A03F4D05B96DFC4 /* ConstraintMultiplierTarget.swift in Sources */,
+				7440BCEE24618792BC9AA5730B121A36 /* ConstraintOffsetTarget.swift in Sources */,
+				5266060B389A51AE99B0F1191D3A79B3 /* ConstraintPriority.swift in Sources */,
+				60D4EC2EFF2E3E2F09B040FAF06C7153 /* ConstraintPriorityTarget.swift in Sources */,
+				82EC06AA7F117F162555346CDE2B6B7E /* ConstraintRelatableTarget.swift in Sources */,
+				5C33D1295C931DB6045F184603150F44 /* ConstraintRelation.swift in Sources */,
+				6D1D8E5161F826659B60C6E9CCBE600C /* ConstraintView+Extensions.swift in Sources */,
+				E901C733303CE1EB7C3240EBB6B4C7A5 /* ConstraintView.swift in Sources */,
+				6508FD064619782209347CB5E1529770 /* ConstraintViewDSL.swift in Sources */,
+				88A4B4A0740C86F227BDBE85CB8C5C77 /* Debugging.swift in Sources */,
+				10B23A2AAD015ED1FABD1D6934095F9F /* LayoutConstraint.swift in Sources */,
+				65D91C8E8861B717DB50FCD031042FE7 /* LayoutConstraintItem.swift in Sources */,
+				347898714013E95BF500010E33537950 /* SnapKit-dummy.m in Sources */,
+				D95A219A7635B0EC391AE71EE727958E /* UILayoutSupport+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5ECDEAA7FF9F4CB3CFBE89C087B048D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78DA22259487B4EA51B296685F65D22C /* Pods-A Project Story-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D370663F5F26ED50016C29AFA262D733 /* PBXTargetDependency */ = {
+		5FDA6E22F6243E4D932004CC0F1EFA12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 5179FC157A8F7AA4889F5EC5A043B9FF /* SwiftyJSON */;
+			targetProxy = AD108552C2D993CC8B261CAF2D14252F /* PBXContainerItemProxy */;
+		};
+		820C4967B12008103955A6E71CDC5523 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 107A9565F9DF88517DFD3E28C05B2B96 /* GoogleToolboxForMac */;
+			targetProxy = C5C2DEC974F7BF020E545850A1CE187A /* PBXContainerItemProxy */;
+		};
+		8344D3F923D4532737F903513C1CC497 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = C052BEBFBD0AB5218CC64BA3450F6547 /* GTMSessionFetcher */;
+			targetProxy = BC0C251ADE3743B4FB1AA60615A76068 /* PBXContainerItemProxy */;
+		};
+		A04E6FB54819BA158C72F8BB246AF635 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
-			target = 34ACE530A841D0217F29A2A3865FE82F /* SnapKit */;
-			targetProxy = 8A9603DFDF52217FA93CA3DB098DF044 /* PBXContainerItemProxy */;
+			target = 9279457409BF9E8D28274AEFDA4A0696 /* SnapKit */;
+			targetProxy = F72E5577E0A2C4F4CC83A0A8A7E1863B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -606,6 +1121,78 @@
 			};
 			name = Debug;
 		};
+		173EB991F4189BD0521FB9FF314C1A99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4612F85F7EE1B3FA46803587218913EC /* GTMSessionFetcher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GTMSessionFetcher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E023A412E25A78FEAA254D8062833A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF28C762C0F5508AD4C6634780FE09DB /* Pods-A Project Story.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-A Project Story/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-A Project Story/Pods-A Project Story.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_A_Project_Story;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1FFD78ED16F067694E858EF49E556866 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D7CF38AB073A506A6C481831FF4A9C3A /* Pods-A Project StoryTests.release.xcconfig */;
@@ -636,44 +1223,6 @@
 				PRODUCT_NAME = Pods_A_Project_StoryTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2A68B3E064FE45F12CA3D9AA62DFDF5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D829C23A2CF22382C31854D2283F9C1 /* Pods-A Project Story.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-A Project Story/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-A Project Story/Pods-A Project Story.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_A_Project_Story;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -752,6 +1301,39 @@
 			};
 			name = Debug;
 		};
+		5EC9DDC590E000FC3BF93D2E1B5E2AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4612F85F7EE1B3FA46803587218913EC /* GTMSessionFetcher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GTMSessionFetcher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GTMSessionFetcher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -796,6 +1378,108 @@
 			};
 			name = Release;
 		};
+		708153707D9E2ADA57CE479A228A0EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D724ADB046CF40D85C1734E442FEBC /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717A3EE67EA0F64B2C44A7F61BD012C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2613A8AD52077C5313C4E1379B311096 /* SnapKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SnapKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		71C642DCA4A9C2CB86B1D0912D8DBA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51200DEE7B7AD807A6E81E349AC628D4 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		80DCFB3ED5F163A5D165324C93FB1597 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4967868CC9696B4A169665DBDC1C5178 /* Pods-A Project StoryUITests.release.xcconfig */;
@@ -832,83 +1516,9 @@
 			};
 			name = Release;
 		};
-		F4AB01E9C6D52DDA4A897D0E43217535 /* Debug */ = {
+		B4E28D0C803449CE16F2827318D8C53D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF28C762C0F5508AD4C6634780FE09DB /* Pods-A Project Story.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-A Project Story/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-A Project Story/Pods-A Project Story.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_A_Project_Story;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F9B3AAF227B1EC81FE69B2FA115A5458 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54B04DD12F6342C19E0EF6B3167130D3 /* SnapKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FC68E8DE474B6BC922A610B120ECACD6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54B04DD12F6342C19E0EF6B3167130D3 /* SnapKit.xcconfig */;
+			baseConfigurationReference = 51200DEE7B7AD807A6E81E349AC628D4 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -922,17 +1532,123 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BB6F4CA740B00D73CF6D8380E5F59148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2613A8AD52077C5313C4E1379B311096 /* SnapKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA7491CE05889DCCBDAC4D38B5187209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D829C23A2CF22382C31854D2283F9C1 /* Pods-A Project Story.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-A Project Story/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-A Project Story/Pods-A Project Story.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_A_Project_Story;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCE128090619EE9BA94A913CB57157F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D724ADB046CF40D85C1734E442FEBC /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -948,6 +1664,24 @@
 			buildConfigurations = (
 				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
 				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F064B02CF14F428D1FA7E2DD2CBDB6C /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C642DCA4A9C2CB86B1D0912D8DBA26 /* Debug */,
+				B4E28D0C803449CE16F2827318D8C53D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3166596B665E06C4B76C8ABB6AB06824 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				708153707D9E2ADA57CE479A228A0EFA /* Debug */,
+				DCE128090619EE9BA94A913CB57157F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -970,20 +1704,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE06093750145CDDE23A1A4FC57E371B /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+		C839F4CD54D61B2AD8A7E18A000E85DE /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9B3AAF227B1EC81FE69B2FA115A5458 /* Debug */,
-				FC68E8DE474B6BC922A610B120ECACD6 /* Release */,
+				BB6F4CA740B00D73CF6D8380E5F59148 /* Debug */,
+				717A3EE67EA0F64B2C44A7F61BD012C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB9F180B87322C3F75D1947AD502DB4B /* Build configuration list for PBXNativeTarget "Pods-A Project Story" */ = {
+		D1E98CE767B7382103AF1486A6F84C07 /* Build configuration list for PBXNativeTarget "Pods-A Project Story" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F4AB01E9C6D52DDA4A897D0E43217535 /* Debug */,
-				2A68B3E064FE45F12CA3D9AA62DFDF5B /* Release */,
+				1E023A412E25A78FEAA254D8062833A3 /* Debug */,
+				CA7491CE05889DCCBDAC4D38B5187209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7CC8559AB6F51830204F1A9CE54BF3E /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				173EB991F4189BD0521FB9FF314C1A99 /* Debug */,
+				5EC9DDC590E000FC3BF93D2E1B5E2AFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

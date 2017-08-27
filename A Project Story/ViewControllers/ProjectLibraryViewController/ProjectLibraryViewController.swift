@@ -12,7 +12,7 @@ import UIKit
 // Project Library View Controller //
 /////////////////////////////////////
 
-final class ProjectLibraryViewController: UIViewController {
+final class ProjectLibraryViewController: UIViewController, PublishProjectDelegate {
     
     fileprivate var mainView = ProjectLibraryMainView()
     let viewModel = ProjectLibraryViewModel()
@@ -62,6 +62,7 @@ final class ProjectLibraryViewController: UIViewController {
         case .didPressAddProjectButton:
             presentAddProjectViewController()
         case .didSelectCell(let indexPath):
+            viewModel.cellIndexSelected = indexPath.row
             let project = viewModel.didSelectItemAt(indexPath: indexPath)
             determineViewControllerToPresent(with: indexPath, data: project)
         case .didPressShowMoreButton(let button):

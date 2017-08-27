@@ -20,3 +20,9 @@ final class Step {
     }
     
 }
+
+extension Step {
+    func toJSON() -> [String: String] {
+        return ["title": title, "description": description]
+    }
+}

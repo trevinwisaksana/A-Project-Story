@@ -17,6 +17,7 @@ final class ProjectLibraryViewModel {
     
     private var listOfProjects = [Project]()
     private var listOfDrafts = [Project]()
+    var cellIndexSelected: Int?
     var didEnlargeDraftSection = false
     var hasBeenInitialized = false
     
@@ -30,6 +31,10 @@ final class ProjectLibraryViewModel {
     
     func appendProject(with data: Project) {
         listOfProjects.append(data)
+    }
+    
+    func removeProjectDraft(at index: Int) {
+        listOfDrafts.remove(at: index)
     }
     
     func showMoreDrafts() {
@@ -72,10 +77,13 @@ final class ProjectLibraryViewModel {
     
     func didSelectItemAt(indexPath: IndexPath) -> Project {
         let section = indexPath.section
-        if section == 0 {
+        switch section {
+        case 0:
             return listOfDrafts[indexPath.row]
-        } else {
+        case 1:
             return listOfProjects[indexPath.row]
+        default:
+            assert(false, "Section out of bounds")
         }
     }
 }

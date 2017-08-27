@@ -7,6 +7,11 @@ target 'A Project Story' do
 
   # Pods for A Project Story
   pod 'SnapKit', '~> 3.2.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'SwiftyJSON'
+
 
   target 'A Project StoryTests' do
     inherit! :search_paths
