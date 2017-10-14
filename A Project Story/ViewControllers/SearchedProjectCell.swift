@@ -13,6 +13,7 @@ final class SearchedProjectCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCell()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

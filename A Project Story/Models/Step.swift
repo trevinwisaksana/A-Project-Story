@@ -6,7 +6,8 @@
 //  Copyright © 2017 Trevin Wisaksana. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+import Realm
 
 final class Step {
     
@@ -18,7 +19,7 @@ final class Step {
         self.title = title
         self.description = description
     }
-    
+
 }
 
 extension Step {

@@ -13,6 +13,9 @@ final class SearchMainView: UIView {
     
     let searchTextField = UITextField()
     var searchedProjectCollectionView: UICollectionView?
+    // Loading Indicator
+    var spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var loadingView = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +44,7 @@ final class SearchMainView: UIView {
         
         searchTextField.placeholder = "Search"
         searchTextField.font = UIFont(name: "Avenir", size: 20)
+        searchTextField.returnKeyType = .done
         
         addSubview(searchTextField)
         
@@ -66,6 +70,7 @@ final class SearchMainView: UIView {
         searchedProjectCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
         searchedProjectCollectionView?.backgroundColor = .clear
         searchedProjectCollectionView?.showsVerticalScrollIndicator = false
+        searchedProjectCollectionView?.alwaysBounceVertical = true
         
         guard let collectionView = searchedProjectCollectionView else {
             return
@@ -82,6 +87,14 @@ final class SearchMainView: UIView {
     
     func registerCollectionViewCell() {
         searchedProjectCollectionView?.register(SearchedProjectCell.self, forCellWithReuseIdentifier: "SearchedProjectCell")
+    }
+    
+    func displayLoadingIndicator() {
+        self.showActivityIndicator(for: loadingView, in: self, with: spinner)
+    }
+    
+    func dismissLoadingIndicator() {
+        self.hideActivityIndicator(for: loadingView, with: spinner)
     }
     
 }

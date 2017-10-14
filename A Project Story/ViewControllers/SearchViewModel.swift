@@ -17,13 +17,24 @@ final class SearchViewModel {
         listOfSearchedProjects.append(project)
     }
     
+    func removeSearchedProjects() {
+        listOfSearchedProjects.removeAll()
+    }
+    
     func numberOfItems() -> Int {
         return listOfSearchedProjects.count
     }
     
-    func retreiveSearchedProjects() {
-        apiCommunicator.retrieveProjects { (listOfProjects, error) in
-            
+    func retreiveSearchedProject(with title: String, completion: ((Error?) -> Void)?) {
+        self.listOfSearchedProjects.removeAll()
+        apiCommunicator.retrieveSearchedProject(with: title) { (project) in
+            guard let project = project else {
+                let error = NSError(domain: "Project not found", code: 404, userInfo: nil)
+                completion?(error)
+                return
+            }
+            self.listOfSearchedProjects.append(project)
+            completion?(nil)
         }
     }
     

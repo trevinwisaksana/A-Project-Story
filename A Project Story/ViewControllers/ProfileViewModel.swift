@@ -46,12 +46,13 @@ final class ProfileViewModel {
     }
     
     func retrievePublishedProjects(completion: ((Error?) -> Void)?) {
-        apiCommunicator.retrieveProjects { (listOfProjects, error) in
+        listOfPublishedProjects.removeAll()
+        apiCommunicator.retrieveProjects { (project, error) in
             if let error = error {
                 completion?(error)
             } else {
-                guard let projects = listOfProjects else { return }
-                self.listOfPublishedProjects.append(contentsOf: projects)
+                guard let project = project else { return }
+                self.listOfPublishedProjects.append(project)
                 completion?(nil)
             }
         }

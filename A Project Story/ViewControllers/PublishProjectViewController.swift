@@ -206,10 +206,11 @@ extension PublishProjectViewController: UICollectionViewDataSource, UICollection
         case 1:
             let width = collectionView.frame.width
             let height = self.view.frame.height * 0.3
+            
             return CGSize(width: width, height: height)
         case 2:
             let width = collectionView.frame.width
-            let height = self.view.frame.height * 0.7
+            let height = self.view.frame.height * 7
             return CGSize(width: width, height: height)
         default:
             return CGSize(width: 0, height: 0)

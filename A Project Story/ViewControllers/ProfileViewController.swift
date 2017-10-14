@@ -30,12 +30,11 @@ final class ProfileViewController: UIViewController, PublishProjectDelegate {
         switch state {
         case .loading:
             view = mainView
-            retrievePublishedProjects()
         case .viewDidLayoutSubviews:
             mainView.registerCollectionViewCells()
             setCollectionViewDataSource()
         case .viewWillAppear:
-            break
+            retrievePublishedProjects()
         default:
             break
         }

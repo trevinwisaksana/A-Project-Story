@@ -6,13 +6,15 @@
 //  Copyright © 2017 Trevin Wisaksana. All rights reserved.
 //
 
-////////////////
+///////////////////
 // Project Model //
-////////////////
+///////////////////
 import Firebase
 import SwiftyJSON
 
-final class Project {
+final class Project: Hashable {
+
+    var hashValue: Int = 0
     var title: String
     let ownerEmail: String
     var description: String
@@ -24,7 +26,7 @@ final class Project {
         self.description = description
     }
     
-    init?(snapshot: FIRDataSnapshot) {
+    init?(snapshot: DataSnapshot) {
         
         let snapshot = JSON(snapshot.value)
         
@@ -35,8 +37,6 @@ final class Project {
         let ownerEmail = snapshot["ownerEmail"].string ?? ""
         let description = snapshot["description"].string ?? ""
         
-        
-        
         self.title = title
         self.ownerEmail = ownerEmail
         self.description = description
@@ -45,17 +45,17 @@ final class Project {
             self.steps.append(contentsOf: stepsData)
         }
     }
+    
+    static func ==(lhs: Project, rhs: Project) -> Bool {
+        if lhs.hashValue == rhs.hashValue {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 extension Project {
-    
-    func encodeOwner(email: String) -> String {
-        return email.replacingOccurrences(of: ".", with: ",")
-    }
-    
-    func decodeOwner(email: String) -> String {
-        return email.replacingOccurrences(of: ",", with: ".")
-    }
     
     func stepsToJSON(_ steps: [Step]) -> [[String : String]] {
         let json = steps.map { (step) -> [String : String] in
@@ -67,6 +67,7 @@ extension Project {
     func toJSON() -> [String : Any] {
         return ["title": title,
                 "description": description,
+                "searchName": title.lowercased(),
                 "steps": stepsToJSON(steps)]
     }
 }

@@ -17,6 +17,7 @@
 		DD30A2101F4D2E6F00271024 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD30A20F1F4D2E6F00271024 /* SignInViewModel.swift */; };
 		DD30A2121F4D2E7900271024 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD30A2111F4D2E7900271024 /* SignUpViewModel.swift */; };
 		DD30A2181F4D2EAD00271024 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD30A2171F4D2EAD00271024 /* User.swift */; };
+		DD5641531F91E5B1004DD92F /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5641521F91E5B1004DD92F /* RealmHelper.swift */; };
 		DD62F9161F51533F0004F403 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F9151F51533F0004F403 /* SearchViewController.swift */; };
 		DD62F9191F5154160004F403 /* SearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F9181F5154160004F403 /* SearchMainView.swift */; };
 		DD62F91C1F5157FA0004F403 /* UpdateProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F91B1F5157FA0004F403 /* UpdateProjectViewController.swift */; };
@@ -27,6 +28,9 @@
 		DD62F92B1F51627B0004F403 /* UIView + LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F92A1F51627B0004F403 /* UIView + LoadingIndicator.swift */; };
 		DD62F92D1F52AF8C0004F403 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F92C1F52AF8B0004F403 /* SearchViewModel.swift */; };
 		DD62F9301F52B6580004F403 /* SearchedProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F92F1F52B6580004F403 /* SearchedProjectCell.swift */; };
+		DD62F9331F53D4F70004F403 /* SearchedProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F9321F53D4F70004F403 /* SearchedProjectViewController.swift */; };
+		DD62F9361F53D5AD0004F403 /* SearchedProjectMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F9351F53D5AD0004F403 /* SearchedProjectMainView.swift */; };
+		DD62F9381F53D5B50004F403 /* SearchedProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62F9371F53D5B50004F403 /* SearchedProjectViewModel.swift */; };
 		DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD65C7001F373E8700333190 /* A_Project_Story.xcdatamodeld */; };
 		DD65C7091F373E8700333190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7021F373E8700333190 /* Assets.xcassets */; };
 		DD65C70B1F373E8700333190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD65C7051F373E8700333190 /* Images.xcassets */; };
@@ -124,6 +128,7 @@
 		DD30A2111F4D2E7900271024 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DD30A2171F4D2EAD00271024 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD3BE7CB26227B5CC5B5DDFB /* Pods-A Project Story.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A Project Story.release.xcconfig"; path = "Pods/Target Support Files/Pods-A Project Story/Pods-A Project Story.release.xcconfig"; sourceTree = "<group>"; };
+		DD5641521F91E5B1004DD92F /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		DD62F9151F51533F0004F403 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		DD62F9181F5154160004F403 /* SearchMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMainView.swift; sourceTree = "<group>"; };
 		DD62F91B1F5157FA0004F403 /* UpdateProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProjectViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +139,9 @@
 		DD62F92A1F51627B0004F403 /* UIView + LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + LoadingIndicator.swift"; sourceTree = "<group>"; };
 		DD62F92C1F52AF8B0004F403 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		DD62F92F1F52B6580004F403 /* SearchedProjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProjectCell.swift; sourceTree = "<group>"; };
+		DD62F9321F53D4F70004F403 /* SearchedProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProjectViewController.swift; sourceTree = "<group>"; };
+		DD62F9351F53D5AD0004F403 /* SearchedProjectMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProjectMainView.swift; sourceTree = "<group>"; };
+		DD62F9371F53D5B50004F403 /* SearchedProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedProjectViewModel.swift; sourceTree = "<group>"; };
 		DD65C7011F373E8700333190 /* A_Project_Story.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A_Project_Story.xcdatamodel; sourceTree = "<group>"; };
 		DD65C7021F373E8700333190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD65C7051F373E8700333190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -293,6 +301,14 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		DD5641541F91E5BA004DD92F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DD5641521F91E5B1004DD92F /* RealmHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DD62F9171F51534C0004F403 /* SearchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +387,32 @@
 			name = ResuableViews;
 			sourceTree = "<group>";
 		};
+		DD62F9341F53D5000004F403 /* SearchedProjectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F9321F53D4F70004F403 /* SearchedProjectViewController.swift */,
+				DD62F93A1F53D5D30004F403 /* ViewModel */,
+				DD62F9391F53D5CF0004F403 /* Views */,
+			);
+			name = SearchedProjectViewController;
+			sourceTree = "<group>";
+		};
+		DD62F9391F53D5CF0004F403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F9351F53D5AD0004F403 /* SearchedProjectMainView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DD62F93A1F53D5D30004F403 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F9371F53D5B50004F403 /* SearchedProjectViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		DD65C6FF1F373E8700333190 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +464,7 @@
 			children = (
 				DD8879B11F2DBFAC004466BE /* AppDelegate.swift */,
 				DDFDD9F71F35B020006FB0AE /* PlaygroundDrivenDevelopment */,
+				DD5641541F91E5BA004DD92F /* Helpers */,
 				DDAEB31E1F4323F30059C672 /* Extensions */,
 				DDAEB29E1F394C530059C672 /* ViewControllers */,
 				DDAEB29B1F394B9D0059C672 /* Models */,
@@ -470,10 +513,11 @@
 				DDAEB2DA1F39F8AB0059C672 /* AddStepViewController */,
 				DDAEB2F11F3BCFC70059C672 /* StepViewcontroller */,
 				DDAEB2E31F3A06AE0059C672 /* PublishProjectViewController */,
-				DDAEB2AD1F394C530059C672 /* ProjectViewController */,
+				DDAEB2AD1F394C530059C672 /* PublishedProjectViewController */,
 				DDAEB2B01F394C530059C672 /* TabBarViewController */,
 				DDE239BD1F498DD30020F7BF /* ProfileViewController */,
 				DD62F9171F51534C0004F403 /* SearchViewController */,
+				DD62F9341F53D5000004F403 /* SearchedProjectViewController */,
 				DD62F91D1F5157FF0004F403 /* UpdateProjectViewController */,
 				DD62F9231F5158BC0004F403 /* BookmarkedProjectsViewController */,
 			);
@@ -531,13 +575,14 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
-		DDAEB2AD1F394C530059C672 /* ProjectViewController */ = {
+		DDAEB2AD1F394C530059C672 /* PublishedProjectViewController */ = {
 			isa = PBXGroup;
 			children = (
 				DDAEB2AF1F394C530059C672 /* ProjectViewController.swift */,
 				DDAEB2D01F39BCAB0059C672 /* ViewModel */,
 				DDAEB2CF1F39BCA70059C672 /* Views */,
 			);
+			name = PublishedProjectViewController;
 			path = ProjectViewController;
 			sourceTree = "<group>";
 		};
@@ -1179,7 +1224,9 @@
 				DDAEB2BF1F394CAA0059C672 /* DraftViewController.swift in Sources */,
 				DD8879B21F2DBFAC004466BE /* AppDelegate.swift in Sources */,
 				DD30A2181F4D2EAD00271024 /* User.swift in Sources */,
+				DD5641531F91E5B1004DD92F /* RealmHelper.swift in Sources */,
 				DDAEB31D1F4323EF0059C672 /* Keyboard+Toolbar.swift in Sources */,
+				DD62F9361F53D5AD0004F403 /* SearchedProjectMainView.swift in Sources */,
 				DDAEB2ED1F3B426C0059C672 /* DraftCollectionViewFooter.swift in Sources */,
 				DDAEB2DF1F39F98D0059C672 /* AddStepMainView.swift in Sources */,
 				DDAEB2F31F3BD02B0059C672 /* StepMainView.swift in Sources */,
@@ -1205,6 +1252,7 @@
 				DDAEB2D21F39C1DF0059C672 /* StepCell.swift in Sources */,
 				DDAEB3161F3FB1C20059C672 /* PublishedProjectDescriptionCell.swift in Sources */,
 				DD65C7081F373E8700333190 /* A_Project_Story.xcdatamodeld in Sources */,
+				DD62F9331F53D4F70004F403 /* SearchedProjectViewController.swift in Sources */,
 				DDAEB2EB1F3AD1E80059C672 /* Step.swift in Sources */,
 				DDAEB2B81F394C530059C672 /* FeaturedCollectionViewCell.swift in Sources */,
 				DDAEB2BA1F394C530059C672 /* FeaturedCollectionViewHeader.swift in Sources */,
@@ -1215,6 +1263,7 @@
 				DDAEB2D51F39C21C0059C672 /* StepCollectionViewHeader.swift in Sources */,
 				DDE239CF1F4C13A60020F7BF /* APICommunicator.swift in Sources */,
 				DDAEB2C61F3951F10059C672 /* ProjectViewModel.swift in Sources */,
+				DD62F9381F53D5B50004F403 /* SearchedProjectViewModel.swift in Sources */,
 				DD62F9301F52B6580004F403 /* SearchedProjectCell.swift in Sources */,
 				DDAEB2FD1F3C5B370059C672 /* ArtworkSection.swift in Sources */,
 				DDE239B91F48313E0020F7BF /* TabBarMainView.swift in Sources */,

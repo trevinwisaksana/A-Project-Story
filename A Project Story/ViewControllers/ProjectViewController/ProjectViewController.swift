@@ -76,19 +76,19 @@ final class ProjectViewController: UIViewController {
     }
     
     private func setCollectionViewDelegate() {
-        mainView.publishCollectionView.delegate = self
-        mainView.publishCollectionView.dataSource = self
-        mainView.publishCollectionView.reloadData()
+        mainView.publishedProjectsCollectionView.delegate = self
+        mainView.publishedProjectsCollectionView.dataSource = self
+        mainView.publishedProjectsCollectionView.reloadData()
     }
     
     private func registerCollectionViewCells() {
-        mainView.publishCollectionView.register(PublishedArtworkCell.self, forCellWithReuseIdentifier: "PublishedArtworkCell")
-        mainView.publishCollectionView.register(PublishedProjectDescriptionCell.self, forCellWithReuseIdentifier: "PublishedProjectDescriptionCell")
+        mainView.publishedProjectsCollectionView.register(PublishedArtworkCell.self, forCellWithReuseIdentifier: "PublishedArtworkCell")
+        mainView.publishedProjectsCollectionView.register(PublishedProjectDescriptionCell.self, forCellWithReuseIdentifier: "FeaturedPublishedProjectDescriptionCell")
     }
     
     private func registerCollectionViewSections() {
-        mainView.publishCollectionView.register(PublishedArtworkSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "PublishedArtworkSection")
-        mainView.publishCollectionView.register(PublishedProjectDescriptionSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "PublishedProjectDescriptionSection")
+        mainView.publishedProjectsCollectionView.register(PublishedArtworkSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "PublishedArtworkSection")
+        mainView.publishedProjectsCollectionView.register(PublishedProjectDescriptionSection.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "PublishedProjectDescriptionSection")
     }
     
     // Miscellaneous
@@ -105,7 +105,7 @@ final class ProjectViewController: UIViewController {
 extension ProjectViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -122,7 +122,7 @@ extension ProjectViewController: UICollectionViewDelegateFlowLayout, UICollectio
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PublishedArtworkCell", for: indexPath) as! PublishedArtworkCell
             return cell
         case 1:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedPublishedProjectDescriptionCellCell", for: indexPath) as! PublishedProjectDescriptionCell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedPublishedProjectDescriptionCell", for: indexPath) as! PublishedProjectDescriptionCell
             return cell
         default:
             assert(false, "Section out of range")
@@ -153,16 +153,14 @@ extension ProjectViewController: UICollectionViewDelegateFlowLayout, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let section = indexPath.section
+        let width = self.view.frame.width
+        let height = self.view.frame.height * 0.5
         
         switch section {
         case 0:
-            let width = self.view.frame.width
-            let height = self.view.frame.height * 0.07
             return CGSize(width: width, height: height)
         case 1:
-            let width = self.view.frame.width
-            let height = self.view.frame.height * 0.5
-            return CGSize(width: width, height: height)
+            return CGSize(width: width, height: height * 0.5)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -170,15 +168,14 @@ extension ProjectViewController: UICollectionViewDelegateFlowLayout, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
+        let width = self.view.frame.width
+        let height = self.view.frame.height
+        
         switch section {
         case 0:
-            let width = self.view.frame.width
-            let height = self.view.frame.height * 0.7
-            return CGSize(width: width, height: height)
+            return CGSize(width: width, height: height * 0.7)
         case 1:
-            let width = self.view.frame.width
-            let height = self.view.frame.height * 0.3
-            return CGSize(width: width, height: height)
+            return CGSize(width: width, height: height * 0.5)
         default:
             return CGSize(width: 0, height: 0)
         }

@@ -79,7 +79,7 @@ final class ProfileMainView: UIView {
     
     private func prepareTopHeaderPhoto() {
         let width = frame.width
-        let height = frame.height * 0.15
+        let height = frame.height * 0.1
         
         let topHeaderPhotoFrame = CGRect(x: 0, y: 0, width: width, height: height)
         topHeaderPhoto.frame = topHeaderPhotoFrame
@@ -96,7 +96,7 @@ final class ProfileMainView: UIView {
     }
     
     private func prepareProfilePhoto() {
-        let width = frame.width * 0.25
+        let width = frame.width * 0.2
         
         let profilePhotoFrame = CGRect(x: 0, y: 0, width: width, height: width)
         profilePhoto.frame = profilePhotoFrame
@@ -119,13 +119,13 @@ final class ProfileMainView: UIView {
         let userNameLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         userNameLabel.frame = userNameLabelFrame
         userNameLabel.text = "Trevin Wisaksana"
-        userNameLabel.font = UIFont(name: "Averta-Bold", size: 30)
+        userNameLabel.font = UIFont(name: "Averta-Bold", size: 25)
         
         addSubview(userNameLabel)
         
         userNameLabel.snp.makeConstraints { (make) in
             make.left.equalTo(frame.width * 0.25 * 0.25)
-            make.top.equalTo(profilePhoto.snp.bottom).offset(20)
+            make.top.equalTo(profilePhoto.snp.bottom).offset(18)
             make.width.equalTo(width)
             make.height.equalTo(height)
         }
@@ -138,14 +138,14 @@ final class ProfileMainView: UIView {
         let userLocationLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         userLocationLabel.frame = userLocationLabelFrame
         userLocationLabel.text = "Jakarta, Indonesia"
-        userLocationLabel.font = UIFont(name: "Avenir-Medium", size: 20)
+        userLocationLabel.font = UIFont(name: "Avenir-Medium", size: 15)
         userLocationLabel.textColor = .lightGray
         
         addSubview(userLocationLabel)
         
         userLocationLabel.snp.makeConstraints { (make) in
             make.left.equalTo(frame.width * 0.25 * 0.25)
-            make.top.equalTo(userNameLabel.snp.bottom).offset(-5)
+            make.top.equalTo(userNameLabel.snp.bottom).offset(-10)
             make.width.equalTo(width)
             make.height.equalTo(height)
         }
@@ -281,7 +281,7 @@ final class ProfileMainView: UIView {
         let numberOfProjectsLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         numberOfProjectsLabel.frame = numberOfProjectsLabelFrame
         numberOfProjectsLabel.text = "28"
-        numberOfProjectsLabel.font = UIFont(name: "Averta-Semibold", size: 30)
+        numberOfProjectsLabel.font = UIFont(name: "Averta-Semibold", size: 25)
         numberOfProjectsLabel.textColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         
         numberOfProjectsStackView.addArrangedSubview(numberOfProjectsLabel)
@@ -307,7 +307,7 @@ final class ProfileMainView: UIView {
         let numberOfFollowingLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         numberOfFollowingLabel.frame = numberOfFollowingLabelFrame
         numberOfFollowingLabel.text = "11"
-        numberOfFollowingLabel.font = UIFont(name: "Averta-Semibold", size: 30)
+        numberOfFollowingLabel.font = UIFont(name: "Averta-Semibold", size: 25)
         numberOfFollowingLabel.textColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         
         numberOfFollowingStackView.addArrangedSubview(numberOfFollowingLabel)
@@ -333,7 +333,7 @@ final class ProfileMainView: UIView {
         let numberOfFollowersLabelFrame = CGRect(x: 0, y: 0, width: width, height: height)
         numberOfFollowersLabel.frame = numberOfFollowersLabelFrame
         numberOfFollowersLabel.text = "8"
-        numberOfFollowersLabel.font = UIFont(name: "Averta-Semibold", size: 30)
+        numberOfFollowersLabel.font = UIFont(name: "Averta-Semibold", size: 25)
         numberOfFollowersLabel.textColor = UIColor(colorLiteralRed: 249/255, green: 182/255, blue: 43/255, alpha: 1)
         
         numberOfFollowersStackView.addArrangedSubview(numberOfFollowersLabel)

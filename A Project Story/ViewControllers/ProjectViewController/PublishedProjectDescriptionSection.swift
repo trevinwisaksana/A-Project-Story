@@ -14,7 +14,7 @@ final class PublishedProjectDescriptionSection: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         prepareProjectDescriptionTextView()
     }
     
@@ -29,13 +29,14 @@ final class PublishedProjectDescriptionSection: UICollectionReusableView {
         
         let artworkFrame = CGRect(x: 0, y: 0, width: width, height: height)
         projectDescriptionTextView.frame = artworkFrame
+        projectDescriptionTextView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
         
         addSubview(projectDescriptionTextView)
         
         projectDescriptionTextView.snp.makeConstraints { (make) in
             make.left.equalTo(22)
             make.right.equalTo(-22)
-            make.top.bottom.equalTo(0)
+            make.top.bottom.equalTo(22)
             make.width.equalTo(width)
         }
     }

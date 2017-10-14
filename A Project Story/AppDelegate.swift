@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Firebase
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         // Get the window sized
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        if FIRAuth.auth()?.currentUser == nil {
+        if Auth.auth().currentUser == nil {
             // Root view controller
             window?.rootViewController = SignInViewController()
         } else {

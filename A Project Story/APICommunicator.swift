@@ -20,15 +20,15 @@ protocol APICommunicationProcotol {
 
 final class APICommunicator: APICommunicationProcotol {
     
-    private let database = FIRDatabase.database().reference()
-    private let firebaseAuth = FIRAuth.auth()
-    private let uid = FIRAuth.auth()?.currentUser?.uid
-    private let usersReference = FIRDatabase.database().reference().child("users")
-    private let projectsReference = FIRDatabase.database().reference().child("projects")
+    private let database = Database.database().reference()
+    private let firebaseAuth = Auth.auth()
+    private let uid = Auth.auth().currentUser?.uid
+    private let usersReference = Database.database().reference().child("users")
+    private let projectsReference = Database.database().reference().child("projects")
     
     // MARK: - App Entry And Exit
     public func signIn(with email: String, password: String, completion: ((Error?) -> Void)?) {
-        firebaseAuth?.signIn(withEmail: email, password: password,
+        firebaseAuth.signIn(withEmail: email, password: password,
                              completion: { (user, error) in
             completion?(error)
         })
@@ -36,7 +36,7 @@ final class APICommunicator: APICommunicationProcotol {
     
     public func signOut() {
         do {
-            try firebaseAuth?.signOut()
+            try firebaseAuth.signOut()
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
@@ -45,7 +45,7 @@ final class APICommunicator: APICommunicationProcotol {
     public func signUp(with email: String, password: String, completion: ((Error?) -> Void)?) {
         // TODO: Check if this is an asynchronous call
         // Success in signing up, create user in Firebase
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             // There's no error
             if error == nil {
                 
@@ -54,10 +54,8 @@ final class APICommunicator: APICommunicationProcotol {
                 }
                 
                 let userReference = self.database.child("users").child(user.uid)
-                
                 // Create Firebase path for this user and save email
                 let emailDictionary = ["email": "\(email)"]
-                
                 // BUG: Format of the completion block must be correct
                 // because there is a bug in Firebase
                 userReference.setValue(emailDictionary) { (error, _) in
@@ -85,14 +83,13 @@ final class APICommunicator: APICommunicationProcotol {
     
     func publish(project: Project, completion:((Error?) -> Void)?) {
         
-        
         let jsonData = project.toJSON()
         
         guard let uid = uid else {
             return
         }
         
-        usersReference.child(uid).child("project").setValue(jsonData) { (error, reference) in
+        usersReference.child(uid).child("project").childByAutoId().setValue(jsonData) { (error, reference) in
             if let error = error {
                 completion?(error)
             } else {
@@ -100,7 +97,7 @@ final class APICommunicator: APICommunicationProcotol {
             }
         }
         
-        projectsReference.setValue(jsonData) { (error, reference) in
+        projectsReference.childByAutoId().setValue(jsonData) { (error, reference) in
             if let error = error {
                 completion?(error)
             } else {
@@ -110,15 +107,20 @@ final class APICommunicator: APICommunicationProcotol {
         
     }
     
-    func retrieveProjects(completion: (([Project]?, Error?) -> Void)?) {
-        var projects: [Project] = []
-        
+    func retrieveProjects(completion: ((Project?, Error?) -> Void)?) {
         guard let uid = uid else { return }
-        
-        usersReference.child(uid).child("project").observe(.value, with: { (snapshot) in
-            guard let project = Project(snapshot: snapshot) else { return }
-            projects.append(project)
-            completion?(projects, nil)
+        usersReference.child(uid).child("project").observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChildren() {
+                for item in snapshot.children {
+                    let dataSnapshot = item as! DataSnapshot
+                    guard let project = Project(snapshot: dataSnapshot) else {
+                        return
+                    }
+                    completion?(project, nil)
+                }
+            } else {
+                completion?(nil, nil)
+            }
         }) { (error) in
             completion?(nil, error)
         }
@@ -131,6 +133,28 @@ final class APICommunicator: APICommunicationProcotol {
                 completion?(error)
             }
         }
+    }
+    
+    func retrieveSearchedProject(with title: String, completion: ((Project?) -> Void)?) {
+        
+        let lowercaseText = title.lowercased()
+        let query = projectsReference.queryOrdered(byChild: "searchName").queryStarting(atValue: lowercaseText).queryEnding(atValue: lowercaseText+"\u{f8ff}").queryLimited(toFirst: 10)
+        
+        query.observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChildren() {
+                for item in snapshot.children {
+                    guard let info = item as? DataSnapshot else {
+                        break
+                    }
+                    guard let searchedProject = Project(snapshot: info) else {
+                        return
+                    }
+                    completion?(searchedProject)
+                }
+            } else {
+                completion?(nil)
+            }
+        })
     }
     
     func updateProjectDraft() {

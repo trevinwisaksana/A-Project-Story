@@ -98,7 +98,7 @@ final class PublishProjectMainView: UIView {
     private func preparePublishCollectionView() {
         
         let width = frame.width
-        let height = frame.height * 0.8
+        let height = frame.height
         
         let maxY = frame.maxY * 0.15
         

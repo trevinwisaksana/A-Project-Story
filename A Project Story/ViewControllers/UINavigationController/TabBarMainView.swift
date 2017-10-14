@@ -57,7 +57,7 @@ final class TabBarMainView: UIView {
         contentView.layer.cornerRadius = 10
         
         let backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
-        contentView.backgroundColor = backgroundColor
+        contentView.backgroundColor = .white
         
         addSubview(contentView)
         sendSubview(toBack: contentView)

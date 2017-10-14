@@ -17,7 +17,8 @@ final class DraftCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        // backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        backgroundColor = .white
         prepareContainerView()
         prepareLineSeparator()
         prepareUnpublishedLabel()
@@ -47,7 +48,8 @@ final class DraftCollectionViewCell: UICollectionViewCell {
         
         let containerViewFrame = CGRect(x: maxX, y: 0, width: width, height: height)
         containerView.frame = containerViewFrame
-        containerView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        // containerView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        containerView.backgroundColor = .white
         
         addSubview(containerView)
     }

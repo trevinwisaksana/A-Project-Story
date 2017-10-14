@@ -47,7 +47,6 @@ final class ProjectLibraryViewController: UIViewController, PublishProjectDelega
             let project = Project(title: "Sample Project", ownerEmail: "testing", description: "Hello, this is a new project.")
             viewModel.appendDraft(with: project)
             viewModel.appendProject(with: project)
-            viewModel.appendProject(with: project)
             
         case .viewDidLayoutSubviews:
             setAddProjectButtonTarget()
@@ -299,7 +298,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
             }
             
             let width = self.view.frame.width
-            let height = self.view.frame.height * 0.1
+            let height = self.view.frame.height * 0.12
             return CGSize(width: width, height: height)
             
         default:
@@ -331,7 +330,7 @@ extension ProjectLibraryViewController: UICollectionViewDelegateFlowLayout, UICo
         case 0:
             return 10
         case 1:
-            return 20
+            return 35
         default:
             return 0
         }

@@ -40,7 +40,7 @@ final class ProjectLibraryMainView: UIView {
         let screenSize = UIScreen.main.bounds.size
         frame.size = screenSize
         layer.cornerRadius = 10
-        backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        // backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
     }
     
     private func prepareCollectionView() {
@@ -55,8 +55,12 @@ final class ProjectLibraryMainView: UIView {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         
         projectLibraryCollectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: collectionViewFlowLayout)
-        projectLibraryCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        
+        // projectLibraryCollectionView.backgroundColor = UIColor(colorLiteralRed: 248/255, green: 253/255, blue: 253/255, alpha: 1)
+        projectLibraryCollectionView.backgroundColor = .white
+        
         projectLibraryCollectionView.showsVerticalScrollIndicator = false
+        projectLibraryCollectionView.alwaysBounceVertical = true
         
         addSubview(projectLibraryCollectionView)
         

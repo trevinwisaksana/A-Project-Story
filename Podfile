@@ -11,6 +11,8 @@ target 'A Project Story' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod 'ReSwift'
 
 
   target 'A Project StoryTests' do
